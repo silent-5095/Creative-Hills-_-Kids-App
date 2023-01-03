@@ -386,7 +386,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -790, y: 3933}
-  - name: grass
+  - name: grass_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -470,7 +470,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 192, y: 3123}
-  - name: grass
+  - name: grass_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -596,7 +596,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 983, y: 1849}
-  - name: grass
+  - name: grass_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -764,14 +764,14 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 802, y: 2665}
-  - name: Sky
+  - name: Sky_
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 2535
+      x: 2529
       y: 4
       width: 843
       height: 294
@@ -785,7 +785,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 2535, y: -781}
-  - name: Sky
+  - name: Sky_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -806,7 +806,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -582, y: 1971}
-  - name: Sky
+  - name: Sky_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -861,11 +861,55 @@ ScriptedImporter:
     dimension: {x: 0, y: 0}
     characterGroups: []
     boneReadOnly: 0
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   mosaicLayers: 1
   characterMode: 1
   documentPivot: {x: 0, y: 0}
-  documentAlignment: 7
+  documentAlignment: 0
   importHiddenLayers: 0
   layerMappingOption: 2
   generatePhysicsShape: 0
@@ -882,7 +926,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 00000000000000000000000000000000
+    spriteID: bb29197909beb494d97fdbb2a74ec179
     layerID: 134
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -892,7 +936,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 00000000000000000000000000000000
+    spriteID: dac4485885654b1448d37fc67ff3ce14
     layerID: 159
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
