@@ -7,6 +7,9 @@ namespace Painting
 {
     public class Detector : MonoBehaviour
     {
+        public static event Action BeginTouchEvent;
+        public static event Action MoveTouchEvent;
+        public static event Action EndTouchEvent;
         [SerializeField] private new Camera camera;
         [SerializeField] private LayerMask layer;
         private bool _isEnded;
@@ -31,25 +34,31 @@ namespace Painting
                             _currentTouch.OnBeganTouchHandler();
                         }
                     }
+                    BeginTouchEvent?.Invoke();
                     break;
                 case TouchPhase.Moved:
                     _currentTouch?.OnMoveTouchHandler(camera.ScreenToWorldPoint(touch.position));
+                    MoveTouchEvent?.Invoke();
                     break;
                 case TouchPhase.Stationary:
                     _currentTouch?.OnMoveTouchHandler(camera.ScreenToWorldPoint(touch.position));
+                    MoveTouchEvent?.Invoke();
                     break;
                 case TouchPhase.Ended:
                     _currentTouch?.OnEndTouchHandler();
+                    EndTouchEvent?.Invoke();
                     _currentTouch = null;
                     break;
                 case TouchPhase.Canceled:
                     _currentTouch?.OnEndTouchHandler();
+                    EndTouchEvent?.Invoke();
                     _currentTouch = null;
                     break;
                 default:
                     if (_currentTouch is null)
                         break;
                     _currentTouch?.OnEndTouchHandler();
+                    EndTouchEvent?.Invoke();
                     _currentTouch = null;
                     break;
             }
