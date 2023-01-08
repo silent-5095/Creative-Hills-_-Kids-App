@@ -8,7 +8,7 @@ namespace Painting
     public class Detector : MonoBehaviour
     {
         public static event Action BeginTouchEvent;
-        public static event Action MoveTouchEvent;
+        public static event Action<Vector2> MoveTouchEvent;
         public static event Action EndTouchEvent;
         [SerializeField] private new Camera camera;
         [SerializeField] private LayerMask layer;
@@ -21,6 +21,7 @@ namespace Painting
                 return;
             if (Input.touchCount <= 0) return;
             var touch = Input.touches[0];
+            Vector2 pos = camera.ScreenToWorldPoint(touch.position);
             switch (touch.phase)
             {
                 case TouchPhase.Began:
@@ -37,12 +38,12 @@ namespace Painting
                     BeginTouchEvent?.Invoke();
                     break;
                 case TouchPhase.Moved:
-                    _currentTouch?.OnMoveTouchHandler(camera.ScreenToWorldPoint(touch.position));
-                    MoveTouchEvent?.Invoke();
+                    _currentTouch?.OnMoveTouchHandler(pos);
+                    MoveTouchEvent?.Invoke(pos);
                     break;
                 case TouchPhase.Stationary:
-                    _currentTouch?.OnMoveTouchHandler(camera.ScreenToWorldPoint(touch.position));
-                    MoveTouchEvent?.Invoke();
+                    _currentTouch?.OnMoveTouchHandler(pos);
+                    MoveTouchEvent?.Invoke(pos);
                     break;
                 case TouchPhase.Ended:
                     _currentTouch?.OnEndTouchHandler();

@@ -279,7 +279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 478.4, y: 139.45}
+  m_AnchoredPosition: {x: 478.4, y: 139.45001}
   m_SizeDelta: {x: 594, y: 550}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &51474196
@@ -2997,7 +2997,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 872259810}
   m_OnClick:
     m_PersistentCalls:
@@ -4083,7 +4083,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1165276444}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 912788081}
+        m_TargetAssemblyTypeName: ForDemo, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Painting
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1165276444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4978,7 +4990,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122, y: 17.48985}
+  m_AnchoredPosition: {x: -122, y: 17.489853}
   m_SizeDelta: {x: 200.3034, y: 102.12836}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1429766080
@@ -5371,7 +5383,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1498025409}
   m_OnClick:
     m_PersistentCalls:
@@ -5945,7 +5957,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1700828001}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 912788081}
+        m_TargetAssemblyTypeName: ForDemo, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Game
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1700828001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6172,7 +6196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 33.05}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 11.6, y: 63.8}
+  m_AnchoredPosition: {x: 11.599998, y: 63.8}
   m_SizeDelta: {x: 150, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1769847988

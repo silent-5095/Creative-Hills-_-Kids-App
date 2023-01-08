@@ -524,6 +524,7 @@ GameObject:
   - component: {fileID: 7486361200956828375}
   - component: {fileID: 7486361200956828328}
   - component: {fileID: 8621469727055181363}
+  - component: {fileID: 4313600454276706552}
   m_Layer: 5
   m_Name: Table
   m_TagString: Untagged
@@ -620,6 +621,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &4313600454276706552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486361200956828331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aceac10ba36f6384b8cf8581210d927c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7486361201246455314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,6 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6354f8dbead45d4385afb355122ac0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wordLinePrefab: {fileID: 4592294191102044373, guid: 6e779cd2f6365414da736073bbd138ea, type: 3}
   currentWord: 
   currentWordTxt: {fileID: 4118053588593262350}
   levelWord:
@@ -1146,6 +1160,17 @@ MonoBehaviour:
   - "\u0627\u0644\u0639\u0627\u0628"
   - "\u062A\u0642\u0644\u06CC\u062F"
   - "\u0646\u0642\u0648\u062F"
+  lineColors:
+  - {r: 0, g: 0.81568635, b: 0.9058824, a: 1}
+  - {r: 0.43921572, g: 0.2784314, b: 0.5019608, a: 1}
+  - {r: 1, g: 0.62352943, b: 0.10980393, a: 1}
+  - {r: 1, g: 0, b: 0.30206633, a: 1}
+  - {r: 0.7960785, g: 0.9215687, b: 0.63529414, a: 1}
+  - {r: 0.18823531, g: 0.5764706, b: 0.89019614, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.95294124, g: 0.2509804, b: 0.25490198, a: 1}
+  - {r: 0.78823537, g: 0.49803925, b: 0.27058825, a: 1}
+  - {r: 0.26666668, g: 0.7490196, b: 0.39607847, a: 1}
 --- !u!114 &7486361202227839713
 MonoBehaviour:
   m_ObjectHideFlags: 0
