@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using Extension;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,41 +11,57 @@ namespace GameScene
         [SerializeField] private GameObject mainPanel;
         [SerializeField] private TextMeshProUGUI summary;
         [SerializeField] private OptionButton[] optionButtons;
+        [SerializeField] private Button[] refreshButtons;
+        private QuestionData _currentData;
 
         private void Start()
         {
+            OptionButton.ButtonClickEvent += OnOptionButtonClickEvent;
+            
+            mainPanel.SetActive(false);
+            
             if (Instance is not null)
                 Destroy(Instance);
             Instance = this;
-            foreach (var optionButton in optionButtons)
+            
+            foreach (var refreshButton in refreshButtons)
             {
-                optionButton.ButtonClickEvent += OnOptionButtonClickEvent;
+                refreshButton.onClick.AddListener(NextQuestion);
             }
+
         }
 
         private void OnOptionButtonClickEvent(OptionProp prop)
         {
-            // Disable all Button and Display Correct Answer
-            PlayerPrefs.SetString(summary.text, prop.GetOption().Key);
-            foreach (var button in optionButtons)
+            if (_currentData is not null)
             {
-                button.IsCompleted(button.OptionProp == prop);
+                _currentData.IsCompleted = prop.GetOption().Value;
             }
         }
 
         public void SetNewQuestion(QuestionData data)
         {
-            mainPanel.SetActive(true);
-            summary.text = data.GetSummary();
-            var isCompleted = data.IsCompleted;
+            if (data is null)
+                return;
+            Debug.Log("Set New Question");
+            _currentData = data;
+            Debug.Log(_currentData.GetSummary());
+            summary.text = _currentData.GetSummary();
 
             var options = data.GetOptions();
             for (var index = 0; index < options.Count; index++)
             {
                 var option = options[index];
                 optionButtons[index].SetData(option);
-                optionButtons[index].IsCompleted(isCompleted);
             }
+
+            mainPanel.SetActive(true);
+        }
+
+        private void NextQuestion()
+        {
+            var newData = GameSceneManager.Instance.GetNextQuestion(_currentData);
+            SetNewQuestion(newData);
         }
     }
 }

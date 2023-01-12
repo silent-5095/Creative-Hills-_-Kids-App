@@ -1,4 +1,5 @@
 ﻿using System;
+using RTLTMPro;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,28 +8,26 @@ namespace GameScene
 {
     public class OptionButton : MonoBehaviour
     {
-        public event Action<OptionProp> ButtonClickEvent;
+        public static event Action<OptionProp> ButtonClickEvent;
         [SerializeField] private Button button;
-        [SerializeField] private TextMeshProUGUI text;
+        [SerializeField] private RTLTextMeshPro text;
         [SerializeField] private OptionProp optionProp;
         [SerializeField] private bool isAnswer;
-        public OptionProp OptionProp => optionProp;
 
 
         public void SetData(OptionProp option)
         {
+            Debug.Log(option.GetOption().Key);
             optionProp = option;
             text.text = option.GetOption().Key;
             isAnswer = option.GetOption().Value;
+            button.interactable = true;
+            button.image.color = Color.white;
         }
 
-        public void IsCompleted(bool isPressed)
+        private void Awake()
         {
-            button.interactable = false;
-            if (isAnswer)
-                button.image.color = Color.green;
-            else if (isPressed)
-                button.image.color = Color.red;
+            ButtonClickEvent += OnButtonClickEvent;
         }
 
         private void Start()
@@ -40,18 +39,16 @@ namespace GameScene
         {
             if (optionProp is null)
                 return;
-            if (isAnswer)
-            {
-                // Reaction true answer
-                Debug.Log("Correct Answer");
-            }
-            else
-            {
-                // Reaction false answer
-                Debug.Log("False Answer");
-            }
-
             ButtonClickEvent?.Invoke(optionProp);
+        }
+
+        private void OnButtonClickEvent(OptionProp prop)
+        {
+            button.interactable = false;
+            if (optionProp == prop)
+                button.image.color = isAnswer ? Color.green : Color.red;
+            else if (isAnswer)
+                button.image.color = Color.green;
         }
     }
 }
