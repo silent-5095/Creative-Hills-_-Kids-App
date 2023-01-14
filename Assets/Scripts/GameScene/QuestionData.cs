@@ -8,7 +8,7 @@ namespace GameScene
     public class QuestionData : ScriptableObject
     {
         [SerializeField] private int qId;
-        private int _islandButtonIndex
+        private int _islandButtonIndex;
         [SerializeField] private string summary;
         [SerializeField] private QuestionLevel level;
         public QuestionLevel Level => level;
