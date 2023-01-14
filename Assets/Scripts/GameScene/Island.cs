@@ -15,6 +15,7 @@ namespace GameScene
         [SerializeField] private IslandQuestionButton[] buttons;
         [SerializeField] private Island nextIsland;
         private Dictionary<int, int> _questionDictionary;
+        public IslandQuestionButton[] GetButtons => buttons;
         private int _passedQCount = 0;
 
         private void OnDestroy()
@@ -44,13 +45,13 @@ namespace GameScene
                 return;
             foreach (var b in buttons)
             {
-                if (b.questionData.IsCompleted != con)
-                    continue;
-                b.questionData = b.questionData.IsCompleted
+                if (b.questionData.IsCompleted != con) continue;
+                var data = b.questionData.IsCompleted && isOpen
                     ? GameSceneManager.Instance.GetNextPassed(b.questionData)
                     : GameSceneManager.Instance.GetNextRemain(b.questionData);
-
-
+                b.questionData = data ? data : b.questionData;
+                Debug.Log($"data =>{b.questionData.name} and complete ={b.questionData.IsCompleted}",
+                    b.gameObject);
             }
 
             SaveQuestionData();
@@ -64,28 +65,44 @@ namespace GameScene
                 buttons[0].questionData.IsOpen = true;
                 buttons[0].HandleCondition();
                 PlayerPrefs.SetInt(islandName, 1);
+                return;
             }
+
             foreach (var button in buttons)
             {
-                if (button.questionData.IsCompleted)
-                    _passedQCount++;
+                button.HandleCondition();
+                if (!button.questionData.IsCompleted)
+                {
+                    button.questionData.IsOpen = true;
+                    break;
+                }
+
+                _passedQCount++;
             }
 
             isPassed = _passedQCount >= buttons.Length;
+            // if (isOpen && !isPassed)
+            // {
+            //     buttons[_passedQCount].questionData.IsOpen = true;
+            //     for (int i = _passedQCount + 1; i < buttons.Length; i++)
+            //     {
+            //         buttons[i].questionData.IsOpen = false;
+            //     }
+            //
+            //     buttons[_passedQCount].HandleCondition();
+            // }
 
-            if (isOpen || isPassed)
+            if (isOpen || isPassed) return;
+            //     foreach (var button in buttons)
+            //     {
+            //         button.HandleCondition();
+            //     }
+            // }
+            // else
+            // {
+            foreach (var questionButton in buttons)
             {
-                foreach (var button in buttons)
-                {
-                    button.HandleCondition();
-                }
-            }
-            else
-            {
-                foreach (var questionButton in buttons)
-                {
-                    questionButton.Lock();
-                }
+                questionButton.Lock();
             }
         }
 
@@ -164,6 +181,7 @@ namespace GameScene
 
         private void SaveQuestionData()
         {
+            Debug.Log("save data");
             _questionDictionary = new Dictionary<int, int>();
             for (var i = 0; i < buttons.Length; i++)
             {
