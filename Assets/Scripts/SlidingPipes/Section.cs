@@ -37,7 +37,8 @@ namespace SlidingPipes
 
         private void OnMove()
         {
-            if (sectionProp.type == SectionType.End || sectionProp.type == SectionType.Start)
+            Debug.Log($"{sectionProp.type.ToString()}");
+            if (sectionProp.type == SectionType.End || sectionProp.type == SectionType.Start || sectionProp.type== SectionType.Movable)
                 return;
             if (top != null && top.SectionProp.type == SectionType.Movable)
             {
