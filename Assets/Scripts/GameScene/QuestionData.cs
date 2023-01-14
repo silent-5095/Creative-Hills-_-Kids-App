@@ -8,10 +8,18 @@ namespace GameScene
     public class QuestionData : ScriptableObject
     {
         [SerializeField] private int qId;
+        private int _islandButtonIndex
         [SerializeField] private string summary;
         [SerializeField] private QuestionLevel level;
         public QuestionLevel Level => level;
         [SerializeField] private OptionProp option0, option1, option2, option3;
+
+        public bool IsOpen
+        {
+            get => PlayerPrefs.GetInt(summary + "IsOpen") > 0;
+            set => PlayerPrefs.SetInt(summary + "IsOpen", value ? 1 : 0);
+        }
+
         public string GetSummary() => summary;
 
         public List<OptionProp> GetOptions()

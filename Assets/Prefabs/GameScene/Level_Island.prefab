@@ -526,7 +526,6 @@ MonoBehaviour:
   isOpen: 0
   isPassed: 0
   defStartQuestion: 0
-  qPanel: {fileID: 0}
   buttons:
   - {fileID: 6835145976017991836}
   - {fileID: 4559724143210970352}
@@ -894,6 +893,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3840343087083361}
     m_Modifications:
+    - target: {fileID: 699940659455084971, guid: c7d5efa94c4b6dd49b8a964c98eb69c8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 699940659455084971, guid: c7d5efa94c4b6dd49b8a964c98eb69c8, type: 3}
+      propertyPath: buttons.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1215291850334181427, guid: c7d5efa94c4b6dd49b8a964c98eb69c8, type: 3}
       propertyPath: m_RootOrder
       value: 2

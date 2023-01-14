@@ -13,7 +13,7 @@ namespace WordsTable
         public void OnLeaveTable()
         {
             if (_touchIsBegan && _tableController != null)
-                _tableController.EndTouch();
+                _tableController.EndTouch(Vector2.zero);
         }
         private void OnDestroy()
         {
@@ -26,11 +26,11 @@ namespace WordsTable
             Detector.EndTouchEvent += DetectorOnEndTouchEvent;
             _tableController = FindObjectOfType<WordTableController>();
         }
-        private void DetectorOnEndTouchEvent()
+        private void DetectorOnEndTouchEvent(Vector2 pos)
         {
             _touchIsBegan = false;
         }
-        private void DetectorOnBeginTouchEvent()
+        private void DetectorOnBeginTouchEvent(Vector2 pos)
         {
             _touchIsBegan = true;
         }

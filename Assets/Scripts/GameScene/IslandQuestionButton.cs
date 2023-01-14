@@ -16,6 +16,30 @@ namespace GameScene
             passedButton.onClick.AddListener(PassedButtonOnClick);
         }
 
+        public void HandleCondition()
+        {
+            if (questionData is null)
+            {
+                Lock();
+                return;
+            }
+
+            if (questionData.IsCompleted)
+            {
+                Pass();
+                return;
+            }
+
+            if (questionData.IsOpen)
+            {
+                Open();
+            }
+            else
+            {
+                Lock();
+            }
+        }
+
         public void Lock()
         {
             ResetButton();

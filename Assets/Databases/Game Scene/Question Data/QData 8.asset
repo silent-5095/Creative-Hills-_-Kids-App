@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae09178856a12094d80b658cbddaeadd, type: 3}
+  m_Name: QData 8
+  m_EditorClassIdentifier: 
+  qId: 8
+  summary: The expire Date of Product is ...
+  level: 0
+  option0:
+    value: Nothing
+    isCorrect: 0
+  option1:
+    value: The Expire Date of Storage of Product
+    isCorrect: 0
+  option2:
+    value: The Date of Product Was Made
+    isCorrect: 0
+  option3:
+    value: The Date of Corrupting of Product
+    isCorrect: 1

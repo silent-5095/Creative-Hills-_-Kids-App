@@ -11,6 +11,7 @@ namespace GameScene
         [SerializeField] private List<QuestionData> questionDataList;
         [HideInInspector] [SerializeField] private List<QuestionData> remainList, passedList;
 
+        public int TotalQuestion() => questionDataList.Count;
         private void Awake()
         {
             if (Instance is not null)

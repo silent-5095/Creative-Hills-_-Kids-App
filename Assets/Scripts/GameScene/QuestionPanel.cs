@@ -1,5 +1,5 @@
 using System;
-using TMPro;
+using RTLTMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,9 +7,10 @@ namespace GameScene
 {
     public class QuestionPanel : MonoBehaviour
     {
+        public static event Action<QuestionData> AnswerEvent;
         public static QuestionPanel Instance;
         [SerializeField] private GameObject mainPanel;
-        [SerializeField] private TextMeshProUGUI summary;
+        [SerializeField] private RTLTextMeshPro summary;
         [SerializeField] private OptionButton[] optionButtons;
         [SerializeField] private Button[] refreshButtons;
         private QuestionData _currentData;
@@ -36,6 +37,7 @@ namespace GameScene
             if (_currentData is not null)
             {
                 _currentData.IsCompleted = prop.GetOption().Value;
+                AnswerEvent?.Invoke(_currentData);
             }
         }
 
@@ -43,7 +45,6 @@ namespace GameScene
         {
             if (data is null)
                 return;
-            Debug.Log("Set New Question");
             _currentData = data;
             Debug.Log(_currentData.GetSummary());
             summary.text = _currentData.GetSummary();
@@ -60,8 +61,8 @@ namespace GameScene
 
         private void NextQuestion()
         {
-            var newData = GameSceneManager.Instance.GetNextQuestion(_currentData);
-            SetNewQuestion(newData);
+            // var newData = GameSceneManager.Instance.GetNextQuestion(_currentData);
+            // SetNewQuestion(newData);
         }
     }
 }
