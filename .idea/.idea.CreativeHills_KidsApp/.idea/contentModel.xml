@@ -19,18 +19,96 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
+        <e p="RTL-TextMeshPro 2020 Plus" t="Include">
+          <e p="RTLTMPro" t="Include">
+            <e p="Ranges" t="Include">
+              <e p="LetterRanges.txt" t="Include" />
+              <e p="NumberRanges.txt" t="Include" />
+              <e p="TashkilRanges.txt" t="Include" />
+            </e>
+            <e p="Resources" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="TMP_SDF Fixed.shader" t="Include" />
+                <e p="TMP_SDF Overlay Fixed.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Fixed.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Masking Fixed.shader" t="Include" />
+                <e p="TMP_SDF-Mobile Overlay Fixed.shader" t="Include" />
+                <e p="TMP_SDF-Surface Fixed.shader" t="Include" />
+                <e p="TMP_SDF-Surface-Mobile Fixed.shader" t="Include" />
+                <e p="TMPro.cginc" t="Include" />
+                <e p="TMPro_Properties.cginc" t="Include" />
+                <e p="TMPro_Surface.cginc" t="Include" />
+                <e p="TMPro_SurfaceOutline.cginc" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Editor" t="Include">
+                <e p="ContextMenu.cs" t="Include" />
+                <e p="RTLDefaultControls.cs" t="Include" />
+                <e p="RTLTextMeshPro3DEditor.cs" t="Include" />
+                <e p="RTLTextMeshProEditor.cs" t="Include" />
+                <e p="RTLTMPro-Editor.asmdef" t="Include" />
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="EnglishNumbers.cs" t="Include" />
+                <e p="FarsiNumbers.cs" t="Include" />
+                <e p="FastStringBuilder.cs" t="Include" />
+                <e p="GeneralLetters.cs" t="Include" />
+                <e p="GlyphFixer.cs" t="Include" />
+                <e p="GlyphTable.cs" t="Include" />
+                <e p="HinduNumbers.cs" t="Include" />
+                <e p="IsolatedLetters.cs" t="Include" />
+                <e p="LigatureFixer.cs" t="Include" />
+                <e p="RichTextFixer.cs" t="Include" />
+                <e p="RTLSupport.cs" t="Include" />
+                <e p="RTLTextMeshPro.cs" t="Include" />
+                <e p="RTLTextMeshPro3D.cs" t="Include" />
+                <e p="RTLTMPro.asmdef" t="Include" />
+                <e p="TashkeelCharacters.cs" t="Include" />
+                <e p="TashkeelFixer.cs" t="Include" />
+                <e p="TashkeelLocation.cs" t="Include" />
+                <e p="TextUtils.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Tests" t="Include">
+              <e p="FastStringBuilderTests.cs" t="Include" />
+              <e p="GlyphFixerTests.cs" t="Include" />
+              <e p="RichTextFixerTests.cs" t="Include" />
+              <e p="RTLSupportTests.cs" t="Include" />
+              <e p="RTLTMPro-Tests.asmdef" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="Extension" t="Include">
+            <e p="Extension.cs" t="Include" />
+          </e>
           <e p="ForDemo.cs" t="Include" />
+          <e p="GameScene" t="Include">
+            <e p="CameraController.cs" t="Include" />
+            <e p="GameSceneManager.cs" t="Include" />
+            <e p="Island.cs" t="Include" />
+            <e p="IslandData.cs" t="Include" />
+            <e p="IslandQuestionButton.cs" t="Include" />
+            <e p="OptionButton.cs" t="Include" />
+            <e p="QuestionData.cs" t="Include" />
+            <e p="QuestionPanel.cs" t="Include" />
+          </e>
           <e p="Interfaces" t="Include">
             <e p="ITouchable.cs" t="Include" />
           </e>
           <e p="Painting" t="Include">
-            <e p="Bucket.cs" t="Include" />
+            <e p="BrushPaintingTexture.cs" t="Include" />
+            <e p="BucketButton.cs" t="Include" />
             <e p="Detector.cs" t="Include" />
+            <e p="PaintCameraController.cs" t="Include" />
             <e p="PaintController.cs" t="Include" />
+            <e p="PaintingTexture.cs" t="Include" />
             <e p="PaintModel.cs" t="Include" />
             <e p="PaintSection.cs" t="Include" />
+            <e p="PatternButton.cs" t="Include" />
             <e p="SideBarMenu.cs" t="Include" />
+            <e p="SolidPaintingTexture.cs" t="Include" />
             <e p="SpriteFitter.cs" t="Include" />
           </e>
           <e p="Platformer" t="Include">
@@ -45,6 +123,12 @@
             <e p="NewBehaviourScript.cs" t="Include" />
             <e p="Slice.cs" t="Include" />
           </e>
+          <e p="Shop" t="Include">
+            <e p="ShopController.cs" t="Include" />
+            <e p="ShopItem.cs" t="Include" />
+            <e p="ShopItemList.cs" t="Include" />
+            <e p="ShopSlot.cs" t="Include" />
+          </e>
           <e p="SlidingPipes" t="Include">
             <e p="Matrix.cs" t="Include" />
             <e p="Path.cs" t="Include" />
@@ -55,11 +139,12 @@
             <e p="SlidingBall.cs" t="Include" />
             <e p="SlidingController.cs" t="Include" />
           </e>
-          <e p="WordTable" t="Include">
-            <e p="LetterData.cs" t="Include" />
+          <e p="WordsTable" t="Include">
+            <e p="LetterButtonData.cs" t="Include" />
+            <e p="LineController.cs" t="Include" />
             <e p="WordColumn.cs" t="Include" />
-            <e p="WordData.cs" t="Include" />
             <e p="WordDetector.cs" t="Include" />
+            <e p="WordTable.cs" t="Include" />
             <e p="WordTableController.cs" t="Include" />
             <e p="WordTargetCell.cs" t="Include" />
           </e>
@@ -101,6 +186,9 @@
       <e p="DOTween.Modules.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
+      <e p="RTLTMPro-Editor.csproj" t="IncludeRecursive" />
+      <e p="RTLTMPro-Tests.csproj" t="IncludeRecursive" />
+      <e p="RTLTMPro.csproj" t="IncludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>
     <e p="C:\Users\Kelerjiman\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
