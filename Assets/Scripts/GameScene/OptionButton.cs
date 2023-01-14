@@ -17,7 +17,6 @@ namespace GameScene
 
         public void SetData(OptionProp option)
         {
-            Debug.Log(option.GetOption().Key);
             optionProp = option;
             text.text = option.GetOption().Key;
             isAnswer = option.GetOption().Value;

@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace GameScene
 {
@@ -14,6 +12,7 @@ namespace GameScene
         public int TotalQuestion() => questionDataList.Count;
         private void Awake()
         {
+            QuestionPanel.AnswerEvent+= OnAnswerEvent;
             if (Instance is not null)
                 Destroy(Instance);
             Instance = this;
@@ -26,28 +25,26 @@ namespace GameScene
             }
         }
 
-        public QuestionData GetNextQuestion(QuestionData currentQuestion)
+        private void OnAnswerEvent(QuestionData arg1, bool arg2)
         {
-            while (true)
-            {
-                int index;
-                if (currentQuestion.IsCompleted)
-                {
-                    index = Random.Range(0, passedList.Count);
-                    var selectedQ = passedList[index];
-                    if (selectedQ == currentQuestion) continue;
-                    return selectedQ;
-                }
-                else
-                {
-                    index = Random.Range(0, remainList.Count);
-                    var selectedQ = remainList[index];
-                    if (selectedQ == currentQuestion) continue;
-                    return selectedQ;
-                }
-            }
+            if (!arg2) return;
+            if(passedList.Contains(arg1))
+                return;
+            passedList.Add(arg1);
         }
 
+        public QuestionData GetNextRemain(QuestionData currentQuestion)
+        {
+            var cIndex=remainList.FindIndex(c => c == currentQuestion);
+            cIndex = remainList.Count - 1 == cIndex ? 0 : cIndex;
+            return remainList[cIndex + 1];
+        }
+        public QuestionData GetNextPassed(QuestionData currentQuestion)
+        {
+            var cIndex=passedList.FindIndex(c => c == currentQuestion);
+            cIndex = passedList.Count - 1 == cIndex ? 0 : cIndex;
+            return passedList[cIndex + 1];
+        }
         public QuestionData GetQuestion(int index)
         {
             return questionDataList.Count <= index ? null : questionDataList[index];
@@ -59,59 +56,3 @@ namespace GameScene
         }
     }
 }
-
-
-/*
- 
- 
-                    Field
-                    
-        // [HideInInspector]
-        // [SerializeField]private List<QuestionData> easyQuestions, mediumQuestions, hardQuestions;
- 
- 
- *                    in Start Method
- *        
-            // foreach (var questionData in questionDataList)
-            // {
-            //     switch (questionData.Level)
-            //     {
-            //         case QuestionLevel.Easy:
-            //             easyQuestions.Add(questionData);
-            //             break;
-            //         case QuestionLevel.Medium:
-            //             mediumQuestions.Add(questionData);
-            //             break;
-            //         case QuestionLevel.Hard:
-            //             hardQuestions.Add(questionData);
-            //             break;
-            //         default:
-            //             easyQuestions.Add(questionData);
-            //             break;
-            //     }
-            // }
- *
- *
- *
- *                 Replace GetNextQuestion
- *                 
-
-        // public QuestionData GetNextQuestion(QuestionLevel level)
-        // {
-        //     switch (level)
-        //     {
-        //         case QuestionLevel.Easy:
-        //             break;
-        //         case QuestionLevel.Medium:
-        //             break;
-        //         case QuestionLevel.Hard:
-        //             break;
-        //         default:
-        //             throw new ArgumentOutOfRangeException(nameof(level), level, null);
-        //     }
-        //
-        //     return null;
-        // }
- *
- * 
- */
