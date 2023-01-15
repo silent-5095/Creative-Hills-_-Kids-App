@@ -7,7 +7,7 @@ namespace GameScene
 {
     public class QuestionPanel : MonoBehaviour
     {
-        public static event Action<QuestionData> AnswerEvent;
+        public static event Action<QuestionData,bool> AnswerEvent;
         public static QuestionPanel Instance;
         [SerializeField] private GameObject mainPanel;
         [SerializeField] private RTLTextMeshPro summary;
@@ -36,8 +36,8 @@ namespace GameScene
         {
             if (_currentData is not null)
             {
-                _currentData.IsCompleted = prop.GetOption().Value;
-                AnswerEvent?.Invoke(_currentData);
+                _currentData.IsCompleted =_currentData.IsCompleted || prop.GetOption().Value;
+                AnswerEvent?.Invoke(_currentData,prop.GetOption().Value);
             }
         }
 
@@ -46,7 +46,6 @@ namespace GameScene
             if (data is null)
                 return;
             _currentData = data;
-            Debug.Log(_currentData.GetSummary());
             summary.text = _currentData.GetSummary();
 
             var options = data.GetOptions();
@@ -61,8 +60,6 @@ namespace GameScene
 
         private void NextQuestion()
         {
-            // var newData = GameSceneManager.Instance.GetNextQuestion(_currentData);
-            // SetNewQuestion(newData);
         }
     }
 }

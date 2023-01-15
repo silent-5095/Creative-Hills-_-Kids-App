@@ -36,8 +36,8 @@ namespace GameScene
 
         public int QuestionId
         {
-            get => PlayerPrefs.GetInt(qId.ToString());
-            set => PlayerPrefs.SetInt(qId.ToString(), value);
+            get => qId;
+            set => qId=value;
         }
     }
 
