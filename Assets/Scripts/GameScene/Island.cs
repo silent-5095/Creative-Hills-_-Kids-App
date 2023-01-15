@@ -2,17 +2,25 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Scene = UnityEngine.SceneManagement.Scene;
 
 namespace GameScene
 {
     public class Island : MonoBehaviour
     {
         public static event Action<bool> IslandRefreshEvent;
+        public static string IslandGameRef;
         [SerializeField] private string islandName;
         [SerializeField] private bool isFirst, isOpen, isPassed;
         [SerializeField] private int defStartQuestion;
         [SerializeField] private IslandQuestionButton[] buttons;
+        [SerializeField] private Button gameButton;
+        [SerializeField] private GameObject gameLock;
+        [SerializeField] private string gameSceneName;
         [SerializeField] private Island nextIsland;
         private Dictionary<int, int> _questionDictionary;
         public IslandQuestionButton[] GetButtons => buttons;
@@ -28,6 +36,7 @@ namespace GameScene
         {
             QuestionPanel.AnswerEvent += OnQuestionPanelAnswerEvent;
             IslandRefreshEvent += OnRefreshEvent;
+            gameButton.onClick.AddListener(OnGameButton);
             _questionDictionary = new Dictionary<int, int>();
             var qdJson = PlayerPrefs.GetString(islandName + "Dic", string.Empty);
             if (!string.IsNullOrEmpty(qdJson))
@@ -37,6 +46,16 @@ namespace GameScene
 
             isOpen = isOpen || PlayerPrefs.GetInt(islandName, 0) > 0;
             Prepare();
+        }
+
+        private void OnGameButton()
+        {
+            if (isPassed)
+            {
+                IslandGameRef = islandName;
+                Debug.Log(IslandGameRef + "island name is =" + islandName);
+                SceneManager.LoadScene(gameSceneName);
+            }
         }
 
         private void OnRefreshEvent(bool con)
@@ -81,25 +100,16 @@ namespace GameScene
             }
 
             isPassed = _passedQCount >= buttons.Length;
-            // if (isOpen && !isPassed)
-            // {
-            //     buttons[_passedQCount].questionData.IsOpen = true;
-            //     for (int i = _passedQCount + 1; i < buttons.Length; i++)
-            //     {
-            //         buttons[i].questionData.IsOpen = false;
-            //     }
-            //
-            //     buttons[_passedQCount].HandleCondition();
-            // }
+
+            gameLock.SetActive(!isPassed);
+            if (isPassed && nextIsland != null && !nextIsland.isOpen)
+            {
+                if (PlayerPrefs.HasKey(nameof(IslandGameRef) + islandName) && nextIsland != null)
+                    nextIsland.OpenIsland();
+            }
 
             if (isOpen || isPassed) return;
-            //     foreach (var button in buttons)
-            //     {
-            //         button.HandleCondition();
-            //     }
-            // }
-            // else
-            // {
+
             foreach (var questionButton in buttons)
             {
                 questionButton.Lock();
@@ -141,7 +151,7 @@ namespace GameScene
                 {
                     // island is completed and game most be activated.
                     //next island most be activated
-                    CompleteIsland();
+                    CompleteIslandQ();
                 }
                 else
                 {
@@ -161,21 +171,23 @@ namespace GameScene
 
         public void OpenIsland()
         {
-            if (isOpen)
+            if (isOpen || PlayerPrefs.GetInt(islandName, 0) > 0)
                 return;
             isOpen = true;
             PlayerPrefs.SetInt(islandName, 1);
+            if (buttons[0] == null)
+                return;
             buttons[0].questionData.IsOpen = true;
             buttons[0].HandleCondition();
             SaveQuestionData();
         }
 
-        private void CompleteIsland()
+        private void CompleteIslandQ()
         {
             isPassed = true;
             if (nextIsland == null)
                 return;
-            nextIsland.OpenIsland();
+            gameLock.SetActive(false);
         }
 
 
@@ -192,4 +204,17 @@ namespace GameScene
             PlayerPrefs.SetString(islandName + "Dic", qdJson);
         }
     }
+
+    // [Serializable]
+    // public class IslandDatabase
+    // {
+    //     public int IslandId { get; set; }
+    //     public string IslandName { get; set; }
+    //     public bool IsPassed { get; set; }
+    //     public bool IsCompleted { get; set; }
+    //     public bool IsOpened { get; set; }
+    //     public int PassedQ { get; set; }
+    //     public int DefStartQ { get; set; }
+    //     public Dictionary<int,int>QuestionData { get; set; }
+    // }
 }

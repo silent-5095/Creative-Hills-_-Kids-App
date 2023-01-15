@@ -13,6 +13,11 @@ namespace GameScene
         private int _remainQIndex, _passedQIndex;
         public int TotalQuestion() => questionDataList.Count;
 
+        private void OnDestroy()
+        {
+            QuestionPanel.AnswerEvent -= OnAnswerEvent;
+        }
+
         private void Awake()
         {
             QuestionPanel.AnswerEvent += OnAnswerEvent;

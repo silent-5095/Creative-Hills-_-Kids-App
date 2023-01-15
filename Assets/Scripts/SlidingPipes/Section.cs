@@ -25,6 +25,11 @@ namespace SlidingPipes
             }
         }
 
+        private void OnDestroy()
+        {
+            Matrix.WinEvent -= MatrixOnWinEvent;
+        }
+
         private void Start()
         {
             Matrix.WinEvent += MatrixOnWinEvent;
