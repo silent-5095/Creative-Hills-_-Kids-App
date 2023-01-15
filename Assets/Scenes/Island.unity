@@ -238,14 +238,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.81
       objectReference: {fileID: 0}
-    - target: {fileID: 4655148201376195582, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 4655148201376195582, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.89
-      objectReference: {fileID: 0}
     - target: {fileID: 4812484061971991004, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
       propertyPath: qPanel
       value: 
@@ -253,6 +245,10 @@ PrefabInstance:
     - target: {fileID: 4812484061971991004, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
       propertyPath: islandName
       value: matrah
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812484061971991004, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: gameSceneName
+      value: SlidingPipes_1
       objectReference: {fileID: 0}
     - target: {fileID: 4812484061971991004, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
       propertyPath: defStartQuestion
@@ -309,6 +305,18 @@ PrefabInstance:
     - target: {fileID: 7393603677644721592, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603109607791319129, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868701584870108918, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868701584870108918, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.47
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
@@ -1546,14 +1554,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.18
       objectReference: {fileID: 0}
-    - target: {fileID: 4655148201376195582, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.696
-      objectReference: {fileID: 0}
-    - target: {fileID: 4655148201376195582, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.693
-      objectReference: {fileID: 0}
     - target: {fileID: 4812484061971991004, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
       propertyPath: qPanel
       value: 
@@ -1566,6 +1566,10 @@ PrefabInstance:
       propertyPath: nextIsland
       value: 
       objectReference: {fileID: 995507885}
+    - target: {fileID: 4812484061971991004, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: gameSceneName
+      value: SlidingPipes_3
+      objectReference: {fileID: 0}
     - target: {fileID: 4812484061971991004, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
       propertyPath: defStartQuestion
       value: 4
@@ -1633,6 +1637,14 @@ PrefabInstance:
     - target: {fileID: 7393603677644721592, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868701584870108918, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868701584870108918, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
@@ -3797,6 +3809,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2977990683853005411, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4812484061971991004, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
       propertyPath: isOpen
       value: 1
@@ -3817,10 +3833,18 @@ PrefabInstance:
       propertyPath: nextIsland
       value: 
       objectReference: {fileID: 1407783738}
+    - target: {fileID: 4812484061971991004, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: gameSceneName
+      value: SlidingPipes_4
+      objectReference: {fileID: 0}
     - target: {fileID: 4874644749833889191, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1762536050}
+    - target: {fileID: 5764125609663548678, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6001253371230183521, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
       propertyPath: m_Name
       value: Level_Island
@@ -3845,6 +3869,26 @@ PrefabInstance:
       propertyPath: buttons.Array.data[3]
       value: 
       objectReference: {fileID: 2139181928}
+    - target: {fileID: 7089964802633768973, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452180023759311806, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603109607791319129, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809076902336276267, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868701584870108918, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce741c92ca9415f4da5316535398b84a, type: 3}
 --- !u!1 &4563122443225489501

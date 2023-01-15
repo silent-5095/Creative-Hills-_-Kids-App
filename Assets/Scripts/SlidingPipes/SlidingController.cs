@@ -9,8 +9,14 @@ namespace SlidingPipes
         [SerializeField] private MatrixType matrixType;
 
 
+        private void OnDestroy()
+        {
+            Path.EndAnimationEvent -= OnWinEvent;
+        }
+
         private void Start()
         {
+            Path.EndAnimationEvent+= OnWinEvent;
             //for test
             switch (matrixType)
             {
@@ -29,6 +35,11 @@ namespace SlidingPipes
             }
 
             ;
+        }
+
+        private void OnWinEvent()
+        {
+            InGameController.Instance.Win();
         }
     }
 

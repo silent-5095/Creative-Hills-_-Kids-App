@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
@@ -7,10 +8,16 @@ namespace SlidingPipes
 {
     public class Path : MonoBehaviour
     {
+        public static event Action EndAnimationEvent;
         [SerializeField] private SpriteShapeController path;
         [SerializeField] private Transform ball;
         [SerializeField] private int index;
         [SerializeField] private bool update;
+
+        private void OnDestroy()
+        {
+            Matrix.WinEvent -= SectionOnMoveEvent;
+        }
 
         private void Start()
         {
@@ -32,6 +39,7 @@ namespace SlidingPipes
             {
                 if (id >= path.spline.GetPointCount())
                 {
+                    EndAnimationEvent?.Invoke();
                     yield break;
                     // id = index;
                     // ball.localPosition = path.spline.GetPosition(0);
