@@ -12,7 +12,7 @@ namespace GameScene
 {
     public class Island : MonoBehaviour
     {
-        public static event Action<bool> IslandRefreshEvent;
+        public static event Action<QuestionData> IslandRefreshEvent;
         public static string IslandGameRef;
         [SerializeField] private string islandName;
         [SerializeField] private bool isFirst, isOpen, isPassed;
@@ -58,13 +58,14 @@ namespace GameScene
             }
         }
 
-        private void OnRefreshEvent(bool con)
+        private void OnRefreshEvent(QuestionData questionData)
         {
-            if (isPassed)
-                return;
+            // if (isPassed)
+            //     return;
+            var targetButton = buttons.FirstOrDefault(b => b.questionData == questionData);
             foreach (var b in buttons)
             {
-                if (b.questionData.IsCompleted != con) continue;
+                if (b.questionData.IsCompleted != questionData.IsCompleted) continue;
                 var data = b.questionData.IsCompleted && isOpen
                     ? GameSceneManager.Instance.GetNextPassed(b.questionData)
                     : GameSceneManager.Instance.GetNextRemain(b.questionData);
@@ -73,6 +74,8 @@ namespace GameScene
                     b.gameObject);
             }
 
+            if (targetButton is not null)
+                IslandRefreshEvent?.Invoke(targetButton.questionData);
             SaveQuestionData();
         }
 
@@ -164,7 +167,7 @@ namespace GameScene
             }
             else
             {
-                IslandRefreshEvent?.Invoke(questionData.IsCompleted);
+                OnRefreshEvent(questionData);
             }
         }
 

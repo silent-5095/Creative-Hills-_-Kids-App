@@ -3601,17 +3601,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 457400483493149528, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2939363850020371394, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
       propertyPath: m_Name
       value: Question_Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2939363850020371394, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2939363850020371398, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
       propertyPath: m_Pivot.x
@@ -3701,22 +3693,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1762536050}
-    - target: {fileID: 2939363851368703935, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3343205749117137316, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
-      propertyPath: forceFix
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858928028176642857, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -5.470001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6353134408115535904, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
-      propertyPath: m_Name
-      value: Close
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
 --- !u!1 &3001689983831428406
