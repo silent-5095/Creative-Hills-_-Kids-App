@@ -7,38 +7,58 @@ namespace GameScene
 {
     public class QuestionPanel : MonoBehaviour
     {
-        public static event Action<QuestionData,bool> AnswerEvent;
+        public static event Action<QuestionData, bool> AnswerEvent;
         public static QuestionPanel Instance;
-        [SerializeField] private GameObject mainPanel;
+        [SerializeField] private GameObject mainPanel, correctPanel, wrongPanel;
+        [SerializeField] private Button wrongPanelRefreshButton;
         [SerializeField] private RTLTextMeshPro summary;
         [SerializeField] private OptionButton[] optionButtons;
-        [SerializeField] private Button[] refreshButtons;
         private QuestionData _currentData;
+        private bool _answerIsCorrect = false;
+
+        private void OnDestroy()
+        {
+            Island.IslandRefreshEvent -= OnIslandRefreshEvent;
+            OptionButton.ButtonClickEvent -= OnOptionButtonClickEvent;
+        }
 
         private void Start()
         {
+            Island.IslandRefreshEvent += OnIslandRefreshEvent;
             OptionButton.ButtonClickEvent += OnOptionButtonClickEvent;
-            
+
             mainPanel.SetActive(false);
-            
+
             if (Instance is not null)
                 Destroy(Instance);
             Instance = this;
-            
-            foreach (var refreshButton in refreshButtons)
-            {
-                refreshButton.onClick.AddListener(NextQuestion);
-            }
 
+            wrongPanelRefreshButton.onClick.AddListener(NextQuestion);
+            // foreach (var refreshButton in refreshButtons)
+            // {
+            //     refreshButton.onClick.AddListener(NextQuestion);
+            // }
+        }
+
+        private void OnIslandRefreshEvent(QuestionData questionData)
+        {
+            _currentData = questionData;
         }
 
         private void OnOptionButtonClickEvent(OptionProp prop)
         {
             if (_currentData is not null)
             {
-                _currentData.IsCompleted =_currentData.IsCompleted || prop.GetOption().Value;
-                AnswerEvent?.Invoke(_currentData,prop.GetOption().Value);
+                _answerIsCorrect = prop.GetOption().Value;
+                _currentData.IsCompleted = _currentData.IsCompleted || _answerIsCorrect;
+                wrongPanel.SetActive(!_answerIsCorrect);
+                correctPanel.SetActive(_answerIsCorrect);
             }
+        }
+
+        public void OnPopUpPanelSubmitButton()
+        {
+            AnswerEvent?.Invoke(_currentData, _answerIsCorrect);
         }
 
         public void SetNewQuestion(QuestionData data)
@@ -60,6 +80,7 @@ namespace GameScene
 
         private void NextQuestion()
         {
+            SetNewQuestion(_currentData);
         }
     }
 }

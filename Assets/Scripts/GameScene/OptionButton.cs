@@ -24,6 +24,11 @@ namespace GameScene
             button.image.color = Color.white;
         }
 
+        private void OnDestroy()
+        {
+            ButtonClickEvent -= OnButtonClickEvent;
+        }
+
         private void Awake()
         {
             ButtonClickEvent += OnButtonClickEvent;
