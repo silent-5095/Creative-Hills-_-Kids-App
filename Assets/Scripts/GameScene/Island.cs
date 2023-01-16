@@ -12,7 +12,8 @@ namespace GameScene
 {
     public class Island : MonoBehaviour
     {
-        public static event Action<QuestionData> IslandRefreshEvent;
+        public static event Action<QuestionData> IslandRefreshQPanelEvent;
+        public static event Action<Island, QuestionData> IslandRefreshButtonsEvent;
         public static string IslandGameRef;
         [SerializeField] private string islandName;
         [SerializeField] private bool isFirst, isOpen, isPassed;
@@ -29,13 +30,13 @@ namespace GameScene
         private void OnDestroy()
         {
             QuestionPanel.AnswerEvent -= OnQuestionPanelAnswerEvent;
-            IslandRefreshEvent -= OnRefreshEvent;
+            IslandRefreshButtonsEvent -= OnRefreshEvent;
         }
 
         private void Start()
         {
             QuestionPanel.AnswerEvent += OnQuestionPanelAnswerEvent;
-            IslandRefreshEvent += OnRefreshEvent;
+            IslandRefreshButtonsEvent += OnRefreshEvent;
             gameButton.onClick.AddListener(OnGameButton);
             _questionDictionary = new Dictionary<int, int>();
             var qdJson = PlayerPrefs.GetString(islandName + "Dic", string.Empty);
@@ -58,26 +59,6 @@ namespace GameScene
             }
         }
 
-        private void OnRefreshEvent(QuestionData questionData)
-        {
-            // if (isPassed)
-            //     return;
-            var targetButton = buttons.FirstOrDefault(b => b.questionData == questionData);
-            foreach (var b in buttons)
-            {
-                if (b.questionData.IsCompleted != questionData.IsCompleted) continue;
-                var data = b.questionData.IsCompleted && isOpen
-                    ? GameSceneManager.Instance.GetNextPassed(b.questionData)
-                    : GameSceneManager.Instance.GetNextRemain(b.questionData);
-                b.questionData = data ? data : b.questionData;
-                Debug.Log($"data =>{b.questionData.name} and complete ={b.questionData.IsCompleted}",
-                    b.gameObject);
-            }
-
-            if (targetButton is not null)
-                IslandRefreshEvent?.Invoke(targetButton.questionData);
-            SaveQuestionData();
-        }
 
         private void Prepare()
         {
@@ -119,26 +100,6 @@ namespace GameScene
             }
         }
 
-        private void GetQuestionData()
-        {
-            if (_questionDictionary is null || _questionDictionary.Count <= 0)
-            {
-                for (var i = 0; i < buttons.Length; i++)
-                {
-                    buttons[i].questionData = GameSceneManager.Instance.GetQuestion(i + defStartQuestion);
-                }
-
-                SaveQuestionData();
-            }
-            else
-            {
-                for (var i = 0; i < buttons.Length; i++)
-                {
-                    if (i + defStartQuestion <= GameSceneManager.Instance.TotalQuestion())
-                        buttons[i].questionData = GameSceneManager.Instance.GetQuestionById(_questionDictionary[i]);
-                }
-            }
-        }
 
         private void OnQuestionPanelAnswerEvent(QuestionData questionData, bool con)
         {
@@ -167,12 +128,52 @@ namespace GameScene
             }
             else
             {
-                OnRefreshEvent(questionData);
+                OnWrongAnswer(questionData);
             }
         }
 
+        private void OnWrongAnswer(QuestionData questionData)
+        {
+            // if (isPassed)
+            //     return;
+            var targetButton = buttons.FirstOrDefault(b => b.questionData == questionData);
+            Debug.Log($"targetButton data ={targetButton?.questionData.name}");
+            foreach (var b in buttons)
+            {
+                if (b.questionData.IsCompleted != questionData.IsCompleted) continue;
+                var data = b.questionData.IsCompleted && isOpen
+                    ? GameSceneManager.Instance.GetNextPassed(b.questionData)
+                    : GameSceneManager.Instance.GetNextRemain(b.questionData);
+                b.questionData = data ? data : b.questionData;
+                // Debug.Log($"data =>{b.questionData.name} and complete ={b.questionData.IsCompleted}",
+                    // b.gameObject);
+            }
+            Debug.Log($"targetButton data after change ={targetButton?.questionData.name}");
 
-        public void OpenIsland()
+            if (targetButton is not null)
+                IslandRefreshQPanelEvent?.Invoke(targetButton.questionData);
+            SaveQuestionData();
+        }
+
+        private void OnRefreshEvent(Island island, QuestionData questionData)
+        {
+            // if (isPassed)
+            //     return;
+            if (island == this)
+                return;
+            foreach (var b in buttons)
+            {
+                if (b.questionData.IsCompleted != questionData.IsCompleted) continue;
+                var data = b.questionData.IsCompleted && isOpen
+                    ? GameSceneManager.Instance.GetNextPassed(b.questionData)
+                    : GameSceneManager.Instance.GetNextRemain(b.questionData);
+                b.questionData = data ? data : b.questionData;
+                Debug.Log($"data =>{b.questionData.name} and complete ={b.questionData.IsCompleted}",
+                    b.gameObject);
+            }
+        }
+
+        private void OpenIsland()
         {
             if (isOpen || PlayerPrefs.GetInt(islandName, 0) > 0)
                 return;
@@ -188,15 +189,33 @@ namespace GameScene
         private void CompleteIslandQ()
         {
             isPassed = true;
-            if (nextIsland == null)
-                return;
-            gameLock.SetActive(false);
+            if (gameLock != null)
+                gameLock.SetActive(false);
         }
 
+        private void GetQuestionData()
+        {
+            if (_questionDictionary is null || _questionDictionary.Count <= 0)
+            {
+                for (var i = 0; i < buttons.Length; i++)
+                {
+                    buttons[i].questionData = GameSceneManager.Instance.GetQuestion(i + defStartQuestion);
+                }
+
+                SaveQuestionData();
+            }
+            else
+            {
+                for (var i = 0; i < buttons.Length; i++)
+                {
+                    if (i + defStartQuestion <= GameSceneManager.Instance.TotalQuestion())
+                        buttons[i].questionData = GameSceneManager.Instance.GetQuestionById(_questionDictionary[i]);
+                }
+            }
+        }
 
         private void SaveQuestionData()
         {
-            Debug.Log("save data");
             _questionDictionary = new Dictionary<int, int>();
             for (var i = 0; i < buttons.Length; i++)
             {
@@ -207,17 +226,4 @@ namespace GameScene
             PlayerPrefs.SetString(islandName + "Dic", qdJson);
         }
     }
-
-    // [Serializable]
-    // public class IslandDatabase
-    // {
-    //     public int IslandId { get; set; }
-    //     public string IslandName { get; set; }
-    //     public bool IsPassed { get; set; }
-    //     public bool IsCompleted { get; set; }
-    //     public bool IsOpened { get; set; }
-    //     public int PassedQ { get; set; }
-    //     public int DefStartQ { get; set; }
-    //     public Dictionary<int,int>QuestionData { get; set; }
-    // }
 }

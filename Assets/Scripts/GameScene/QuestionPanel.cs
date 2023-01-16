@@ -18,13 +18,13 @@ namespace GameScene
 
         private void OnDestroy()
         {
-            Island.IslandRefreshEvent -= OnIslandRefreshEvent;
+            Island.IslandRefreshQPanelEvent -= OnIslandRefreshQPanelEvent;
             OptionButton.ButtonClickEvent -= OnOptionButtonClickEvent;
         }
 
         private void Start()
         {
-            Island.IslandRefreshEvent += OnIslandRefreshEvent;
+            Island.IslandRefreshQPanelEvent += OnIslandRefreshQPanelEvent;
             OptionButton.ButtonClickEvent += OnOptionButtonClickEvent;
 
             mainPanel.SetActive(false);
@@ -40,25 +40,24 @@ namespace GameScene
             // }
         }
 
-        private void OnIslandRefreshEvent(QuestionData questionData)
+        private void OnIslandRefreshQPanelEvent(QuestionData questionData)
         {
             _currentData = questionData;
         }
 
         private void OnOptionButtonClickEvent(OptionProp prop)
         {
-            if (_currentData is not null)
-            {
-                _answerIsCorrect = prop.GetOption().Value;
-                _currentData.IsCompleted = _currentData.IsCompleted || _answerIsCorrect;
-                wrongPanel.SetActive(!_answerIsCorrect);
-                correctPanel.SetActive(_answerIsCorrect);
-            }
+            if (_currentData is null) return;
+            _answerIsCorrect = prop.GetOption().Value;
+            _currentData.IsCompleted = _currentData.IsCompleted || _answerIsCorrect;
+            wrongPanel.SetActive(!_answerIsCorrect);
+            correctPanel.SetActive(_answerIsCorrect);
+            AnswerEvent?.Invoke(_currentData, _answerIsCorrect);
         }
 
         public void OnPopUpPanelSubmitButton()
         {
-            AnswerEvent?.Invoke(_currentData, _answerIsCorrect);
+            // AnswerEvent?.Invoke(_currentData, _answerIsCorrect);
         }
 
         public void SetNewQuestion(QuestionData data)
