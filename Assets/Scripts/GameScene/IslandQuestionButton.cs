@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +6,7 @@ namespace GameScene
 {
     public class IslandQuestionButton : MonoBehaviour
     {
+        public event Action<IslandQuestionButton> OnButtonClickEvent;
         [SerializeField] private Button lockButton, openButton, passedButton;
         public QuestionData questionData;
 
@@ -72,13 +74,13 @@ namespace GameScene
         private void OpenButtonOnClick()
         {
             // select remain Question
-            QuestionPanel.Instance.SetNewQuestion(questionData);
+            OnButtonClickEvent?.Invoke(this);
         }
 
         private void PassedButtonOnClick()
         {
             // select Passed Question
-            QuestionPanel.Instance.SetNewQuestion(questionData);
+            OnButtonClickEvent?.Invoke(this);
         }
     }
 }

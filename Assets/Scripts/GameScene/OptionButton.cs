@@ -1,6 +1,5 @@
 ﻿using System;
 using RTLTMPro;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +7,7 @@ namespace GameScene
 {
     public class OptionButton : MonoBehaviour
     {
-        public static event Action<OptionProp> ButtonClickEvent;
+        public event Action<OptionProp> ButtonClickEvent;
         [SerializeField] private Button button;
         [SerializeField] private RTLTextMeshPro text;
         [SerializeField] private OptionProp optionProp;

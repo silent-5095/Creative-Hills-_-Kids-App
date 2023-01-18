@@ -20,14 +20,10 @@ public class InGameController : MonoBehaviour
             Destroy(Instance);
         Instance = this;
         loadFromIslands = !string.IsNullOrEmpty(Island.IslandGameRef);
-        Debug.Log(Island.IslandGameRef);
-        // cancelButton.onClick.AddListener(() => { exitPanel.SetActive(false); });
-        // submitButton.onClick.AddListener(OnSubmitButtonClick);
     }
 
     public void OnSubmitButtonClick()
     {
-        Debug.Log(loadFromIslands ? "Island" : defaultSceneName);
         SceneManager.LoadScene(loadFromIslands ? "Island" : defaultSceneName);
     }
 

@@ -65,7 +65,7 @@ namespace Painting
                 case PaintType.None:
                     break;
                 case PaintType.Color:
-                    renderer.color = PaintController.GetColor();
+                    // renderer.color = PaintController.GetColor();
                         Debug.Log("color");
                         var tempTexture = brushPaintingTextures.GetTexture(PaintController.GetBrushIndex());
                     mask.enabled = tempTexture is not null;
@@ -82,7 +82,7 @@ namespace Painting
 
                     break;
                 case PaintType.Brush:
-                    renderer.color = PaintController.GetColor();
+                    // renderer.color = PaintController.GetColor();
                     Debug.Log("Brush");
                     var tTexture = brushPaintingTextures.GetTexture(PaintController.GetBrushIndex());
                     mask.enabled = tTexture is not null;

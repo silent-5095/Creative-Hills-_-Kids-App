@@ -9,6 +9,7 @@ namespace Shop
     public class ShopController : MonoBehaviour
     {
         [SerializeField] private List<ShopItem> items;
+        [SerializeField] private string sceneName;
         private int _activeItemCount = 0;
 
         private void Start()
@@ -32,7 +33,7 @@ namespace Shop
         private void Win()
         {
             Debug.Log("win Shop Scene");
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene(sceneName);
         }
     }
 }

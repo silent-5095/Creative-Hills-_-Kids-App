@@ -5,8 +5,8 @@ namespace Puzzle
 {
     public class Slice : MonoBehaviour
     {
-        [SerializeField] private Drop destination;
-        [SerializeField] private Drag movingPart;
+        [SerializeField] private InWorldDrop destination;
+        [SerializeField] private InWorldDrag movingPart;
         [SerializeField] private SpriteRenderer renderer;
 
         private void Start()
