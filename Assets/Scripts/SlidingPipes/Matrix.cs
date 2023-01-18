@@ -76,7 +76,6 @@ namespace SlidingPipes
 
         private void Start()
         {
-            // sections = GetComponentsInChildren<Section>();
             Section.MoveEvent += OnMoveCheck;
         }
 
@@ -84,7 +83,6 @@ namespace SlidingPipes
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("Check Button");
                 OnMoveCheck();
             }
         }
@@ -97,21 +95,19 @@ namespace SlidingPipes
                 var section = sections[index];
                 if (_correctPath[index] == SectionType.None || _correctPath[index]== SectionType.Movable) continue;
                 _isWin = _correctPath[index] == section.SectionProp.type;
-                Debug.Log($"OnMove CHeck and isWin is ={_isWin}");
                 if (!_isWin) break;
             }
             if (_isWin)
                 Win();
-            else
-            {
-                Debug.Log("InCorrect sort");
-            }
+            // else
+            // {
+            //     Debug.Log("InCorrect sort");
+            // }
         }
 
         private void Win()
         {
             WinEvent?.Invoke(true);
-            Debug.Log("Win");
         }
     }
 }

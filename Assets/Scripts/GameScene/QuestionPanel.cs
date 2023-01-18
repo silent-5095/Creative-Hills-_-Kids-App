@@ -1,53 +1,69 @@
 using System;
-using System.Collections.Generic;
-using Extension;
-using TMPro;
+using RTLTMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace GameScene
 {
     public class QuestionPanel : MonoBehaviour
     {
-        public static QuestionPanel Instance;
-        [SerializeField] private GameObject mainPanel;
-        [SerializeField] private TextMeshProUGUI summary;
+        public static event Action<QuestionData, bool> AnswerEvent;
+        public static event Action CancelQuestionEvent;
+        [SerializeField] private GameObject mainPanel, correctPanel, wrongPanel;
+        [SerializeField] private RTLTextMeshPro summary;
         [SerializeField] private OptionButton[] optionButtons;
+        private QuestionData _currentData;
+        private bool _answerIsCorrect ;
+
+        private void OnDestroy()
+        {
+            Island.IslandRefreshQPanelEvent -= SetNewQuestion;
+        }
 
         private void Start()
         {
-            if (Instance is not null)
-                Destroy(Instance);
-            Instance = this;
+            Island.IslandRefreshQPanelEvent += SetNewQuestion;
             foreach (var optionButton in optionButtons)
             {
                 optionButton.ButtonClickEvent += OnOptionButtonClickEvent;
             }
-        }
 
+            mainPanel.SetActive(false);
+        }
         private void OnOptionButtonClickEvent(OptionProp prop)
         {
-            // Disable all Button and Display Correct Answer
-            PlayerPrefs.SetString(summary.text, prop.GetOption().Key);
-            foreach (var button in optionButtons)
-            {
-                button.IsCompleted(button.OptionProp == prop);
-            }
+            if (_currentData is null) return;
+            _answerIsCorrect = prop.GetOption().Value;
+            _currentData.IsCompleted = _currentData.IsCompleted || _answerIsCorrect;
+            wrongPanel.SetActive(!_answerIsCorrect);
+            correctPanel.SetActive(_answerIsCorrect);
         }
 
-        public void SetNewQuestion(QuestionData data)
+        private void SetNewQuestion(QuestionData data)
         {
-            mainPanel.SetActive(true);
-            summary.text = data.GetSummary();
-            var isCompleted = data.IsCompleted;
+            if (data is null)
+                return;
+            _currentData = data;
+            summary.text = _currentData.GetSummary();
 
             var options = data.GetOptions();
             for (var index = 0; index < options.Count; index++)
             {
                 var option = options[index];
                 optionButtons[index].SetData(option);
-                optionButtons[index].IsCompleted(isCompleted);
             }
+            mainPanel.SetActive(true);
+        }
+
+        public void OnSubmitButton()
+        {
+            mainPanel.SetActive(false);
+            AnswerEvent?.Invoke(_currentData, _answerIsCorrect);
+        }
+
+        public void OnCancelButton()
+        {
+            CancelQuestionEvent?.Invoke();
+            mainPanel.SetActive(false);
         }
     }
 }

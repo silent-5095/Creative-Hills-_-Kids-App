@@ -1,42 +1,55 @@
 using System;
-using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Puzzle
 {
-    public class Drop : MonoBehaviour
+    public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
     {
-        [SerializeField] private Drag target;
-        [SerializeField] private float offset;
-        [SerializeField] private SpriteRenderer renderer;
-        [SerializeField] private Color color;
-        private int _sortOrder = 0;
+        [SerializeField] private RectTransform rect;
+        [SerializeField] private new BoxCollider2D collider;
+        [SerializeField] private RectTransform item;
+        [SerializeField] private Sprite sprite;
+        private Drop _drop;
 
-        public void SetSprite(SpriteRenderer sp)
+        private void Awake()
         {
-            renderer.sprite = sp.sprite;
-            _sortOrder = sp.sortingOrder;
-            renderer.sortingOrder = _sortOrder;
-            // renderer.sortingOrder = 0;
-            // renderer.sortingLayerID = sp.sortingLayerID;
+           var image= rect.GetComponent<Image>();
+            var itemImage=item.GetComponent<Image>() ;
+            image.sprite = sprite;
+            itemImage.sprite = sprite;
+            itemImage.SetNativeSize();
+            collider.size = rect.sizeDelta/2;
+            _drop = this;
         }
 
-        private void Start()
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            target.DropEvent += DropEvent;
+            if (other.gameObject == item.gameObject)
+            {
+                item.transform.SetParent(transform);
+                item.localPosition = Vector2.zero;
+                item.GetComponent<IDroppable>().Dropped(true);
+            }
         }
 
-        private void DropEvent()
+        public void OnDrop(PointerEventData eventData)
         {
-            var targetPos = target.transform.position;
-            var pos = transform.position;
-            if (!(Mathf.Abs(targetPos.x - pos.x) <= offset) || !(Mathf.Abs(targetPos.y - pos.y) <= offset) ||
-                !(Mathf.Abs(targetPos.z - pos.z) <= offset)) return;
-            var tween = target.transform.DOMove(transform.position, 0.1f);
-            tween.onComplete += () => tween.Kill();
-            target.IsPlaced = true;
-            renderer.color = color;
-            renderer.sortingOrder = _sortOrder;
+            // Debug.Log($"On Drop {eventData.pointerDrag.name}");
+            if (eventData.pointerDrag == item.gameObject)
+            {
+                item.transform.SetParent(transform);
+                item.localPosition = Vector2.zero;
+            }
+
+            eventData.pointerDrag.GetComponent<IDroppable>().Dropped(item.gameObject == eventData.pointerDrag);
+            _drop.enabled = item.gameObject != eventData.pointerDrag;
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            Debug.Log("On Pointer enter in drop");
         }
     }
 }

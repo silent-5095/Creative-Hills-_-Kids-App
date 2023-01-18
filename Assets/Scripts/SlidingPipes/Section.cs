@@ -25,6 +25,11 @@ namespace SlidingPipes
             }
         }
 
+        private void OnDestroy()
+        {
+            Matrix.WinEvent -= MatrixOnWinEvent;
+        }
+
         private void Start()
         {
             Matrix.WinEvent += MatrixOnWinEvent;
@@ -37,7 +42,7 @@ namespace SlidingPipes
 
         private void OnMove()
         {
-            if (sectionProp.type == SectionType.End || sectionProp.type == SectionType.Start)
+            if (sectionProp.type == SectionType.End || sectionProp.type == SectionType.Start || sectionProp.type== SectionType.Movable)
                 return;
             if (top != null && top.SectionProp.type == SectionType.Movable)
             {
@@ -52,7 +57,6 @@ namespace SlidingPipes
                 sectionProp.gameObject.SetActive(false);
                 sectionProp = sectionList.Find(p => p.type == changeType);
                 sectionProp.gameObject.SetActive(true);
-                // sectionProp.isActive=true;
                 top.SectionProp.isActive = true;
                 MoveEvent?.Invoke();
             }
@@ -113,7 +117,6 @@ namespace SlidingPipes
         {
             if (!_canTouch)
                 return;
-            Debug.Log("OnBeganTouch");
             OnMove();
         }
 

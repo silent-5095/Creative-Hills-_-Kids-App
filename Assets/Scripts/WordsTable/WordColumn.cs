@@ -52,7 +52,7 @@ namespace WordsTable
             }
         }
 
-        public void OnEndTouchHandler()
+        public void OnEndTouchHandler(Vector2 pos)
         {
             _isAdded = false;
         }

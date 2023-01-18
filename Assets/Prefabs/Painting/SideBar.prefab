@@ -2712,7 +2712,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1531415799405468923, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: id
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3648713697740623472, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: m_Sprite
@@ -3070,6 +3070,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5641339516582854395}
     m_Modifications:
+    - target: {fileID: 1531415799405468923, guid: 051423f1caa151649b610974dacc86bb, type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3648713697740623473, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3542,7 +3546,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1531415799405468923, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: id
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3648713697740623472, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: m_Sprite
@@ -3652,7 +3656,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1531415799405468923, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: id
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3648713697740623472, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: m_Sprite
@@ -3762,7 +3766,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1531415799405468923, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: id
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3648713697740623472, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: m_Sprite
@@ -4234,7 +4238,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1531415799405468923, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: id
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3648713697740623472, guid: 051423f1caa151649b610974dacc86bb, type: 3}
       propertyPath: m_Sprite

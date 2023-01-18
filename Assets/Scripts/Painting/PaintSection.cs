@@ -11,10 +11,16 @@ namespace Painting
     [RequireComponent(typeof(SpriteRenderer), typeof(SpriteMask), typeof(PolygonCollider2D))]
     public class PaintSection : MonoBehaviour, ITouchable
     {
+        [HideInInspector]
         [SerializeField] private SolidPaintingTexture solidPaintingTextures;
+        [HideInInspector]
         [SerializeField] private BrushPaintingTexture brushPaintingTextures;
         [SerializeField] private AudioSource source;
+        
+        [HideInInspector]
         [SerializeField] private new SpriteRenderer renderer;
+        
+        [HideInInspector]
         [SerializeField] private SpriteMask mask;
 
         [SuppressMessage("ReSharper", "Unity.InefficientPropertyAccess")]
@@ -59,7 +65,7 @@ namespace Painting
                 case PaintType.None:
                     break;
                 case PaintType.Color:
-                    renderer.color = PaintController.GetColor();
+                    // renderer.color = PaintController.GetColor();
                         Debug.Log("color");
                         var tempTexture = brushPaintingTextures.GetTexture(PaintController.GetBrushIndex());
                     mask.enabled = tempTexture is not null;
@@ -76,7 +82,7 @@ namespace Painting
 
                     break;
                 case PaintType.Brush:
-                    renderer.color = PaintController.GetColor();
+                    // renderer.color = PaintController.GetColor();
                     Debug.Log("Brush");
                     var tTexture = brushPaintingTextures.GetTexture(PaintController.GetBrushIndex());
                     mask.enabled = tTexture is not null;

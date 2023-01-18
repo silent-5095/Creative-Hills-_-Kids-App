@@ -69,7 +69,7 @@ namespace WordsTable
                 _currentLineRenderer.MoveLastPoint(new Vector3(position.x, position.y, 1));
         }
 
-        public void EndTouch()
+        public void EndTouch(Vector2 pos)
         {
             var contains = false;
             foreach (var word in levelWord)

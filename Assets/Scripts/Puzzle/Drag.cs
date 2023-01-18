@@ -1,53 +1,46 @@
 using System;
-using System.Collections.Generic;
-using Interfaces;
 using UnityEngine;
-// ReSharper disable FieldCanBeMadeReadOnly.Local
+using UnityEngine.EventSystems;
 
 namespace Puzzle
 {
-    public class Drag : MonoBehaviour, ITouchable
+    [RequireComponent(typeof(CanvasGroup))]
+    public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDragHandler
     {
-        public  event Action DropEvent;
-        [SerializeField] private bool is3D;
-        [SerializeField] private new SpriteRenderer renderer;
-        [SerializeField] private new PolygonCollider2D collider2D;
-        private List<Vector2>_physicsShape= new List<Vector2>();
-
-        public void SetSprite(SpriteRenderer sp)
+        public static event Action<Transform> BeginDragEvent; 
+        [SerializeField] private RectTransform rectTransform;
+        private Vector3 _delta;
+        [SerializeField] private Canvas canvas;
+        [SerializeField] private CanvasGroup canvasGroup;
+        private void Start()
         {
-            renderer.sprite = sp.sprite;
-            renderer.sortingOrder = sp.sortingOrder+1;
-            // renderer.sortingLayerID = sp.sortingLayerID;
-            renderer.sprite.GetPhysicsShape(0, _physicsShape);
-            collider2D.SetPath(0, _physicsShape);
+            rectTransform = GetComponent<RectTransform>();
+            _delta = rectTransform.sizeDelta;
+            canvasGroup = GetComponent<CanvasGroup>();
         }
 
-        public bool IsPlaced { get; set; }
-
-        public void OnBeganTouchHandler()
+        public void OnBeginDrag(PointerEventData eventData)
         {
-            
-        }
-
-        public void OnMoveTouchHandler(Vector3 position)
-        {
-            if (IsPlaced)
+            Debug.Log("on begin drag");
+            canvasGroup.blocksRaycasts = false;
+            if(transform.parent is null)
                 return;
-            
-            var tempPos = position;
-                
-            var objectTransform = transform;
-            
-            tempPos.z = !is3D ? objectTransform.position.z : tempPos.z;
-            objectTransform.position = tempPos;
+            BeginDragEvent?.Invoke(transform);
+            eventData.pointerDrag.GetComponent<IBeginDrag>().BeginDrag();
         }
 
-        public void OnEndTouchHandler()
+        public void OnDrag(PointerEventData eventData)
         {
-            if (IsPlaced)
-                return;
-            DropEvent?.Invoke();
+            Debug.Log("onDrag");
+            var newPos = rectTransform.anchoredPosition + eventData.delta / canvas.scaleFactor;
+            rectTransform.anchoredPosition =newPos ;
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            Debug.Log("on end drag");
+            eventData.pointerDrag.GetComponent<IDroppable>().Dropped(false);
+            canvasGroup.blocksRaycasts = true;
         }
     }
 }
