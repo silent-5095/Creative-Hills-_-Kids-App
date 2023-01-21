@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 
 namespace GameScene
@@ -9,9 +11,10 @@ namespace GameScene
     {
         [SerializeField] private int qId;
         private int _islandButtonIndex;
-        [SerializeField] private string summary;
+        [Multiline] [SerializeField] private string summary;
         [SerializeField] private QuestionLevel level;
         public QuestionLevel Level => level;
+        [SerializeField] private OptionProp[] options;
         [SerializeField] private OptionProp option0, option1, option2, option3;
 
         public bool IsOpen
@@ -24,8 +27,9 @@ namespace GameScene
 
         public List<OptionProp> GetOptions()
         {
-            var options = new List<OptionProp> {option0, option1, option2, option3};
-            return options;
+            // var tempOptions = new List<OptionProp> {option0, option1, option2, option3};
+            var tempOptions = options.ToList();
+            return tempOptions;
         }
 
         public bool IsCompleted
@@ -37,7 +41,7 @@ namespace GameScene
         public int QuestionId
         {
             get => qId;
-            set => qId=value;
+            set => qId = value;
         }
     }
 

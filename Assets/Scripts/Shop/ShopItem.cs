@@ -2,15 +2,17 @@ using System;
 using System.Collections;
 using Painting;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Shop
 {
     public class ShopItem : MonoBehaviour
     {
-        public static event Action AttachEvent;
+        public event Action AttachEvent;
         public event Action<ShopItem> EndDragEvent;
         [SerializeField] private bool isActive;
         [SerializeField] private ShopItemList tickImage;
+        [SerializeField] private GameObject inBasketObj;
 
         public bool IsActive => isActive;
 
@@ -68,7 +70,9 @@ namespace Shop
             _isAttached = true;
             _isTouched = false;
             tickImage.ActiveTick();
+            inBasketObj.SetActive(true);
             AttachEvent?.Invoke();
+            gameObject.SetActive(false);
         }
     }
 }

@@ -14,10 +14,10 @@ namespace Shop
 
         private void Start()
         {
-            ShopItem.AttachEvent += OnAttachEvent;
             items = FindObjectsOfType<ShopItem>().ToList();
             foreach (var item in items)
             {
+                item.AttachEvent += OnAttachEvent;
                 if (item.IsActive)
                     _activeItemCount++;
             }

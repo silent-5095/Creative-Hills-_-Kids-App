@@ -120,8 +120,14 @@
           </e>
           <e p="Puzzle" t="Include">
             <e p="Drag.cs" t="Include" />
+            <e p="DraggableItem.cs" t="Include" />
             <e p="Drop.cs" t="Include" />
-            <e p="NewBehaviourScript.cs" t="Include" />
+            <e p="DropItemSlot.cs" t="Include" />
+            <e p="IBeginDrag.cs" t="Include" />
+            <e p="Idraggable.cs" t="Include" />
+            <e p="IDroppable.cs" t="Include" />
+            <e p="InWorldDrag.cs" t="Include" />
+            <e p="InWorldDrop.cs" t="Include" />
             <e p="Slice.cs" t="Include" />
           </e>
           <e p="Shop" t="Include">

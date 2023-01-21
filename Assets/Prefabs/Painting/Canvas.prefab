@@ -305,11 +305,11 @@ RectTransform:
   m_Father: {fileID: 8955940125364923250}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 200, y: 150}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 80, y: -13.195}
+  m_SizeDelta: {x: 175.38, y: 170.87}
+  m_Pivot: {x: 0, y: 0}
 --- !u!222 &531929530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1533,8 +1533,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: -1459841127
-  m_SortingOrder: 1
+  m_SortingLayerID: -1809122149
+  m_SortingOrder: 61
   m_TargetDisplay: 0
 --- !u!114 &8955940125364923248
 MonoBehaviour:

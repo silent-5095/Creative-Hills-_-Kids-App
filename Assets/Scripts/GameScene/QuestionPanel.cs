@@ -12,7 +12,7 @@ namespace GameScene
         [SerializeField] private RTLTextMeshPro summary;
         [SerializeField] private OptionButton[] optionButtons;
         private QuestionData _currentData;
-        private bool _answerIsCorrect ;
+        private bool _answerIsCorrect;
 
         private void OnDestroy()
         {
@@ -29,6 +29,7 @@ namespace GameScene
 
             mainPanel.SetActive(false);
         }
+
         private void OnOptionButtonClickEvent(OptionProp prop)
         {
             if (_currentData is null) return;
@@ -48,9 +49,19 @@ namespace GameScene
             var options = data.GetOptions();
             for (var index = 0; index < options.Count; index++)
             {
+                optionButtons[index].gameObject.SetActive(true);
                 var option = options[index];
                 optionButtons[index].SetData(option);
             }
+
+            if (optionButtons.Length > options.Count)
+            {
+                for (int i = options.Count - 1; i < optionButtons.Length; i++)
+                {
+                    optionButtons[i].gameObject.SetActive(false);
+                }
+            }
+
             mainPanel.SetActive(true);
         }
 
