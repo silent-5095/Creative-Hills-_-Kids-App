@@ -47,6 +47,7 @@ namespace GameScene
             summary.text = _currentData.GetSummary();
 
             var options = data.GetOptions();
+            Debug.Log(data.GetOptions().Count);
             for (var index = 0; index < options.Count; index++)
             {
                 optionButtons[index].gameObject.SetActive(true);
@@ -56,7 +57,7 @@ namespace GameScene
 
             if (optionButtons.Length > options.Count)
             {
-                for (int i = options.Count - 1; i < optionButtons.Length; i++)
+                for (var i = options.Count ; i < optionButtons.Length; i++)
                 {
                     optionButtons[i].gameObject.SetActive(false);
                 }
