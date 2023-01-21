@@ -8,6 +8,7 @@ namespace WordsTable
     {
         [SerializeField] private Image thickImg;
         [SerializeField] private string value;
+        [SerializeField] private RTLTMPro.RTLTextMeshPro3D text;
 
         private void OnDestroy()
         {
@@ -17,6 +18,7 @@ namespace WordsTable
         private void Start()
         {
             WordTableController.CompleteWordEvent += WordTableControllerOnCompleteWordEvent;
+            text.text = value;
         }
 
         private void WordTableControllerOnCompleteWordEvent(string targetValue)

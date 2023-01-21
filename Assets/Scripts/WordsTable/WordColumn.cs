@@ -2,6 +2,7 @@ using System;
 using Interfaces;
 using Painting;
 using RTLTMPro;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,7 @@ namespace WordsTable
         private WordTableController _controller;
         [SerializeField] private string value;
         [SerializeField] private Image spRenderer;
-        [SerializeField] private RTLTextMeshPro text;
+        [SerializeField] private TextMeshPro text;
         [SerializeField] private bool update;
 
         public string Value => value;

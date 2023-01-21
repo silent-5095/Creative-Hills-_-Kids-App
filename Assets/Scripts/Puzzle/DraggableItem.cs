@@ -33,6 +33,7 @@ namespace Puzzle
             image.raycastTarget = !con;
             _attached = con;
             _drag.enabled = !con;
+             transform.localScale = Vector3.one;
             image.SetNativeSize();
         }
 
