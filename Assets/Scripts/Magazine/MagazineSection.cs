@@ -22,7 +22,7 @@ namespace Magazine
 
         private void OnSelectorEvent(MagazineData selectedData)
         {
-            
+            MagazinePreview.Instance.SetSummary(selectedData);
         }
     }
 }

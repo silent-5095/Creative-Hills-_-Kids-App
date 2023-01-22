@@ -7,12 +7,15 @@ namespace Magazine
 {
     public class MagazinePreview : MonoBehaviour
     {
+        public static MagazinePreview Instance;
+        [SerializeField] private Image icon;
         [SerializeField] private RTLTextMeshPro3D summary;
         [SerializeField] private GameObject mainMenu;
         [SerializeField] private Button button;
 
         private void Start()
         {
+            Instance = this;
             button.onClick.AddListener(OnButtonClick);
         }
 
@@ -21,10 +24,11 @@ namespace Magazine
             
         }
 
-        public void SetSummary(string value)
+        public void SetSummary(MagazineData data)
         {
             mainMenu.SetActive(true);
-            summary.text = value;
+            summary.text = data.Summary;
+            icon.sprite = data.Icon;
         }
     }
 }

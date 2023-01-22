@@ -1,15 +1,49 @@
-using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Magazine
 {
     public class MagazineController : MonoBehaviour
     {
-        [SerializeField] private GameObject mainMenu;
+        [SerializeField] private GameObject landScape,lSBackButton, portrait,pBackButton;
+        [SerializeField] private Image landScapePrefab,portraitPrefab;
+        [SerializeField] private Sprite[] pages;
+        [SerializeField] private Transform landScapeCHolder,portraitCHolder;
+        
+        private void Update()
+        {
+            if (Screen.orientation == ScreenOrientation.Portrait || Screen.orientation== ScreenOrientation.PortraitUpsideDown && !portrait.activeSelf)
+            {
+                landScape.SetActive(false);
+                lSBackButton.SetActive(false);
+                portrait.SetActive(true);
+                pBackButton.SetActive(true);
+                
+            }
+            else if (Screen.orientation == ScreenOrientation.LandscapeLeft ||
+                     Screen.orientation == ScreenOrientation.LandscapeRight && !landScape.activeSelf)
+            {
+                landScape.SetActive(true);
+                lSBackButton.SetActive(true);
+                portrait.SetActive(false);
+                pBackButton.SetActive(false);
+            }
+        }
 
         private void Start()
         {
-            mainMenu.SetActive(true);
+            foreach (var page in pages)
+            {
+                foreach (var VARIABLE in contentHolder)
+                {
+                    
+                }
+                foreach (var p in pages)
+                {
+                    var img= Instantiate(landScapePrefab, holder);
+                    img.sprite = page;
+                }
+            }
         }
     }
 }

@@ -426,3 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9499faaccfd2d67478faf091cc02e3af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataList:
+  - {fileID: 11400000, guid: f3180ec90e7fa2046b3ea7d26d40e6a6, type: 2}
+  contentHolder: {fileID: 7778794773911377521}
+  mSelectorPrefab: {fileID: 2795020620276045656, guid: 997619d8f12524c43beae57b16057df0, type: 3}

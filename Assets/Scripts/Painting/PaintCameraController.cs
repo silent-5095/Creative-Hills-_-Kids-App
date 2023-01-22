@@ -54,6 +54,7 @@ namespace Painting
 
         private void Zoom(float currentIncrement)
         {
+            Debug.Log($"Zoom {currentIncrement}");
             camera.orthographicSize = Mathf.Clamp(camera.orthographicSize - currentIncrement, zoomOutMin, zoomOutMax);
             increment = zoomOutMax - camera.orthographicSize;
         }
