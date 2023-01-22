@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3700889634843123117
+--- !u!1001 &653809826640679968
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -37,11 +37,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1706999146712710786, guid: 5bcc04642321cba4d9e21d2e1c9b6c7e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 350
+      value: 1700.4883
       objectReference: {fileID: 0}
     - target: {fileID: 1706999146712710786, guid: 5bcc04642321cba4d9e21d2e1c9b6c7e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 500
+      value: 2200
       objectReference: {fileID: 0}
     - target: {fileID: 1706999146712710786, guid: 5bcc04642321cba4d9e21d2e1c9b6c7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5763340735362507215, guid: 5bcc04642321cba4d9e21d2e1c9b6c7e, type: 3}
       propertyPath: m_Name
-      value: PortraitMP
+      value: MagazinePage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bcc04642321cba4d9e21d2e1c9b6c7e, type: 3}
