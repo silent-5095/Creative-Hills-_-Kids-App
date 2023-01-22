@@ -85,9 +85,9 @@
           </e>
           <e p="ForDemo.cs" t="Include" />
           <e p="GameScene" t="Include">
-            <e p="CameraController.cs" t="Include" />
             <e p="GameSceneManager.cs" t="Include" />
             <e p="Island.cs" t="Include" />
+            <e p="IslandCameraController.cs" t="Include" />
             <e p="IslandData.cs" t="Include" />
             <e p="IslandQuestionButton.cs" t="Include" />
             <e p="OptionButton.cs" t="Include" />
@@ -97,6 +97,14 @@
           <e p="InGameController.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="ITouchable.cs" t="Include" />
+          </e>
+          <e p="Magazine" t="Include">
+            <e p="MagazineContentController.cs" t="Include" />
+            <e p="MagazineController.cs" t="Include" />
+            <e p="MagazineData.cs" t="Include" />
+            <e p="MagazinePreview.cs" t="Include" />
+            <e p="MagazineSection.cs" t="Include" />
+            <e p="MagazineSelector.cs" t="Include" />
           </e>
           <e p="Painting" t="Include">
             <e p="BrushPaintingTexture.cs" t="Include" />
@@ -128,6 +136,7 @@
             <e p="IDroppable.cs" t="Include" />
             <e p="InWorldDrag.cs" t="Include" />
             <e p="InWorldDrop.cs" t="Include" />
+            <e p="PuzzlePiecesHolder.cs" t="Include" />
             <e p="Slice.cs" t="Include" />
           </e>
           <e p="Shop" t="Include">
@@ -137,7 +146,9 @@
             <e p="ShopSlot.cs" t="Include" />
           </e>
           <e p="SlidingPipes" t="Include">
+            <e p="AspectDetector.cs" t="Include" />
             <e p="Matrix.cs" t="Include" />
+            <e p="MsgBox.cs" t="Include" />
             <e p="Path.cs" t="Include" />
             <e p="Roller.cs" t="Include" />
             <e p="Section.cs" t="Include" />

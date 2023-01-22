@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +26,6 @@ namespace Puzzle
         {
             if (_attached)
                 return;
-            Debug.Log($"is dropped in right place = {con}");
             rect.localPosition = con ? rect.localPosition : _defPos;
             image.maskable = !con;
             image.raycastTarget = !con;
@@ -35,6 +33,7 @@ namespace Puzzle
             _drag.enabled = !con;
              transform.localScale = Vector3.one;
             image.SetNativeSize();
+            gameObject.SetActive(!con);
         }
 
         public void OnDrag()

@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -95,6 +95,9 @@ MonoBehaviour:
   rect: {fileID: 899821672547486884}
   collider: {fileID: 7259442651534902055}
   item: {fileID: 0}
+  sprite: {fileID: 0}
+  fillColor: {r: 1, g: 1, b: 1, a: 1}
+  emptyColor: {r: 0.5372549, g: 0.53469205, b: 0.53469205, a: 1}
 --- !u!50 &9167396755911143212
 Rigidbody2D:
   serializedVersion: 4
@@ -128,9 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48850f56bc9929e4d958c205f6085482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  itemSlot: {fileID: 899821672547486885}
-  slot: {fileID: 0}
 --- !u!61 &7259442651534902055
 BoxCollider2D:
   m_ObjectHideFlags: 0
