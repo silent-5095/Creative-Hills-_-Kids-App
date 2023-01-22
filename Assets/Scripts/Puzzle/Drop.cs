@@ -30,8 +30,9 @@ namespace Puzzle
             if (other.gameObject != item.gameObject) return;
             item.transform.SetParent(transform);
             item.localPosition = Vector2.zero;
-            item.GetComponent<IDroppable>().Dropped(true);
+            item.GetComponent<IDroppable>().Dropped(true); 
             _image.color =  fillColor;
+            _drop.enabled =false;
         }
 
         public void OnDrop(PointerEventData eventData)
