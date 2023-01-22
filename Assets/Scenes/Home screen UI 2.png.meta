@@ -1,0 +1,2060 @@
+fileFormatVersion: 2
+guid: b7638d938f812434081dcba032c45288
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Home screen UI 2_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1736
+        width: 260
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21963a3f23a7e5c4da45bcb3bf6f6879
+      internalID: 232603946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1736
+        width: 260
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6506d1ad7fa8bb142a1d62a6420ab94d
+      internalID: -707882001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_2
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1736
+        width: 260
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36aa27c7e9b18b24181de9e29b4ff3c9
+      internalID: -1519198003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1736
+        width: 260
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00561517545641e40b90829c4be1489f
+      internalID: -752390455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_4
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1610
+        width: 401
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4060a5a4cb2433c4b90c7269fa05d943
+      internalID: -2123795720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_5
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1811
+        width: 177
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e85c4b2146cc2b4f85ddefed26d00b8
+      internalID: 1454470929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1178
+        width: 260
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4adc6c723c0de514391860bf2f9998f5
+      internalID: 2100287658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_7
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1174
+        width: 260
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28575d2048220414e9afcf67d7ad9681
+      internalID: -803747003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_8
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1170
+        width: 258
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005264b5d0b377847a9bb111b756e588
+      internalID: -498169267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_9
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1164
+        width: 261
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1e063cd419d3242a6d1eb1c059621d
+      internalID: -1423965698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_10
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1088
+        width: 400
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e6d27da06680840aaca81335fb3162
+      internalID: -251515911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_11
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 1251
+        width: 176
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005f1ff652aa9cf47ae7312dd55268ed
+      internalID: -976812973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_12
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 866
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97be812fecf882e41b72319028ecdfa2
+      internalID: -1550716860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_13
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 821
+        width: 60
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85837e1401c0a745812c0b61a7f8494
+      internalID: -2071085202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_14
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 830
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9279e6bb74c3b724cb712491916d0024
+      internalID: 1416794119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_15
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 854
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62164d1698a6af64db67bc06e736ce51
+      internalID: 141986864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_16
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 825
+        width: 73
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f62e358c24919845a57ec1e50bc3b27
+      internalID: 855152451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_17
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 823
+        width: 8
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919fa262f17465e4d82de7f4eb546b0a
+      internalID: 1263405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_18
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 806
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6138e683a4843d9468b7c8350d8be40e
+      internalID: 1752934410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_19
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 827
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4229a259817f44e9d14ee2cb0cbf40
+      internalID: 1725775568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_20
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 803
+        width: 107
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd4b16a105475647a2a26a0b4e8ee85
+      internalID: -646223197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_21
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 839
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c85f3818d08a7b48a8af5f28d1849a5
+      internalID: 464800885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_22
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 816
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0916eda452ee84699165d218c79f24
+      internalID: 714921132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_23
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 809
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba780e09f0000649af98606175d040e
+      internalID: -1778149985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_24
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 801
+        width: 13
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2291c0be23f51814a853e4e09d03167b
+      internalID: 1188050979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_25
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 820
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20fe7548ffdfcc4bb0e4e2d05b30c41
+      internalID: 826286425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_26
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 781
+        width: 92
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fc8dbf544b2634db99dfdda9b9b88e
+      internalID: -249544194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_27
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 822
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b466a1de1af2a49b7eaf2d0b3ebdd4
+      internalID: -1773601150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_28
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 803
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cb7cf993ac57842a3fbc5cde76a048
+      internalID: 571548186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_29
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 770
+        width: 86
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8a840408a230a45822943845ebcb32
+      internalID: 1154618054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_30
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 813
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad45bb0c375987543843ddfd1adc4fdd
+      internalID: -1937396809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_31
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 781
+        width: 13
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56edb410d0997cd45a92a0a222560b1a
+      internalID: -740498457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_32
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 807
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089d5da3fc6e3074dbdb58d25e32b224
+      internalID: -1461393981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_33
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 764
+        width: 119
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9edd9238150ded4fbd9de9a900bedd5
+      internalID: 1164265635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_34
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 810
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac42c1519b4e2049bc3ffb3bc951b2c
+      internalID: -96285561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_35
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 812
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8157c6be9de7f0c42a3fe8c5ac621e70
+      internalID: 691782473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_36
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 801
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72dc51947e974f44d8321af2f5f49848
+      internalID: 1627616050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_37
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 776
+        width: 71
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673cad37cde54bc46822f7115e2a1842
+      internalID: -1631100695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_38
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 780
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7980dafd07346384788b0be09cdc66ac
+      internalID: 975493233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_39
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 772
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c127deb3e997140a505d44cee99144
+      internalID: 1376647735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_40
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 774
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa0e9e91dacfe54cbcf296a595542bd
+      internalID: 1343492254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_41
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 777
+        width: 76
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30d5cab0d257eb4e809413ca205163d
+      internalID: -1152336102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_42
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 786
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde4c81e81efb27458dea3904ad4d6d0
+      internalID: 521673132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_43
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 753
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea38bf1d114dd924489d19b27f36c080
+      internalID: -143983900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_44
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 768
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3a1ce2be0d7a44fa2f754611837f81
+      internalID: -994522237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_45
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 785
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bae48829d651c54db39353811908f81
+      internalID: 2138378209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_46
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 767
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb14a9195d73bb04483ee96e91a15936
+      internalID: 1971540526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_47
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 745
+        width: 89
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c81ed8ef5d72f45a6cc716d54ff04f
+      internalID: -1087508769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_48
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 758
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47cbbe2208df6504db3c6a79eeba6064
+      internalID: 2038820859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_49
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 762
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09918fc0cb78d5d4a98fd79668cedeb6
+      internalID: -851470680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_50
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 747
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08436222e2c7cbb4e8fd148825427692
+      internalID: 518965290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_51
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 761
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce335ee57b1daf49af13d544ba1a349
+      internalID: 1394979296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_52
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 760
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361fa8d6e9aa2f04cb20a191a7592971
+      internalID: -296976673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_53
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 728
+        width: 94
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fc4b47df021ba4b98f8fbf4bc6e672
+      internalID: -1113211403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_54
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 762
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4715cd6b280434898868d467c5fc8d
+      internalID: 1640668377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_55
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 759
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a83094a220887a489906e2d93536401
+      internalID: -25858486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_56
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 752
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69223979470f7da4e8e4ad4bb2a4eb0d
+      internalID: -145886377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_57
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 746
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d7e5f1718898d4bae3b0c3262225be
+      internalID: -524358612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_58
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 739
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a076c819b3f13ed42a5a78a12c8370f5
+      internalID: 1269467353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_59
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 744
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fe3a1d84d092d4c9b4149a337021dd
+      internalID: -670870734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_60
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 753
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee893bfda59f5042b4ac256c2217ed1
+      internalID: -238070014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_61
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 710
+        width: 17
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052c748c8e8a00149bc7c550ee69ed8b
+      internalID: -694873149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_62
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 740
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afe807c8160c384aad8e7824193f831
+      internalID: -425245645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_63
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 733
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130314d8469c580489c834b92223c3aa
+      internalID: 1223223195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_64
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 727
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3716332de16ba2b43969e95c8fc798cb
+      internalID: -1654346346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_65
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 727
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb7273db6e04234db998c2e268e86ca
+      internalID: -1729814396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_66
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 736
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbc24d44455ed54f904d7a81bbaf989
+      internalID: -1543590479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_67
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 740
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383c6f97370149c489df2042775049b0
+      internalID: 879798107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_68
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 721
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe925577c2044e41a6fa5ffc06724d8
+      internalID: -1731638281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_69
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 724
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f6f5653b5c12d49a52d3b077400bcd
+      internalID: -1624410698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_70
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 723
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9d73711108624458177c83be721a4e
+      internalID: -1980582415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_71
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 718
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c43eed244138a4ba7e8c65ec3382e9
+      internalID: 205082349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_72
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 717
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c149b9398dacac149a1686e7ca8f58ca
+      internalID: 1255515909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_73
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 688
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90da0e1c867bca44b90fc8f845995a6
+      internalID: -373115636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_74
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 706
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b966c0f30f9f5e44fb6afe40c43feae7
+      internalID: 208118368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_75
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 701
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e8f17f3b3b5484e90042edc2fe2168
+      internalID: 2006458630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_76
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 699
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac4ae7124925384a8d97efdea071d18
+      internalID: 716654063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_77
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 691
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d3bac36fb96a6409c569dcb921f2ab
+      internalID: 664691994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_78
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 678
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5898f09189c8c44ba4640b7c397ef2c
+      internalID: 833645254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_79
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 674
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635c08c1468e8ed489f4e7da8eb05410
+      internalID: 1733376234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_80
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 672
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d333829163f2d48a8b773e035aa3d5
+      internalID: -249273056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_81
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 667
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9848c69a71ddba4dab9dcdb80bbbf49
+      internalID: 1575875466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_82
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 650
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7c811ab4aef274daba76bb55abdd96
+      internalID: 2020769403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_83
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 662
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4433fdb46d77fc54b9debf313c482aed
+      internalID: 1436782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_84
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 284
+        width: 200
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70dc88d713685845adb864d8d0c8b6d
+      internalID: -1203051168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_85
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 305
+        width: 221
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76160b447281d564db196d0d001776ec
+      internalID: -172892003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 2_86
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 292
+        width: 330
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cffde65cb2e15d44b495477487a7a5d
+      internalID: 90292011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Home screen UI 2_78: 833645254
+      Home screen UI 2_85: -172892003
+      Home screen UI 2_47: -1087508769
+      Home screen UI 2_55: -25858486
+      Home screen UI 2_74: 208118368
+      Home screen UI 2_19: 1725775568
+      Home screen UI 2_37: -1631100695
+      Home screen UI 2_34: -96285561
+      Home screen UI 2_86: 90292011
+      Home screen UI 2_17: 1263405
+      Home screen UI 2_1: -707882001
+      Home screen UI 2_5: 1454470929
+      Home screen UI 2_3: -752390455
+      Home screen UI 2_24: 1188050979
+      Home screen UI 2_63: 1223223195
+      Home screen UI 2_64: -1654346346
+      Home screen UI 2_60: -238070014
+      Home screen UI 2_29: 1154618054
+      Home screen UI 2_14: 1416794119
+      Home screen UI 2_36: 1627616050
+      Home screen UI 2_71: 205082349
+      Home screen UI 2_7: -803747003
+      Home screen UI 2_40: 1343492254
+      Home screen UI 2_81: 1575875466
+      Home screen UI 2_21: 464800885
+      Home screen UI 2_59: -670870734
+      Home screen UI 2_62: -425245645
+      Home screen UI 2_20: -646223197
+      Home screen UI 2_42: 521673132
+      Home screen UI 2_10: -251515911
+      Home screen UI 2_32: -1461393981
+      Home screen UI 2_69: -1624410698
+      Home screen UI 2_70: -1980582415
+      Home screen UI 2_39: 1376647735
+      Home screen UI 2_6: 2100287658
+      Home screen UI 2_48: 2038820859
+      Home screen UI 2_26: -249544194
+      Home screen UI 2_77: 664691994
+      Home screen UI 2_68: -1731638281
+      Home screen UI 2_65: -1729814396
+      Home screen UI 2_72: 1255515909
+      Home screen UI 2_54: 1640668377
+      Home screen UI 2_18: 1752934410
+      Home screen UI 2_30: -1937396809
+      Home screen UI 2_82: 2020769403
+      Home screen UI 2_53: -1113211403
+      Home screen UI 2_45: 2138378209
+      Home screen UI 2_49: -851470680
+      Home screen UI 2_46: 1971540526
+      Home screen UI 2_50: 518965290
+      Home screen UI 2_52: -296976673
+      Home screen UI 2_57: -524358612
+      Home screen UI 2_13: -2071085202
+      Home screen UI 2_16: 855152451
+      Home screen UI 2_58: 1269467353
+      Home screen UI 2_23: -1778149985
+      Home screen UI 2_28: 571548186
+      Home screen UI 2_66: -1543590479
+      Home screen UI 2_38: 975493233
+      Home screen UI 2_15: 141986864
+      Home screen UI 2_56: -145886377
+      Home screen UI 2_8: -498169267
+      Home screen UI 2_33: 1164265635
+      Home screen UI 2_4: -2123795720
+      Home screen UI 2_11: -976812973
+      Home screen UI 2_83: 1436782
+      Home screen UI 2_27: -1773601150
+      Home screen UI 2_9: -1423965698
+      Home screen UI 2_44: -994522237
+      Home screen UI 2_75: 2006458630
+      Home screen UI 2_2: -1519198003
+      Home screen UI 2_73: -373115636
+      Home screen UI 2_61: -694873149
+      Home screen UI 2_67: 879798107
+      Home screen UI 2_84: -1203051168
+      Home screen UI 2_31: -740498457
+      Home screen UI 2_43: -143983900
+      Home screen UI 2_76: 716654063
+      Home screen UI 2_35: 691782473
+      Home screen UI 2_0: 232603946
+      Home screen UI 2_80: -249273056
+      Home screen UI 2_25: 826286425
+      Home screen UI 2_51: 1394979296
+      Home screen UI 2_79: 1733376234
+      Home screen UI 2_41: -1152336102
+      Home screen UI 2_12: -1550716860
+      Home screen UI 2_22: 714921132
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
