@@ -97,6 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c480ffae451cb8458cd7e3a09f58644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 519420031}
+  zoomOutMin: 4
+  zoomOutMax: 10
+  increment: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

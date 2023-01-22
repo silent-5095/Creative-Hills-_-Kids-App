@@ -23,22 +23,6 @@ namespace SlidingPipes
 
         private void OnValidate()
         {
-            // if (shuffle)
-            // {
-            //     shuffle = false;
-            //     _changeOrderArr = new List<Vector2>();
-            //     // sections = GetComponentsInChildren<Section>();
-            //     foreach (var section in sections)
-            //     {
-            //         if (section.gameObject.activeSelf && section.SectionProp.type != SectionType.Start &&
-            //             section.SectionProp.type != SectionType.End)
-            //         {
-            //             _changeOrderArr.Add(section.gameObject.transform.position);
-            //         }
-            //     }
-            //
-            //     ChangeOrder();
-            // }
             if (saveCorrectPath)
             {
                 _correctPath = null;

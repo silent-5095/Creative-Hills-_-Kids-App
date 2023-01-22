@@ -12019,12 +12019,24 @@ PrefabInstance:
       value: Touch Detector
       objectReference: {fileID: 0}
     - target: {fileID: 8223072643112602468, guid: c438314504191db408d8f06266e5d89e, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 519420031}
-    - target: {fileID: 8223072643112602468, guid: c438314504191db408d8f06266e5d89e, type: 3}
       propertyPath: otherRect
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223072643112602468, guid: c438314504191db408d8f06266e5d89e, type: 3}
+      propertyPath: maxXPanning
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223072643112602468, guid: c438314504191db408d8f06266e5d89e, type: 3}
+      propertyPath: maxYPanning
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223072643112602468, guid: c438314504191db408d8f06266e5d89e, type: 3}
+      propertyPath: minXPanning
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223072643112602468, guid: c438314504191db408d8f06266e5d89e, type: 3}
+      propertyPath: minYPanning
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c438314504191db408d8f06266e5d89e, type: 3}
@@ -19494,7 +19506,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 531929527, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13.195007
+      value: -13.195068
       objectReference: {fileID: 0}
     - target: {fileID: 531929528, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

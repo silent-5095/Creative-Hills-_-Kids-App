@@ -17,11 +17,17 @@ namespace SlidingPipes
         private void OnDestroy()
         {
             Matrix.WinEvent -= SectionOnMoveEvent;
+            AspectDetector.AspectDetectorEvent -= OnAspectDetectorEvent;
+        }
+
+        private void Awake()
+        {
+            Matrix.WinEvent+= SectionOnMoveEvent;
+            AspectDetector.AspectDetectorEvent += OnAspectDetectorEvent;
         }
 
         private void Start()
         {
-            Matrix.WinEvent+= SectionOnMoveEvent;
             ball.localPosition = path.spline.GetPosition(0);
             index = 0;
             StartCoroutine(Move(index));
@@ -54,6 +60,16 @@ namespace SlidingPipes
             }
             else
                 StartCoroutine(Move(id));
+        }private void OnAspectDetectorEvent(bool isTablet)
+        {
+            // if (isTablet)
+            // {
+            //     transform.localScale = transform.localScale * 0.8f;
+            // }
+            // else
+            //     transform.localScale = transform.localScale;
+
+            
         }
     }
 }

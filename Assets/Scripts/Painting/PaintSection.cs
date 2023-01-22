@@ -24,6 +24,11 @@ namespace Painting
         [SerializeField] private SpriteMask mask;
 
         [SuppressMessage("ReSharper", "Unity.InefficientPropertyAccess")]
+        private void OnDestroy()
+        {
+            PaintController.ResetAllEvent -= OnResetAllEvent;
+        }
+
         private void Start()
         {
             PaintController.ResetAllEvent += OnResetAllEvent;
@@ -37,12 +42,6 @@ namespace Painting
             mask.backSortingOrder = renderer.sortingOrder;
             solidPaintingTextures = GetComponentInChildren<SolidPaintingTexture>();
             brushPaintingTextures = GetComponentInChildren<BrushPaintingTexture>();
-            // if (brushTexture is null)
-            // {
-            //     brushTexture = Instantiate(Resources.Load<BrushTexture>("Assets/Prefabs/Painting/BrushTextures"),transform);
-            //     
-            //     brushTexture.SetTextureOrder(mask.frontSortingOrder);
-            // }
             solidPaintingTextures.SetTextureOrder(mask.frontSortingOrder);
             brushPaintingTextures.SetTextureOrder(mask.frontSortingOrder);
         }

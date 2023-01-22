@@ -39,7 +39,7 @@ namespace Painting
 
         private void ResetAllButtonOnClick()
         {
-            PaintController.ResetAll();
+            PaintController.Instance.ResetAll();
             foreach (var paletteButton in mainPaletteButtons)
             {
                 paletteButton.OnResetAll();

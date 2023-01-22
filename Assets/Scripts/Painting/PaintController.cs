@@ -6,26 +6,33 @@ namespace Painting
     public class PaintController : MonoBehaviour
     {
         public static event Action ResetAllEvent;
+        public static PaintController Instance;
         private static Color _currentColor;
         private static int _patternIndex;
         private static int _brushIndex;
         private static PaintType _paintType;
         
         [SerializeField] private Color defColor;
+        [SerializeField] private int defBrush;
 
         private void OnDestroy()
         {
             BucketButton.BucketClickEvent -= OnBucketClickEvent;
+            MainPaletteButton.PushButtonEvent-= OnMainPaletteButtonEvent;
+            PatternButton.SelectPatternEvent-= OnPatternButtonClickEvent;
             PatternButton.SelectBrushEvent-= OnSelectBrushButtonClickEvent;
         }
 
         private void Start()
         {
+            _brushIndex = defBrush;
             _currentColor = defColor;
             BucketButton.BucketClickEvent += OnBucketClickEvent;
             MainPaletteButton.PushButtonEvent+= OnMainPaletteButtonEvent;
             PatternButton.SelectPatternEvent+= OnPatternButtonClickEvent;
             PatternButton.SelectBrushEvent+= OnSelectBrushButtonClickEvent;
+            Instance = this;
+            ResetAll();
         }
 
         private void OnPatternButtonClickEvent(int index)
@@ -60,9 +67,10 @@ namespace Painting
         public static int GetPatternIndex() => _patternIndex;
         public static int GetBrushIndex() => _brushIndex;
 
-        public static void ResetAll()
+        public void ResetAll()
         {
-            _currentColor = Color.white;
+            _currentColor = defColor;
+            _brushIndex = defBrush;
             _paintType = PaintType.Color;
             ResetAllEvent?.Invoke();
         }
