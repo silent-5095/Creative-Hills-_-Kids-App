@@ -2331,7 +2331,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &326939329
 Canvas:
   m_ObjectHideFlags: 0
@@ -23162,6 +23162,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1892589875}
     m_Modifications:
+    - target: {fileID: 531929527, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13.195007
+      objectReference: {fileID: 0}
     - target: {fileID: 531929528, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
