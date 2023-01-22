@@ -530,6 +530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MLP_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3975982973914188010, guid: 5d98cc5b4029f3d4f90cba990da79b29, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8321685028807715262, guid: 5d98cc5b4029f3d4f90cba990da79b29, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
