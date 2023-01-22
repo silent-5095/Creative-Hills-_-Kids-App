@@ -1344,6 +1344,7 @@ GameObject:
   - component: {fileID: 990256231}
   - component: {fileID: 990256232}
   - component: {fileID: 990256233}
+  - component: {fileID: 990256234}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -1418,6 +1419,18 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 40}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!114 &990256234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990256230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d21282f57d94249ace034e6dc0a095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1335868295 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2558693054429415199, guid: 33bdd1dd43f11e148be8573bc78697df, type: 3}
