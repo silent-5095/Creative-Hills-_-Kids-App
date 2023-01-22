@@ -1176,6 +1176,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 16777215
       objectReference: {fileID: 0}
+    - target: {fileID: 4121308539854179748, guid: a9cadc62a801de14486171c3784627ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: WordTable_0
+      objectReference: {fileID: 0}
     - target: {fileID: 5256313109797837132, guid: a9cadc62a801de14486171c3784627ab, type: 3}
       propertyPath: value
       value: "\u0642"
@@ -1436,6 +1440,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -5528198864436122802, guid: 6d7bbce85217a0b4f894747b0beac56c, type: 2}
+    - target: {fileID: 6888016404470899004, guid: a9cadc62a801de14486171c3784627ab, type: 3}
+      propertyPath: m_fontSize
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888016404470899004, guid: a9cadc62a801de14486171c3784627ab, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 44
+      objectReference: {fileID: 0}
     - target: {fileID: 6991564656172652287, guid: a9cadc62a801de14486171c3784627ab, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1939,6 +1951,22 @@ PrefabInstance:
     - target: {fileID: 7486361202227839727, guid: a9cadc62a801de14486171c3784627ab, type: 3}
       propertyPath: m_PreserveAspect
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486361202476992760, guid: a9cadc62a801de14486171c3784627ab, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 312.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486361202476992760, guid: a9cadc62a801de14486171c3784627ab, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 69.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486361202476992760, guid: a9cadc62a801de14486171c3784627ab, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7486361202476992760, guid: a9cadc62a801de14486171c3784627ab, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8949411466519690195, guid: a9cadc62a801de14486171c3784627ab, type: 3}
       propertyPath: m_AnchorMax.y
