@@ -34,15 +34,10 @@ namespace Magazine
         {
             foreach (var page in pages)
             {
-                foreach (var VARIABLE in contentHolder)
-                {
-                    
-                }
-                foreach (var p in pages)
-                {
-                    var img= Instantiate(landScapePrefab, holder);
-                    img.sprite = page;
-                }
+                    var img= Instantiate(landScapePrefab, landScapeCHolder);
+                    img.sprite = page;                    
+                    img= Instantiate(portraitPrefab, portraitCHolder);
+                    img.sprite = page; 
             }
         }
     }
