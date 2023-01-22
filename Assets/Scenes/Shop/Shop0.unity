@@ -1044,5 +1044,6 @@ PrefabInstance:
       propertyPath: originalText
       value: "\u062E\u0628\u0632"
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2397848558397693022, guid: 4f98952877acced45bda888f08152c2a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4f98952877acced45bda888f08152c2a, type: 3}
