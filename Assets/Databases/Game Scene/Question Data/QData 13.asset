@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae09178856a12094d80b658cbddaeadd, type: 3}
+  m_Name: QData 13
+  m_EditorClassIdentifier: 
+  qId: 13
+  summary: "\u0645\u0627 \u0647\u0648 \u0627\u0644\u063A\u0634\u061F"
+  level: 0
+  options:
+  - value: "\u0627\u062E\u0641\u0627\u0621 \u0639\u06CC\u0648\u0628 \u0627\u0644\u0633\u0644\u0639\u0629"
+    isCorrect: 1
+  - value: "\u0639\u062F\u0645 \u0627\u0631\u062A\u062F\u0627\u0621 \u0627\u0644\u062B\u0648\u0628
+      \u0627\u0644\u0645\u0646\u0627\u0633\u0628 \u0639\u0646\u062F \u0627\u0644\u0628\u06CC\u0639"
+    isCorrect: 0
+  option0:
+    value: Nepton
+    isCorrect: 0
+  option1:
+    value: Earth
+    isCorrect: 1
+  option2:
+    value: Mars
+    isCorrect: 0
+  option3:
+    value: Jupiter
+    isCorrect: 0
