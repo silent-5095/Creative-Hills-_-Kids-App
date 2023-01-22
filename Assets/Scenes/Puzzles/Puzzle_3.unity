@@ -130,6 +130,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5724946074904018962, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 945
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724946074904018962, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 945
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724946074904018963, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8438682654311360658, guid: 72fed50aa46bd5643b20bf4265898301, type: 3}
+    - target: {fileID: 5724946074904018963, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724946074999416311, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6187181563347311545, guid: 72fed50aa46bd5643b20bf4265898301, type: 3}
+    - target: {fileID: 5724946075499368620, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_text
+      value: "\uFE97\uFE8E\u0631\uFBFE\uFEA6 \u0627\uFEDF\uFEBC\uFEFC\uFEA3\uFBFF\uFE94"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724946075499368620, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_fontSize
+      value: 69.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724946075499368620, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724946075499368620, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: originalText
+      value: "\u062A\u0627\u0631\u06CC\u062E \u0627\u0644\u0635\u0644\u0627\u062D\u06CC\u0629"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724946075539614970, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 193274293616242339, guid: 72fed50aa46bd5643b20bf4265898301, type: 3}
+    - target: {fileID: 5724946075666966798, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6187181563347311545, guid: 72fed50aa46bd5643b20bf4265898301, type: 3}
     - target: {fileID: 5724946075758267119, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -138,6 +182,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5724946076390230016, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4177880651779281075, guid: 72fed50aa46bd5643b20bf4265898301, type: 3}
     - target: {fileID: 5724946076524007569, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
       propertyPath: m_Name
       value: PuzzleCanvas
@@ -226,6 +274,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5724946076758418689, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7538728255324955567, guid: 72fed50aa46bd5643b20bf4265898301, type: 3}
     - target: {fileID: 5724946076960201931, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
