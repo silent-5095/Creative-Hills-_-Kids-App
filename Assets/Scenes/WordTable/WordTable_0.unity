@@ -1441,12 +1441,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5528198864436122802, guid: 6d7bbce85217a0b4f894747b0beac56c, type: 2}
     - target: {fileID: 6888016404470899004, guid: a9cadc62a801de14486171c3784627ab, type: 3}
+      propertyPath: m_text
+      value: "\u0627\uFEDF\uFEDC\uFEE0\uFEE4\uFE8E\u062A \u0627\uFEDF\uFEE4\uFE98\uFED8\uFEC4\uFECC\uFE94\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888016404470899004, guid: a9cadc62a801de14486171c3784627ab, type: 3}
       propertyPath: m_fontSize
       value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 6888016404470899004, guid: a9cadc62a801de14486171c3784627ab, type: 3}
+      propertyPath: originalText
+      value: "\u0627\u0644\u0643\u0644\u0645\u0627\u062A \u0627\u0644\u0645\u062A\u0642\u0637\u0639\u0629\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888016404470899004, guid: a9cadc62a801de14486171c3784627ab, type: 3}
       propertyPath: m_fontSizeBase
       value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888016404470899004, guid: a9cadc62a801de14486171c3784627ab, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6991564656172652287, guid: a9cadc62a801de14486171c3784627ab, type: 3}
       propertyPath: m_AnchorMax.y
