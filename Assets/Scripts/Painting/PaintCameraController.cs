@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,19 @@ namespace Painting
     public class PaintCameraController : MonoBehaviour
     {
         private Vector3 _touchStart;
+        public static PaintCameraController Instance;
         [SerializeField] private new Camera camera;
+        public float CameraSize => camera.orthographicSize;
         public float zoomOutMin = 1;
         public float zoomOutMax = 8;
         public float increment;
 
         // Update is called once per frame
+        private void Awake()
+        {
+            Instance = this;
+        }
+
         private void Update()
         {
             if (Input.GetMouseButtonDown(0))
@@ -52,7 +60,7 @@ namespace Painting
             }
         }
 
-        private void Zoom(float currentIncrement)
+        public void Zoom(float currentIncrement)
         {
             Debug.Log($"Zoom {currentIncrement}");
             camera.orthographicSize = Mathf.Clamp(camera.orthographicSize - currentIncrement, zoomOutMin, zoomOutMax);
