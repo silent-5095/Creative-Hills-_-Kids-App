@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Shop
@@ -13,6 +14,7 @@ namespace Shop
 
         private void Start()
         {
+            items = FindObjectsOfType<ShopItem>().ToList();
             foreach (var item in items)
             {
                 item.EndDragEvent += ItemOnEndDragEvent;

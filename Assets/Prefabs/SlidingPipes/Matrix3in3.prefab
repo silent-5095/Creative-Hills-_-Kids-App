@@ -1404,6 +1404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Matrix3in3
       objectReference: {fileID: 0}
+    - target: {fileID: 6740136928174385440, guid: 6b1ba035071157c45b47381908f38ef4, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7042616396080628722, guid: 6b1ba035071157c45b47381908f38ef4, type: 3}
       propertyPath: m_RootOrder
       value: 0

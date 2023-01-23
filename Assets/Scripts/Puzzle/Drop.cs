@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ namespace Puzzle
 {
     public class Drop : MonoBehaviour, IDropHandler, IPointerEnterHandler
     {
+        public event Action FillSlotEvent;
         [SerializeField] private RectTransform rect;
         [SerializeField] private new BoxCollider2D collider;
         [SerializeField] private RectTransform item;
@@ -33,6 +35,7 @@ namespace Puzzle
             item.GetComponent<IDroppable>().Dropped(true); 
             _image.color =  fillColor;
             _drop.enabled =false;
+            FillSlotEvent?.Invoke();
         }
 
         public void OnDrop(PointerEventData eventData)
@@ -44,6 +47,8 @@ namespace Puzzle
             }
 
             eventData.pointerDrag.GetComponent<IDroppable>().Dropped(item.gameObject == eventData.pointerDrag);
+            if(item.gameObject == eventData.pointerDrag)
+                FillSlotEvent?.Invoke();
             _drop.enabled = item.gameObject != eventData.pointerDrag;
             _image.color = !_drop.enabled ? fillColor :emptyColor ;
         }

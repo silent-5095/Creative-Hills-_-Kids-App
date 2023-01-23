@@ -10,6 +10,9 @@ namespace WordsTable
     public class WordTableController : MonoBehaviour
     {
         public static event Action<string> CompleteWordEvent;
+        [SerializeField] private AudioSource source;
+        [SerializeField] private GameObject winPanel;
+         private int _wordCount;
         [SerializeField] private LineController wordLinePrefab;
         private LineController _currentLineRenderer;
         public string currentWord;
@@ -23,12 +26,24 @@ namespace WordsTable
         {
             Detector.EndTouchEvent -= EndTouch;
             Detector.MoveTouchEvent -= MoveTouch;
+            CompleteWordEvent = null;
         }
 
         private void Awake()
         {
+            _wordCount = levelWord.Count;
             Detector.EndTouchEvent += EndTouch;
             Detector.MoveTouchEvent += MoveTouch;
+            CompleteWordEvent += s =>
+            {
+                _wordCount -= 1;
+                if (_wordCount <= 0)
+                {
+                    winPanel.SetActive(true);
+                }
+                else
+                    source.Play();
+            };
         }
 
         private void Start()
@@ -52,7 +67,7 @@ namespace WordsTable
             var tempLine = Instantiate(wordLinePrefab);
             // tempLine.AddStartingNode(_currentLineRenderer == null ? position : _currentLineRenderer.GetLastPos());
             tempLine.AddStartingNode(position);
-            if (_currentLineRenderer !=null) 
+            if (_currentLineRenderer != null)
                 _currentLineRenderer.MoveLastPoint(position);
             _currentLineRenderer = tempLine;
             _currentLineRenderer.SetColor(_currentColor);

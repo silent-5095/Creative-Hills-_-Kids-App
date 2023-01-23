@@ -8,7 +8,8 @@ namespace SlidingPipes
 {
     public class Matrix : MonoBehaviour
     {
-        public static event Action<bool> WinEvent; 
+        public static event Action<bool> WinEvent;
+        [SerializeField] private AudioSource source;
         [SerializeField] private Section[] sections;
         private List<Vector2> _changeOrderArr;
         [SerializeField] private List<SectionType> _correctPath;
@@ -81,6 +82,8 @@ namespace SlidingPipes
                 _isWin = _correctPath[index] == section.SectionProp.type;
                 if (!_isWin) break;
             }
+
+            source.Play();
             if (_isWin)
                 Win();
             // else

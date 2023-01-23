@@ -42,6 +42,7 @@ namespace Shop
         {
             if (!_isAttached)
                 _isTouched = true;
+            
         }
 
         public void OnPointerUp()

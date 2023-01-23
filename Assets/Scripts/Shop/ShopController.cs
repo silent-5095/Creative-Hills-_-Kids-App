@@ -11,6 +11,8 @@ namespace Shop
         [SerializeField] private List<ShopItem> items;
         [SerializeField] private string sceneName;
         private int _activeItemCount = 0;
+        [SerializeField] private GameObject winPanel;
+        [SerializeField] private AudioSource source;
 
         private void Start()
         {
@@ -28,12 +30,13 @@ namespace Shop
             _activeItemCount--;
             if (_activeItemCount <= 0)
                 Win();
+            else
+                source.Play();
         }
 
         private void Win()
         {
-            Debug.Log("win Shop Scene");
-            SceneManager.LoadScene(sceneName);
+            winPanel.SetActive(true);
         }
     }
 }
