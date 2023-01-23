@@ -9235,7 +9235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad704e34e2f82745a6bbe1cf0bdecf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defColor: {r: 1, g: 1, b: 1, a: 1}
+  defColor: {r: 0, g: 0, b: 0, a: 1}
+  defBrush: 0
 --- !u!82 &6817331867452832458
 AudioSource:
   m_ObjectHideFlags: 0
