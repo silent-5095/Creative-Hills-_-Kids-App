@@ -79,7 +79,22 @@
             </e>
           </e>
         </e>
+        <e p="RTLTMPro-master" t="Include">
+          <e p="Packages" t="Include">
+            <e p="manifest.json" t="Include" />
+            <e p="packages-lock.json" t="Include" />
+          </e>
+          <e p="ProjectSettings" t="Include">
+            <e p="ProjectVersion.txt" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="Arabic" t="Include">
+            <e p="ArabicFixer.cs" t="Include" />
+            <e p="ArabicFixer3D.cs" t="Include" />
+            <e p="ArabicFixerTMPRO.cs" t="Include" />
+            <e p="ArabicSupport.cs" t="Include" />
+          </e>
           <e p="Extension" t="Include">
             <e p="Extension.cs" t="Include" />
           </e>
@@ -157,6 +172,12 @@
             <e p="SectionType.cs" t="Include" />
             <e p="SlidingBall.cs" t="Include" />
             <e p="SlidingController.cs" t="Include" />
+          </e>
+          <e p="Video" t="Include">
+            <e p="CustomSlider.cs" t="Include" />
+            <e p="PlayerPanel.cs" t="Include" />
+            <e p="TimeScrub.cs" t="Include" />
+            <e p="VideoButton.cs" t="Include" />
           </e>
           <e p="WordsTable" t="Include">
             <e p="LetterButtonData.cs" t="Include" />
