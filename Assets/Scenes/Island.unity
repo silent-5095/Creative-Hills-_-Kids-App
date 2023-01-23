@@ -3385,6 +3385,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 546620065827343302, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 731336240235290145, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830926873394710525, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2939363850020371394, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
       propertyPath: m_Name
       value: Question_Canvas
@@ -3477,6 +3489,26 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1762536050}
+    - target: {fileID: 2939363850785553363, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561024349692587727, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
+      propertyPath: forceFix
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561024349692587727, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
+      propertyPath: preserveNumbers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561024349692587727, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770991785888966885, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
 --- !u!1 &3001689983831428406
