@@ -3493,6 +3493,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4304524708778497828, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6561024349692587727, guid: 0a128091cdbbaef45a127d303f163103, type: 3}
       propertyPath: forceFix
       value: 1
