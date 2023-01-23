@@ -25,8 +25,11 @@ namespace Video
         private void OnButtonClick()
         {
             _videoPlayer.clip = clip;
-            _videoPlayer.Prepare();
+            _videoPlayer.Play();
             VideoButtonClickEvent?.Invoke(clip);
         }
     }
 }
+
+
+

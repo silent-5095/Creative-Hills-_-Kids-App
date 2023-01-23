@@ -1,3 +1,5 @@
+using System;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,8 +32,14 @@ namespace Magazine
             }
         }
 
+        private void OnDestroy()
+        {
+            Screen.orientation = default;
+        }
+
         private void Start()
         {
+            Screen.orientation = ScreenOrientation.AutoRotation;
             foreach (var page in pages)
             {
                     var img= Instantiate(landScapePrefab, landScapeCHolder);

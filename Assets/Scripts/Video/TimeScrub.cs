@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Video;
 
 namespace Video
@@ -10,7 +9,7 @@ namespace Video
     {
         [SerializeField] public VideoPlayer vPlayer;
 
-        [SerializeField] private Text currentTime, totalTime;
+        // [SerializeField] private Text currentTime, totalTime;
         private bool _setUp, _videoPlayerRide = true;
 
         private void SetUp(VideoPlayer videoPlayer)
@@ -28,7 +27,7 @@ namespace Video
             var maxVal = Mathf.Round((float) vPlayer.length);
             visualSlider.maxValue = maxVal;
             touchSlider.maxValue = maxVal;
-            totalTime.text = TimerFormatHandler((int) vPlayer.length);
+            // totalTime.text = TimerFormatHandler((int) vPlayer.length);
             _setUp = true;
         }
 
@@ -86,7 +85,7 @@ namespace Video
                 return;
             }
 
-            currentTime.text = TimerFormatHandler((int) vPlayer.time);
+            // currentTime.text = TimerFormatHandler((int) vPlayer.time);
             if (vPlayer is null || !_videoPlayerRide)
                 return;
             visualSlider.SetValue((float) vPlayer.time);
