@@ -1,5 +1,6 @@
 ﻿using System;
 using RTLTMPro;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,8 @@ namespace GameScene
         public event Action<OptionProp> ButtonClickEvent;
         public static event Action<OptionProp> InternalClickEvent;
         [SerializeField] private Button button;
-        [SerializeField] private RTLTextMeshPro text;
+        [SerializeField] private TextMeshProUGUI text;
+        [SerializeField] private ArabicFixerTMPRO fixer;
         [SerializeField] private OptionProp optionProp;
         [SerializeField] private bool isAnswer;
 
@@ -18,7 +20,7 @@ namespace GameScene
         public void SetData(OptionProp option)
         {
             optionProp = option;
-            text.text = option.GetOption().Key;
+            fixer.fixedText = option.GetOption().Key;
             isAnswer = option.GetOption().Value;
             button.interactable = true;
             button.image.color = Color.white;
@@ -26,15 +28,11 @@ namespace GameScene
 
         private void OnDestroy()
         {
-            // ButtonClickEvent -= OnButtonClickEvent;
-            // ButtonClickEvent -= InternalClickEvent;
             InternalClickEvent -= OnButtonClickEvent;
         }
 
         private void Awake()
         {
-            // ButtonClickEvent += OnButtonClickEvent;
-            // ButtonClickEvent += InternalClickEvent;
             InternalClickEvent += OnButtonClickEvent;
         }
 
@@ -47,7 +45,6 @@ namespace GameScene
         {
             if (optionProp is null)
                 return;
-            Debug.Log($"it is pushed button and color is {button.image.color}");
             ButtonClickEvent?.Invoke(optionProp);
             InternalClickEvent?.Invoke(optionProp);
         }
@@ -55,16 +52,13 @@ namespace GameScene
         private void OnButtonClickEvent(OptionProp prop)
         {
             button.interactable = false;
-            Debug.Log($"it is pushed button and color is {button.image.color}");
             if (optionProp == prop)
             {
                 button.image.color = isAnswer ? Color.green : Color.red;
-                Debug.Log($"it is pushed button and color is {button.image.color}");
             }
             if (isAnswer)
             {
                 button.image.color = Color.green;
-                Debug.Log($"it is correct button and color is {button.image.color}");
             }
         }
     }

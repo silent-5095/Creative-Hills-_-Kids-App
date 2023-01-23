@@ -502,7 +502,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2939363850785553372}
   - component: {fileID: 2939363850785553362}
-  - component: {fileID: 2939363850785553363}
+  - component: {fileID: 3743422787698183093}
+  - component: {fileID: 849898920453066571}
   m_Layer: 5
   m_Name: Text - RTLTMP
   m_TagString: Untagged
@@ -538,7 +539,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2939363850785553373}
   m_CullTransparentMesh: 1
---- !u!114 &2939363850785553363
+--- !u!114 &3743422787698183093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -547,7 +548,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2939363850785553373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9839c2d141529145a431aef4d757ff3, type: 3}
+  m_Script: {fileID: 11500000, guid: 80172e7093d66a24a9c280683dbfd615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixedText: "\u0645\u0646 \u062D\u0642\u064A \u0645\u0639\u0631\u0641\u0629 \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062A\u0643"
+  ShowTashkeel: 1
+  UseHinduNumbers: 0
+--- !u!114 &849898920453066571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2939363850785553373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -558,11 +574,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uFEE3\uFEE6 \uFEA3\uFED8\uFBFD  \uFEE3\uFECC\uFEAE\uFED3\uFE94 \u0627\uFEDF\uFEE4\uFECC\uFEE0\uFEEE\uFEE3\uFE8E\u062A\n\u0627\uFEDF\uFEE4\uFE98\uFECC\uFEE0\uFED8\uFE94
-    \uFE91\uFE8E\uFEDF\uFEA8\uFEAA\uFEE3\uFE8E\u062A \u0648\u0627\uFEDF\uFEE4\uFEE8\uFE98\uFEA0\uFE8E\u062A"
-  m_isRightToLeft: 1
+  m_text: 
+  m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d7bbce85217a0b4f894747b0beac56c, type: 2}
-  m_sharedMaterial: {fileID: 3420840966509603597, guid: 513e672d1c2266a459604becd6c26a7d, type: 2}
+  m_sharedMaterial: {fileID: -5528198864436122802, guid: 6d7bbce85217a0b4f894747b0beac56c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -586,14 +601,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 72
+  m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -610,7 +625,7 @@ MonoBehaviour:
   m_enableKerning: 1
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
-  m_isRichText: 0
+  m_isRichText: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -628,13 +643,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
-  preserveNumbers: 0
-  farsi: 1
-  originalText: "\u0645\u0646 \u062D\u0642\u06CC  \u0645\u0639\u0631\u0641\u0629
-    \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062A\n\u0627\u0644\u0645\u062A\u0639\u0644\u0642\u0629
-    \u0628\u0627\u0644\u062E\u062F\u0645\u0627\u062A \u0648\u0627\u0644\u0645\u0646\u062A\u062C\u0627\u062A"
-  fixTags: 1
-  forceFix: 0
 --- !u!1 &2939363850882012220
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +928,8 @@ MonoBehaviour:
   mainPanel: {fileID: 2939363851368703935}
   correctPanel: {fileID: 644835446030553878}
   wrongPanel: {fileID: 8438853457999637487}
-  summary: {fileID: 2939363850785553363}
+  summary: {fileID: 849898920453066571}
+  fixerSummary: {fileID: 3743422787698183093}
   optionButtons:
   - {fileID: 4854253652761303802}
   - {fileID: 3566645814345639475}

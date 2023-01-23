@@ -1,5 +1,6 @@
 using System;
 using RTLTMPro;
+using TMPro;
 using UnityEngine;
 
 namespace GameScene
@@ -8,8 +9,12 @@ namespace GameScene
     {
         public static event Action<QuestionData, bool> AnswerEvent;
         public static event Action CancelQuestionEvent;
+
         [SerializeField] private GameObject mainPanel, correctPanel, wrongPanel;
-        [SerializeField] private RTLTextMeshPro summary;
+
+        // [SerializeField] private RTLTextMeshPro summary;
+        [SerializeField] private TextMeshProUGUI summary;
+        [SerializeField] private ArabicFixerTMPRO fixerSummary;
         [SerializeField] private OptionButton[] optionButtons;
         private QuestionData _currentData;
         private bool _answerIsCorrect;
@@ -44,7 +49,8 @@ namespace GameScene
             if (data is null)
                 return;
             _currentData = data;
-            summary.text = _currentData.GetSummary();
+            // summary.text = _currentData.GetSummary();
+            fixerSummary.fixedText = _currentData.GetSummary();
 
             var options = data.GetOptions();
             Debug.Log(data.GetOptions().Count);
@@ -57,7 +63,7 @@ namespace GameScene
 
             if (optionButtons.Length > options.Count)
             {
-                for (var i = options.Count ; i < optionButtons.Length; i++)
+                for (var i = options.Count; i < optionButtons.Length; i++)
                 {
                     optionButtons[i].gameObject.SetActive(false);
                 }
