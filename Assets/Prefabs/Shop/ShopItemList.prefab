@@ -74,7 +74,7 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  m_ReverseArrangement: 1
 --- !u!114 &5687169116476388411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,9 +149,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -309,8 +309,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uFEC3\uFEE4\uFE8E\uFEC3\uFEE2"
   m_isRightToLeft: 1
-  m_fontAsset: {fileID: 11400000, guid: 513e672d1c2266a459604becd6c26a7d, type: 2}
-  m_sharedMaterial: {fileID: 3420840966509603597, guid: 513e672d1c2266a459604becd6c26a7d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5445d4e17d150804ab3d3f21df35cea1, type: 2}
+  m_sharedMaterial: {fileID: 4038690617341770267, guid: 5445d4e17d150804ab3d3f21df35cea1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -337,9 +337,9 @@ MonoBehaviour:
   m_fontSize: 70
   m_fontSizeBase: 101.7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 65
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_enableKerning: 1
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
-  m_isRichText: 1
+  m_isRichText: 0
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0

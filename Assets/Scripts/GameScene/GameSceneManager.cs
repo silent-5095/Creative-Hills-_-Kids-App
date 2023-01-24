@@ -45,9 +45,7 @@ namespace GameScene
         public QuestionData GetNextRemain(QuestionData currentQuestion)
         {
             var cIndex = remainList.FindIndex(c => c == currentQuestion);
-            Debug.Log($"RemainList count is = {remainList.Count}");
             cIndex = remainList.Count - 1 > cIndex ? cIndex + 1 : 0;
-            Debug.Log($"Current Index is ={cIndex-1} and next is ={cIndex} and data is {remainList[cIndex]}");
             return remainList[cIndex] is null ? null : remainList[cIndex];
         }
 

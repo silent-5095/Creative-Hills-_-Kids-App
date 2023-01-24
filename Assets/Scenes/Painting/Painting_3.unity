@@ -16861,14 +16861,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1892589875}
     m_Modifications:
-    - target: {fileID: 531929527, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -13.195007
-      objectReference: {fileID: 0}
     - target: {fileID: 531929528, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2702385494360055075}
+    - target: {fileID: 531929529, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 531929529, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 665092485111239058, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

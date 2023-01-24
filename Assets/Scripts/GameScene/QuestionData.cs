@@ -15,7 +15,7 @@ namespace GameScene
         [SerializeField] private QuestionLevel level;
         public QuestionLevel Level => level;
         [SerializeField] private OptionProp[] options;
-        [SerializeField] private OptionProp option0, option1, option2, option3;
+        // [SerializeField] private OptionProp option0, option1, option2, option3;
 
         public bool IsOpen
         {

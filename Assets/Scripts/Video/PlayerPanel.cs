@@ -12,19 +12,26 @@ namespace Video
     public class PlayerPanel : MonoBehaviour
     {
         // public static PlayerPanel Instance;
-        [SerializeField] private VideoPlayer vPlayer;
+        // [SerializeField] private VideoPlayer vPlayer;
         [SerializeField] private VideoButton[] buttons;
         [SerializeField] private VideoPlayer player;
+
         [SerializeField] private GameObject fullScreen;
+
         // [SerializeField] private Slider[] timeLines;
-        [SerializeField] private Slider soundSlider;
+        [SerializeField] private Slider[] soundSlider;
         [SerializeField] private AudioSource source;
-        [SerializeField] private Image soundButton, playButton;
+        [SerializeField] private Image[] soundButton, playButton;
         [SerializeField] private Sprite pauseSp, playSp, muteSp, volumeSp;
 
         private void Start()
         {
-            soundSlider.value = source.volume;
+            foreach (var slider in soundSlider)
+            {
+                slider.value = source.volume;
+            }
+
+            // soundSlider.value = source.volume;
             // Instance = this;
             foreach (var button in buttons)
             {
@@ -35,12 +42,25 @@ namespace Video
 
         private void OnVideoButtonClickEvent(VideoClip clip)
         {
-            vPlayer.Play();
-            playButton.sprite = vPlayer.isPaused ? playSp : pauseSp;
+            player.Play();
+            foreach (var pButton in playButton)
+            {
+                pButton.sprite = player.isPaused ? playSp : pauseSp;
+            }
 
             source.mute = false;
-            soundButton.sprite = volumeSp;
-            soundSlider.interactable = true;
+            foreach (var sButton in soundButton)
+            {
+                sButton.sprite = volumeSp;
+            }
+
+            // soundButton.sprite = volumeSp;
+            foreach (var slider in soundSlider)
+            {
+                slider.interactable = true;
+            }
+
+            // soundSlider.interactable = true;
         }
 
         // private void Update()
@@ -57,23 +77,36 @@ namespace Video
 
         public void OnStopButton()
         {
-            vPlayer.Stop();
-            playButton.sprite = playSp;
+            player.Stop();
+            foreach (var pb in playButton)
+            {
+                pb.sprite = playSp;
+            }
+
+            // playButton.sprite = playSp;
         }
 
         public void OnPauseButton()
         {
-            vPlayer.Pause();
-            playButton.sprite = playSp;
+            player.Pause();
+            foreach (var pb in playButton)
+            {
+                pb.sprite = playSp;
+            }
+
+            // playButton.sprite = playSp;
         }
 
         public void OnPlayButton()
         {
-            if (vPlayer.isPaused)
-                vPlayer.Play();
+            if (player.isPaused)
+                player.Play();
             else
-                vPlayer.Pause();
-            playButton.sprite = vPlayer.isPaused ? playSp : pauseSp;
+                player.Pause();
+            foreach (var pb in playButton)
+            {
+                pb.sprite = player.isPaused ? playSp : pauseSp;
+            }
         }
 
         public void OnNextButton()
@@ -87,9 +120,12 @@ namespace Video
 
         public void OnReplayButton()
         {
-            vPlayer.Stop();
-            vPlayer.Play();
-            playButton.sprite = pauseSp;
+            player.Stop();
+            player.Play();
+            foreach (var pb in playButton)
+            {
+                pb.sprite = pauseSp;
+            }
         }
 
         public void OnSoundButton()
@@ -97,8 +133,15 @@ namespace Video
             var mute = source.mute;
             mute = !mute;
             source.mute = mute;
-            soundButton.sprite = mute ? muteSp : volumeSp;
-            soundSlider.interactable = !mute;
+            foreach (var sb in soundButton)
+            {
+                sb.sprite = mute ? muteSp : volumeSp;
+            }
+
+            foreach (var slider in soundSlider)
+            {
+                slider.interactable = !mute;
+            }
         }
 
         // private bool _scrubTouched;
@@ -153,9 +196,9 @@ namespace Video
         //     _touchedSlider = null;
         // }
 
-        public void OnSoundSlider()
+        public void OnSoundSlider(Slider slider)
         {
-            source.volume = soundSlider.value;
+            source.volume = slider.value;
         }
     }
 }

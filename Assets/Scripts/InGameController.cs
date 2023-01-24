@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using GameScene;
+using Painting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,7 +13,7 @@ public class InGameController : MonoBehaviour
     [SerializeField] private bool loadFromIslands;
     [SerializeField] private string defaultSceneName;
     [SerializeField] private GameObject winPanel, exitPanel;
-    [SerializeField] private Button submitButton, cancelButton;
+    [SerializeField] private Button submitButton, cancelButton,backButton;
 
     private void Start()
     {
@@ -24,7 +25,8 @@ public class InGameController : MonoBehaviour
 
     public void OnSubmitButtonClick()
     {
-        SceneManager.LoadScene(loadFromIslands ? "Island" : defaultSceneName);
+        ForDemo.Instance.LoadScene(loadFromIslands ? "Island" : defaultSceneName);
+        // SceneManager.LoadScene(loadFromIslands ? "Island" : defaultSceneName);
     }
 
     public void Win()

@@ -9,15 +9,16 @@ namespace GameScene
     {
         public static event Action<QuestionData, bool> AnswerEvent;
         public static event Action CancelQuestionEvent;
+        public static event Action<bool> QPanelRayCastEvent;
 
         [SerializeField] private GameObject mainPanel, correctPanel, wrongPanel;
 
-        // [SerializeField] private RTLTextMeshPro summary;
         [SerializeField] private TextMeshProUGUI summary;
         [SerializeField] private ArabicFixerTMPRO fixerSummary;
         [SerializeField] private OptionButton[] optionButtons;
         private QuestionData _currentData;
         private bool _answerIsCorrect;
+        private Vector2 _defPos;
 
         private void OnDestroy()
         {
@@ -26,13 +27,14 @@ namespace GameScene
 
         private void Start()
         {
+            _defPos = mainPanel.transform.localPosition;
             Island.IslandRefreshQPanelEvent += SetNewQuestion;
             foreach (var optionButton in optionButtons)
             {
                 optionButton.ButtonClickEvent += OnOptionButtonClickEvent;
             }
 
-            mainPanel.SetActive(false);
+            // mainPanel.SetActive(false);
         }
 
         private void OnOptionButtonClickEvent(OptionProp prop)
@@ -69,19 +71,26 @@ namespace GameScene
                 }
             }
 
-            mainPanel.SetActive(true);
+            mainPanel.transform.localPosition = Vector2.zero;
+            QPanelRayCastEvent?.Invoke(true);
+            // mainPanel.SetActive(true);
         }
 
         public void OnSubmitButton()
         {
-            mainPanel.SetActive(false);
+            // mainPanel.SetActive(false);
+            mainPanel.transform.localPosition = _defPos;
+            QPanelRayCastEvent?.Invoke(false);
+
             AnswerEvent?.Invoke(_currentData, _answerIsCorrect);
         }
 
         public void OnCancelButton()
         {
             CancelQuestionEvent?.Invoke();
-            mainPanel.SetActive(false);
+            mainPanel.transform.localPosition = _defPos;
+            QPanelRayCastEvent?.Invoke(false);
+            // mainPanel.SetActive(false);
         }
     }
 }

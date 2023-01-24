@@ -11,8 +11,10 @@ namespace GameScene
     public class Island : MonoBehaviour
     {
         public static event Action<QuestionData> IslandRefreshQPanelEvent;
+        public static event Action<QuestionData> IslandTrueAnswerRefreshEvent;
 
         public static string IslandGameRef;
+        public int islandId;
         [SerializeField] private string islandName;
         [SerializeField] private bool isFirst, isOpen, isPassed;
         [SerializeField] private int defStartQuestion;
@@ -60,6 +62,7 @@ namespace GameScene
         }
         private void OnQuestionPanelAnswerEvent(QuestionData questionData, bool con)
         {
+            Debug.Log(con);
             if (con)
             {
                 if (_clickedButton is null)
@@ -107,7 +110,7 @@ namespace GameScene
         {
             if (!isPassed) return;
             IslandGameRef = islandName;
-            SceneManager.LoadScene(gameSceneName);
+            ForDemo.Instance.LoadScene(gameSceneName);
         }
         private void Prepare()
         {
@@ -154,7 +157,7 @@ namespace GameScene
                 return;
             isOpen = true;
             PlayerPrefs.SetInt(islandName, 1);
-            if (buttons[0] == null)
+            if (buttons[0] == null ||buttons[0].questionData is null)
                 return;
             buttons[0].questionData.IsOpen = true;
             buttons[0].HandleCondition();
