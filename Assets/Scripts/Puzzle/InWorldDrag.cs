@@ -43,6 +43,19 @@ namespace Puzzle
             objectTransform.position = tempPos;
         }
 
+        public void OnStationaryTouchHandler(Vector3 position)
+        {
+            if (IsPlaced)
+                return;
+            
+            var tempPos = position;
+                
+            var objectTransform = transform;
+            
+            tempPos.z = !is3D ? objectTransform.position.z : tempPos.z;
+            objectTransform.position = tempPos;
+        }
+
         public void OnEndTouchHandler()
         {
             if (IsPlaced)

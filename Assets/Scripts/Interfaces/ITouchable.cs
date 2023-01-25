@@ -7,6 +7,7 @@ namespace Interfaces
     {
         void OnBeganTouchHandler();
         void OnMoveTouchHandler(Vector3 position);
+        void OnStationaryTouchHandler(Vector3 position);
         void OnEndTouchHandler();
     }
 }

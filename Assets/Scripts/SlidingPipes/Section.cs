@@ -124,6 +124,11 @@ namespace SlidingPipes
         {
         }
 
+        public void OnStationaryTouchHandler(Vector3 position)
+        {
+            
+        }
+
         public void OnEndTouchHandler()
         {
         }

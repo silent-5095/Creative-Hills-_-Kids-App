@@ -54,6 +54,11 @@ namespace Painting
         {
         }
 
+        public void OnStationaryTouchHandler(Vector3 position)
+        {
+            
+        }
+
         public void OnMoveTouchHandler()
         {
         }

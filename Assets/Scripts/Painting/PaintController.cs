@@ -14,6 +14,7 @@ namespace Painting
         
         [SerializeField] private Color defColor;
         [SerializeField] private int defBrush;
+        public float touchDly;
 
         private void OnDestroy()
         {
@@ -21,6 +22,11 @@ namespace Painting
             MainPaletteButton.PushButtonEvent-= OnMainPaletteButtonEvent;
             PatternButton.SelectPatternEvent-= OnPatternButtonClickEvent;
             PatternButton.SelectBrushEvent-= OnSelectBrushButtonClickEvent;
+        }
+
+        private void Awake()
+        {
+            Instance = this;
         }
 
         private void Start()
@@ -31,7 +37,6 @@ namespace Painting
             MainPaletteButton.PushButtonEvent+= OnMainPaletteButtonEvent;
             PatternButton.SelectPatternEvent+= OnPatternButtonClickEvent;
             PatternButton.SelectBrushEvent+= OnSelectBrushButtonClickEvent;
-            Instance = this;
             ResetAll();
         }
 

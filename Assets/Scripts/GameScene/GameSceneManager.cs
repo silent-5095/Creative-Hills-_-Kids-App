@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace GameScene
@@ -7,7 +8,7 @@ namespace GameScene
     {
         public static GameSceneManager Instance;
         [SerializeField] private List<QuestionData> questionDataList;
-        [HideInInspector] [SerializeField] private List<QuestionData> remainList, passedList;
+        private List<QuestionData> remainList, passedList;
         private int _remainQIndex, _passedQIndex;
         public int TotalQuestion() => questionDataList.Count;
 
@@ -22,13 +23,19 @@ namespace GameScene
             if (Instance is not null)
                 Destroy(Instance);
             Instance = this;
+            Debug.Log("dd");
+            passedList=new List<QuestionData>();
+            remainList = questionDataList.ToList();
             foreach (var questionData in questionDataList)
             {
                 if (questionData.IsCompleted)
+                {
                     passedList.Add(questionData);
-                else
-                    remainList.Add(questionData);
+                    remainList.Remove(questionData);
+                }
             }
+
+            remainList[0].IsOpen = true;
         }
 
 

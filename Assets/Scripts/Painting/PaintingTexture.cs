@@ -30,7 +30,6 @@ namespace Painting
         {
             foreach (var brushTexture in brushTextures)
             {
-                Debug.Log("ResetTexture");
                 brushTexture.Active(false);
             }
         }

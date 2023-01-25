@@ -11,17 +11,18 @@ namespace Painting
     [RequireComponent(typeof(SpriteRenderer), typeof(SpriteMask), typeof(PolygonCollider2D))]
     public class PaintSection : MonoBehaviour, ITouchable
     {
-        [HideInInspector]
-        [SerializeField] private SolidPaintingTexture solidPaintingTextures;
-        [HideInInspector]
-        [SerializeField] private BrushPaintingTexture brushPaintingTextures;
+        [HideInInspector] [SerializeField] private SolidPaintingTexture solidPaintingTextures;
+        [HideInInspector] [SerializeField] private BrushPaintingTexture brushPaintingTextures;
         [SerializeField] private AudioSource source;
-        
-        [HideInInspector]
-        [SerializeField] private new SpriteRenderer renderer;
-        
-        [HideInInspector]
-        [SerializeField] private SpriteMask mask;
+
+        [HideInInspector] [SerializeField] private new SpriteRenderer renderer;
+
+        [HideInInspector] [SerializeField] private SpriteMask mask;
+
+        [SerializeField] private float touchDlyTime;
+        private float _touchTime;
+        private bool _beginTouch, _correct;
+        private Vector2 _bTouchPos;
 
         [SuppressMessage("ReSharper", "Unity.InefficientPropertyAccess")]
         private void OnDestroy()
@@ -32,6 +33,7 @@ namespace Painting
         private void Start()
         {
             PaintController.ResetAllEvent += OnResetAllEvent;
+            touchDlyTime = PaintController.Instance.touchDly;
             renderer = GetComponent<SpriteRenderer>();
             mask = GetComponent<SpriteMask>();
             renderer.sortingLayerName = "Player";
@@ -53,10 +55,47 @@ namespace Painting
             renderer.color = Color.white;
         }
 
+        private void Update()
+        {
+            if (_beginTouch)
+            {
+                _touchTime += Time.deltaTime;
+            }
+        }
+
         public void OnBeganTouchHandler()
         {
+            _touchTime = 0;
+            _beginTouch = true;
+            _bTouchPos = Input.touches[0].position;
+        }
+
+        public void OnMoveTouchHandler(Vector3 position)
+        {
+            if (_bTouchPos.magnitude - Input.touches[0].position.magnitude > 1)
+            {
+                Debug.Log($"move {_bTouchPos.magnitude - Input.touches[0].position.magnitude} ");
+                _correct = false;
+            }
+        }
+
+        public void OnStationaryTouchHandler(Vector3 position)
+        {
+        }
+
+        public void OnMoveTouchHandler()
+        {
+            _correct = false;
+        }
+
+        public void OnEndTouchHandler()
+        {
+                _correct = _touchTime <touchDlyTime;
+            _beginTouch = false;
+            _touchTime = 0;
+            if (!_correct || Input.touchCount >= 2)
+                return;
             source.Play();
-            Debug.Log("OnBegan Touch Handler");
             solidPaintingTextures.ResetTextures();
             brushPaintingTextures.ResetTextures();
             switch (PaintController.GetPaintType())
@@ -64,25 +103,20 @@ namespace Painting
                 case PaintType.None:
                     break;
                 case PaintType.Color:
-                    // renderer.color = PaintController.GetColor();
-                        Debug.Log("color");
-                        var tempTexture = brushPaintingTextures.GetTexture(PaintController.GetBrushIndex());
+                    var tempTexture = brushPaintingTextures.GetTexture(PaintController.GetBrushIndex());
                     mask.enabled = tempTexture is not null;
-                        if (tempTexture is null)
-                            break;
-                        tempTexture.Active(true);
-                        tempTexture.SetColor(PaintController.GetColor());
+                    if (tempTexture is null)
+                        break;
+                    tempTexture.Active(true);
+                    tempTexture.SetColor(PaintController.GetColor());
                     break;
                 case PaintType.Texture:
-                    Debug.Log("Texture");
                     mask.enabled = true;
                     renderer.color = Color.white;
                     solidPaintingTextures.GetTexture(PaintController.GetPatternIndex()).Active(true);
 
                     break;
                 case PaintType.Brush:
-                    // renderer.color = PaintController.GetColor();
-                    Debug.Log("Brush");
                     var tTexture = brushPaintingTextures.GetTexture(PaintController.GetBrushIndex());
                     mask.enabled = tTexture is not null;
                     if (tTexture is null)
@@ -99,18 +133,6 @@ namespace Painting
                     mask.enabled = false;
                     break;
             }
-        }
-
-        public void OnMoveTouchHandler(Vector3 position)
-        {
-        }
-
-        public void OnMoveTouchHandler()
-        {
-        }
-
-        public void OnEndTouchHandler()
-        {
         }
     }
 }

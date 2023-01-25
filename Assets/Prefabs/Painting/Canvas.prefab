@@ -1263,7 +1263,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: -1809122149
+  m_SortingLayerID: -1459841127
   m_SortingOrder: 61
   m_TargetDisplay: 0
 --- !u!114 &8955940125364923248
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 2960, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1324,18 +1324,6 @@ PrefabInstance:
     - target: {fileID: 5779974365528689482, guid: 6d87936924f024d449de527a5a6f45c1, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5779974365528689482, guid: 6d87936924f024d449de527a5a6f45c1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.0606785
-      objectReference: {fileID: 0}
-    - target: {fileID: 5779974365528689482, guid: 6d87936924f024d449de527a5a6f45c1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.701262
-      objectReference: {fileID: 0}
-    - target: {fileID: 5779974365528689482, guid: 6d87936924f024d449de527a5a6f45c1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5779974365528689482, guid: 6d87936924f024d449de527a5a6f45c1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1698,18 +1686,6 @@ PrefabInstance:
     - target: {fileID: 1763151046979010874, guid: e1e9012577dff2749ba437ea00f1b10e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 888
-      objectReference: {fileID: 0}
-    - target: {fileID: 1763151046979010874, guid: e1e9012577dff2749ba437ea00f1b10e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1763151046979010874, guid: e1e9012577dff2749ba437ea00f1b10e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1763151046979010874, guid: e1e9012577dff2749ba437ea00f1b10e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1763151046979010874, guid: e1e9012577dff2749ba437ea00f1b10e, type: 3}
       propertyPath: m_LocalPosition.x

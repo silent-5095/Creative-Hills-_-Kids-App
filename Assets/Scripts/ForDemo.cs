@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ForDemo : MonoBehaviour
 {
     public static ForDemo Instance;
-    [SerializeField] private ScreenOrientation orientation=ScreenOrientation.LandscapeLeft;
+    [SerializeField] private ScreenOrientation orientation;
 
     private void Awake()
     {
@@ -15,6 +15,7 @@ public class ForDemo : MonoBehaviour
     private void Start()
     {
         Screen.orientation = orientation;
+        Screen.autorotateToPortrait = true;
         Debug.Log(Screen.orientation);
     }
 

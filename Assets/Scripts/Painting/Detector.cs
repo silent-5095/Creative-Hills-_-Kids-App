@@ -9,6 +9,7 @@ namespace Painting
     {
         public static event Action<Vector2> BeginTouchEvent;
         public static event Action<Vector2> MoveTouchEvent;
+        public static event Action<Vector2> StationaryEvent;
         public static event Action<Vector2> EndTouchEvent;
         [SerializeField] private new Camera camera;
         [SerializeField] private LayerMask layer;
@@ -42,8 +43,8 @@ namespace Painting
                     MoveTouchEvent?.Invoke(pos);
                     break;
                 case TouchPhase.Stationary:
-                    _currentTouch?.OnMoveTouchHandler(pos);
-                    MoveTouchEvent?.Invoke(pos);
+                    _currentTouch?.OnStationaryTouchHandler(pos);
+                    StationaryEvent?.Invoke(pos);
                     break;
                 case TouchPhase.Ended:
                     _currentTouch?.OnEndTouchHandler();
