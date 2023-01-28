@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: a89680134696bf943b9ddceb785e05c0
+guid: 9d3a3c2e8baa6e54b8eee2a3a42233cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -112,29 +113,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Game menu UI_0
+      name: Home screen UI 4 (2)_0
       rect:
         serializedVersion: 2
-        x: 68
-        y: 1664
-        width: 332
-        height: 328
+        x: 103
+        y: 729
+        width: 249
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 292a5c7ba71e69e46a122ed2d24ca3ca
-      internalID: 439812819
+      spriteID: 698f897ddca1403448172494b6b2c108
+      internalID: 1147452796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_1
+      name: Home screen UI 4 (2)_1
       rect:
         serializedVersion: 2
-        x: 68
-        y: 1240
-        width: 332
-        height: 327
+        x: 491
+        y: 766
+        width: 241
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eadaecbc53a427149b1601515567c941
-      internalID: -38921741
+      spriteID: a0a91d4366fcedc4eb2d774b522a121a
+      internalID: -1517076473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_2
+      name: Home screen UI 4 (2)_2
       rect:
         serializedVersion: 2
-        x: 429
-        y: 1664
-        width: 335
-        height: 330
+        x: 820
+        y: 730
+        width: 170
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8823cb12c1dea944b8e6605beb2727b
-      internalID: -524680581
+      spriteID: abe7d034f690ce047ae74983ff5e3ec0
+      internalID: -484144327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_3
+      name: Home screen UI 4 (2)_3
       rect:
         serializedVersion: 2
-        x: 428
-        y: 1240
-        width: 336
-        height: 329
+        x: 1059
+        y: 694
+        width: 229
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 102966c302eea3a48b3d01c0890f018c
-      internalID: -537687259
+      spriteID: 41e0440f62496374ea4d295955dfa526
+      internalID: 764841297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_4
+      name: Home screen UI 4 (2)_4
       rect:
         serializedVersion: 2
-        x: 792
-        y: 1629
-        width: 404
-        height: 401
+        x: 1404
+        y: 688
+        width: 169
+        height: 175
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a2eba097a266a64195610c2893bdfd1
-      internalID: 10696075
+      spriteID: 6268486a0a4962143b1d1b7a047aa83b
+      internalID: -635913407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_5
+      name: Home screen UI 4 (2)_5
       rect:
         serializedVersion: 2
-        x: 792
-        y: 1204
-        width: 404
-        height: 401
+        x: 1718
+        y: 775
+        width: 264
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7330af837ffe5f54cb7dcc722e93d229
-      internalID: 2130807442
+      spriteID: 8e7f9d843b255c2429f004ecc856ebe8
+      internalID: 423200581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_6
+      name: Home screen UI 4 (2)_6
       rect:
         serializedVersion: 2
-        x: 1220
-        y: 1660
-        width: 348
-        height: 339
+        x: 1597
+        y: 292
+        width: 330
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f4ea6fd848f23b4488df4a676505aef
-      internalID: 1444057294
+      spriteID: 9b5cdbdc8804c9147a757f668006491f
+      internalID: -161882914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_7
+      name: Home screen UI 4 (2)_7
       rect:
         serializedVersion: 2
-        x: 1220
-        y: 1232
-        width: 348
-        height: 342
+        x: 1223
+        y: 305
+        width: 221
+        height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4a9f996c7e81044983b21af2d8f49b6
-      internalID: -1036116175
+      spriteID: 2690ec637405a014485ef484d5e11942
+      internalID: 2028865828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_8
+      name: Home screen UI 4 (2)_8
       rect:
         serializedVersion: 2
-        x: 1598
-        y: 1668
-        width: 325
-        height: 324
+        x: 896
+        y: 284
+        width: 200
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,20 +299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d0e42a6a175de0488b6331d1d22d71e
-      internalID: 1078604445
+      spriteID: 514b375699ebafa4ebc655af7ff58059
+      internalID: 1048095273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_9
+      name: Home screen UI 4 (2)_9
       rect:
         serializedVersion: 2
-        x: 1598
-        y: 1244
-        width: 326
-        height: 320
+        x: 88
+        y: 1178
+        width: 260
+        height: 255
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,20 +320,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c16ad016f4919d34eb03b626359f60ec
-      internalID: 474589558
+      spriteID: 2096ae8e278136442a71d65e6978beb8
+      internalID: 869003124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_10
+      name: Home screen UI 4 (2)_10
       rect:
         serializedVersion: 2
-        x: 132
-        y: 1024
-        width: 102
-        height: 123
+        x: 88
+        y: 1736
+        width: 260
+        height: 255
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,19 +341,166 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36c5921e62c100d4797725f59881b31f
-      internalID: -548678021
+      spriteID: b597fd625d8ff8549bdf42d612d24c6d
+      internalID: -1668055522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_11
+      name: Home screen UI 4 (2)_11
       rect:
         serializedVersion: 2
-        x: 282
-        y: 926
-        width: 216
+        x: 398
+        y: 1736
+        width: 260
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0765f450d475a1e42a59bb1fc12301fc
+      internalID: 647430179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 4 (2)_12
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1736
+        width: 260
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10451d88e92edd4aa3c479be63d37f6
+      internalID: 1132777343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 4 (2)_13
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1736
+        width: 260
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a84a1ebafab91459b3002b53954f28
+      internalID: -1072284585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 4 (2)_14
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1610
+        width: 401
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc03867e0c49394cbac0597562406f9
+      internalID: -1415624563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 4 (2)_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1811
+        width: 177
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50043789c74f20445997763f65553833
+      internalID: 1503924042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 4 (2)_16
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 1251
+        width: 176
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab941c85436cc94aa2ab5572e5767e8
+      internalID: -548830062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 4 (2)_17
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1088
+        width: 400
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d6a25e14edbe842b93de6e8e290ce8
+      internalID: -780410976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home screen UI 4 (2)_18
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1164
+        width: 261
         height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -373,20 +509,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e24aac6c473ec9b4ab0d837d4b04df96
-      internalID: 1640672436
+      spriteID: 576100371d38d7241820b7e695d23e0d
+      internalID: 467425012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_12
+      name: Home screen UI 4 (2)_19
       rect:
         serializedVersion: 2
-        x: 596
-        y: 958
-        width: 310
-        height: 196
+        x: 694
+        y: 1170
+        width: 258
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,20 +530,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 971c3ca530e632441afd7f41854e753e
-      internalID: -1428515493
+      spriteID: 47c286fcceb98ed41b35caab4df3a26f
+      internalID: -1631115183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game menu UI_13
+      name: Home screen UI 4 (2)_20
       rect:
         serializedVersion: 2
-        x: 993
-        y: 901
-        width: 176
-        height: 246
+        x: 398
+        y: 1174
+        width: 260
+        height: 255
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,71 +551,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b65cf9a473d300047ba2401e39b369b1
-      internalID: -737841648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game menu UI_14
-      rect:
-        serializedVersion: 2
-        x: 1238
-        y: 980
-        width: 279
-        height: 151
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f41588a84a470745a70d3434b1d9221
-      internalID: -1141484411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game menu UI_15
-      rect:
-        serializedVersion: 2
-        x: 1651
-        y: 946
-        width: 330
-        height: 185
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4c95e994cd61f640800c0efbae81333
-      internalID: 219585000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game menu UI_16
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 33
-        width: 1998
-        height: 792
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f114e5083557ffa4a9fbf0f1ed1b6832
-      internalID: 1403783116
+      spriteID: f3b5bc5096506254eb4ac7d994ccd018
+      internalID: 1763875317
       vertices: []
       indices: 
       edges: []
@@ -495,23 +568,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Game menu UI_4: -38921741
-      Game menu UI_10: -1036116175
-      Game menu UI_14: 1640672436
-      Game menu UI_11: 1078604445
-      Game menu UI_1: -774890058
-      Game menu UI_13: -548678021
-      Game menu UI_9: 1444057294
-      Game menu UI_2: -70941826
-      Game menu UI_12: 474589558
-      Game menu UI_7: 10696075
-      Game menu UI_3: 1609828921
-      Game menu UI_15: -1428515493
-      Game menu UI_0: 439812819
-      Game menu UI_5: -524680581
-      Game menu UI_16: -737841648
-      Game menu UI_6: -537687259
-      Game menu UI_8: 2130807442
+      Home screen UI 4 (2)_18: 467425012
+      Home screen UI 4 (2)_14: -1415624563
+      Home screen UI 4 (2)_3: 764841297
+      Home screen UI 4 (2)_13: -1072284585
+      Home screen UI 4 (2)_6: -161882914
+      Home screen UI 4 (2)_0: 1147452796
+      Home screen UI 4 (2)_1: -1517076473
+      Home screen UI 4 (2)_12: 1132777343
+      Home screen UI 4 (2)_4: -635913407
+      Home screen UI 4 (2)_19: -1631115183
+      Home screen UI 4 (2)_17: -780410976
+      Home screen UI 4 (2)_10: -1668055522
+      Home screen UI 4 (2)_15: 1503924042
+      Home screen UI 4 (2)_9: 869003124
+      Home screen UI 4 (2)_8: 1048095273
+      Home screen UI 4 (2)_20: 1763875317
+      Home screen UI 4 (2)_11: 647430179
+      Home screen UI 4 (2)_7: 2028865828
+      Home screen UI 4 (2)_2: -484144327
+      Home screen UI 4 (2)_5: 423200581
+      Home screen UI 4 (2)_16: -548830062
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
