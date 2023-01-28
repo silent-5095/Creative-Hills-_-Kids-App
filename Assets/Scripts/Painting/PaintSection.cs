@@ -3,8 +3,11 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Interfaces;
+using Newtonsoft.Json;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
+using ColorUtility = UnityEngine.ColorUtility;
 
 namespace Painting
 {
@@ -48,7 +51,14 @@ namespace Painting
             brushPaintingTextures = GetComponentInChildren<BrushPaintingTexture>();
             solidPaintingTextures.SetTextureOrder(mask.frontSortingOrder);
             brushPaintingTextures.SetTextureOrder(mask.frontSortingOrder);
-            
+            _pSectionProp = LoadData();
+            renderer.color = _pSectionProp.GetColor();
+            Debug.Log(_pSectionProp.GetColor());
+            brushPaintingTextures.GetTexture(_pSectionProp.BrushId).Active(true);
+            brushPaintingTextures.GetTexture(_pSectionProp.BrushId).SetColor(Color.black);
+            if (_pSectionProp.TextureId > -1)
+                solidPaintingTextures.GetTexture(_pSectionProp.TextureId).Active(true);
+            mask.enabled = true;
         }
 
         private void OnResetAllEvent()
@@ -92,7 +102,7 @@ namespace Painting
 
         public void OnEndTouchHandler()
         {
-                _correct = _touchTime <touchDlyTime;
+            _correct = _touchTime < touchDlyTime;
             _beginTouch = false;
             _touchTime = 0;
             if (!_correct || Input.touchCount >= 2)
@@ -111,11 +121,17 @@ namespace Painting
                         break;
                     tempTexture.Active(true);
                     tempTexture.SetColor(PaintController.GetColor());
+                    _pSectionProp.BrushId = PaintController.GetBrushIndex();
+                    _pSectionProp.SetColor(PaintController.GetColor());
+                    _pSectionProp.TextureId = -1;
                     break;
                 case PaintType.Texture:
                     mask.enabled = true;
                     renderer.color = Color.white;
                     solidPaintingTextures.GetTexture(PaintController.GetPatternIndex()).Active(true);
+                    _pSectionProp.BrushId = 0;
+                    _pSectionProp.TextureId = PaintController.GetPatternIndex();
+                    _pSectionProp.SetColor(Color.white);
 
                     break;
                 case PaintType.Brush:
@@ -125,25 +141,74 @@ namespace Painting
                         break;
                     tTexture.Active(true);
                     tTexture.SetColor(PaintController.GetColor());
+                    _pSectionProp.BrushId = PaintController.GetBrushIndex();
+                    _pSectionProp.SetColor(PaintController.GetColor());
+                    _pSectionProp.TextureId = -1;
                     break;
                 case PaintType.Erase:
                     renderer.color = Color.white;
                     mask.enabled = false;
+                    _pSectionProp.BrushId = 0;
+                    _pSectionProp.SetColor(Color.white);
+                    _pSectionProp.TextureId = -1;
                     break;
                 default:
                     renderer.color = PaintController.GetColor();
+                    _pSectionProp.BrushId = 0;
+                    _pSectionProp.SetColor(Color.white);
+                    _pSectionProp.TextureId = -1;
                     mask.enabled = false;
                     break;
             }
+
+            SaveProp();
         }
-        
+
+        private void SaveProp()
+        {
+            var dataString = _pSectionProp.ToString();
+            Debug.Log(_pSectionProp.SolidColor);
+            Debug.Log($"save {dataString}", gameObject);
+            PlayerPrefs.SetString(gameObject.name, dataString);
+        }
+
+        private PaintSectionProp LoadData()
+        {
+            var dataString = PlayerPrefs.GetString(gameObject.name, string.Empty);
+            Debug.Log($"load{dataString}", gameObject);
+            return string.IsNullOrEmpty(dataString)
+                ? new PaintSectionProp()
+                : JsonConvert.DeserializeObject<PaintSectionProp>(dataString);
+        }
     }
 
     [Serializable]
     public class PaintSectionProp
     {
-        public Color SolidColor { get; set; }
+        public PaintSectionProp()
+        {
+            SolidColor = ColorUtility.ToHtmlStringRGB(Color.white);
+            BrushId = 0;
+            TextureId = -1;
+        }
+
+        public string SolidColor { get; set; }
         public int BrushId { get; set; }
         public int TextureId { get; set; }
+
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+
+        public Color GetColor()
+        {
+            return PaintingColorHandler.GetColorFromString(SolidColor);
+        }
+
+        public void SetColor(Color color)
+        {
+            SolidColor = PaintingColorHandler.GetStringFromColor(color);
+        }
     }
 }
