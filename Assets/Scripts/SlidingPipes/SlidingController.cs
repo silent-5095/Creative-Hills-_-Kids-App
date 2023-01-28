@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -8,6 +9,9 @@ namespace SlidingPipes
     {
         [SerializeField] private GameObject matrix3In3, matrix4In4, matrix5In5;
         [SerializeField] private MatrixType matrixType;
+        [SerializeField] private SpriteRenderer lastMsgSprite;
+        [SerializeField] private AudioSource source;
+        [SerializeField] private AudioClip lMsgClip;
 
 
         private void OnDestroy()
@@ -38,6 +42,17 @@ namespace SlidingPipes
         }
 
         private void OnWinEvent()
+        {
+            Animation();
+        }
+        private void Animation()
+        {
+            source.PlayOneShot(lMsgClip);
+            var tween = lastMsgSprite.DOFade(0, 0.5f);
+            tween.onComplete += () => { Invoke(nameof(Win),2f); };
+        }
+
+        private void Win()
         {
             InGameController.Instance.Win();
         }

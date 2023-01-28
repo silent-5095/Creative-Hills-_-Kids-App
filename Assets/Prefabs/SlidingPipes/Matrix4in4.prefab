@@ -1459,6 +1459,14 @@ PrefabInstance:
       propertyPath: sections.Array.data[15]
       value: 
       objectReference: {fileID: 1933942211994130340}
+    - target: {fileID: 1139565947965968863, guid: 6b1ba035071157c45b47381908f38ef4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1139565947965968863, guid: 6b1ba035071157c45b47381908f38ef4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1429358326454092509, guid: 6b1ba035071157c45b47381908f38ef4, type: 3}
       propertyPath: m_Enabled
       value: 1
