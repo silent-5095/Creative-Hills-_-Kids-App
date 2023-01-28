@@ -14,14 +14,11 @@ namespace GameScene
         [Multiline] [SerializeField] private string summary;
         [SerializeField] private QuestionLevel level;
         public QuestionLevel Level => level;
-        [SerializeField] private OptionProp[] options;
-        // [SerializeField] private OptionProp option0, option1, option2, option3;
 
-        public bool IsOpen
-        {
-            get => PlayerPrefs.GetInt(summary + "IsOpen") > 0;
-            set => PlayerPrefs.SetInt(summary + "IsOpen", value ? 1 : 0);
-        }
+        [SerializeField] private OptionProp[] options;
+
+        // [SerializeField] private OptionProp option0, option1, option2, option3;
+        public bool IsOpen { get; set; }
 
         public string GetSummary() => summary;
 
@@ -32,11 +29,7 @@ namespace GameScene
             return tempOptions;
         }
 
-        public bool IsCompleted
-        {
-            get => PlayerPrefs.GetInt(summary, 0) > 0;
-            set => PlayerPrefs.SetInt(summary, value ? 1 : 0);
-        }
+        public bool IsCompleted { get; set; }
 
         public int QuestionId
         {

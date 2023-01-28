@@ -13,6 +13,7 @@ namespace Magazine
 
         private void Update()
         {
+            
             if (Screen.orientation == ScreenOrientation.Portrait ||
                 Screen.orientation == ScreenOrientation.PortraitUpsideDown && !portrait.activeSelf)
             {
@@ -39,8 +40,8 @@ namespace Magazine
 
         private void Start()
         {
-            Screen.orientation = ScreenOrientation.AutoRotation;
-            // Screen.autorotateToPortrait = true;
+            ForDemo.Instance.ChangeOrientation(ScreenOrientation.AutoRotation);
+            Screen.autorotateToPortrait = true;
             foreach (var page in pages)
             {
                 var img = Instantiate(landScapePrefab, landScapeCHolder);

@@ -15,20 +15,16 @@ namespace Magazine
 
         private void Start()
         {
-            // Screen.orientation = ScreenOrientation.LandscapeLeft;
-            // Screen.autorotateToPortrait = false;
-            // Screen.autorotateToLandscapeLeft = true;
-            // Debug.Log(Screen.orientation );
-            // Debug.Log(Screen.orientation );
             Instance = this;
             button.onClick.AddListener(OnButtonClick);
         }
 
-        // private void LateUpdate()
-        // {
-        //     if (Screen.orientation != ScreenOrientation.LandscapeLeft)
-        //         Screen.orientation = ScreenOrientation.LandscapeLeft;
-        // }
+        
+        private void LateUpdate()
+        {
+            if (Screen.orientation != ScreenOrientation.LandscapeLeft)
+                ForDemo.Instance.ChangeOrientation(ScreenOrientation.LandscapeLeft);
+        }
 
         private void OnButtonClick()
         {

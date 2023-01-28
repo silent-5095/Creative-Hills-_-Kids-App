@@ -11,6 +11,7 @@ namespace Painting
     [RequireComponent(typeof(SpriteRenderer), typeof(SpriteMask), typeof(PolygonCollider2D))]
     public class PaintSection : MonoBehaviour, ITouchable
     {
+        [SerializeField] private int id;
         [HideInInspector] [SerializeField] private SolidPaintingTexture solidPaintingTextures;
         [HideInInspector] [SerializeField] private BrushPaintingTexture brushPaintingTextures;
         [SerializeField] private AudioSource source;
@@ -23,6 +24,7 @@ namespace Painting
         private float _touchTime;
         private bool _beginTouch, _correct;
         private Vector2 _bTouchPos;
+        private PaintSectionProp _pSectionProp;
 
         [SuppressMessage("ReSharper", "Unity.InefficientPropertyAccess")]
         private void OnDestroy()
@@ -46,6 +48,7 @@ namespace Painting
             brushPaintingTextures = GetComponentInChildren<BrushPaintingTexture>();
             solidPaintingTextures.SetTextureOrder(mask.frontSortingOrder);
             brushPaintingTextures.SetTextureOrder(mask.frontSortingOrder);
+            
         }
 
         private void OnResetAllEvent()
@@ -74,7 +77,6 @@ namespace Painting
         {
             if (_bTouchPos.magnitude - Input.touches[0].position.magnitude > 1)
             {
-                Debug.Log($"move {_bTouchPos.magnitude - Input.touches[0].position.magnitude} ");
                 _correct = false;
             }
         }
@@ -134,5 +136,14 @@ namespace Painting
                     break;
             }
         }
+        
+    }
+
+    [Serializable]
+    public class PaintSectionProp
+    {
+        public Color SolidColor { get; set; }
+        public int BrushId { get; set; }
+        public int TextureId { get; set; }
     }
 }

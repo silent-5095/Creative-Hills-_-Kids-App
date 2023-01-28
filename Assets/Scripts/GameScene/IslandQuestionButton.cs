@@ -33,6 +33,7 @@ namespace GameScene
 
             if (questionData.IsOpen)
             {
+                Debug.Log("IsOpen");
                 Open();
             }
             else

@@ -3719,6 +3719,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1515442641649625380, guid: 47bac56bb0a17bd4aa8eb5720986b5fb, type: 3}
   m_PrefabInstance: {fileID: 258540731}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &710663265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8223072643112602468, guid: c438314504191db408d8f06266e5d89e, type: 3}
+  m_PrefabInstance: {fileID: 2702385494360055073}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c480ffae451cb8458cd7e3a09f58644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &711642937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6907,6 +6918,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &1554712571
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10513,6 +10525,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &2908940204094958784
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -11731,6 +11744,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &3456157199782808073
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12127,6 +12141,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &3912860938844383881
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12580,6 +12595,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &4694412683308737814
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12841,6 +12857,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &4749650741602118522
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13039,6 +13056,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &5557401608230414610
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13269,6 +13287,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &5863111089722052721
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13467,6 +13486,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &5934530502667845021
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13845,6 +13865,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &6097385025083203563
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14115,6 +14136,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &6641921166571765707
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14244,6 +14266,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &6769883068721441875
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14420,6 +14443,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &6973689206990475011
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14544,6 +14568,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &7183461790438596662
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14739,6 +14764,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &7377763793454217661
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14921,6 +14947,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &7392257670482504681
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15065,6 +15092,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &7405720897214382494
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15293,6 +15321,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &7468956531894072170
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15453,6 +15482,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &7528987516425450973
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15605,6 +15635,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &7603481501499475770
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15784,6 +15815,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &7830128479164898898
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -15939,6 +15971,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &8281577745981416283
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16120,6 +16153,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &8425805228024580840
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16249,6 +16283,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &8475768809517495869
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16371,6 +16406,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &8701597117198513782
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16540,6 +16576,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &8708937828937243574
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16739,6 +16776,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &8753829968099969905
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16873,6 +16911,30 @@ PrefabInstance:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 549399271203175349, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 549399271203175349, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 549399271203175349, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 549399271203175349, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[3].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 549399271203175349, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[4].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 549399271203175349, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[5].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
     - target: {fileID: 665092485111239058, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -16918,6 +16980,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1576858660941364875, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605964758513041379, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605964758513041379, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605964758513041379, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605964758513041379, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -16925,6 +17003,30 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2056496192509094737, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 2056496192509094737, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 2056496192509094737, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 2056496192509094737, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[3].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 2056496192509094737, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[4].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 2056496192509094737, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[5].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
     - target: {fileID: 2222136654535508176, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -16945,6 +17047,30 @@ PrefabInstance:
       propertyPath: isBrushButton
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2259349391852028026, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 2259349391852028026, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 2259349391852028026, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 2259349391852028026, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[3].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 2259349391852028026, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[4].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 2259349391852028026, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[5].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
     - target: {fileID: 3010776240867142916, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -17053,6 +17179,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5060048731514629404, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5717694193248098605, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -17069,6 +17199,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6039778394155073824, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 6039778394155073824, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 6039778394155073824, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 6039778394155073824, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[3].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 6039778394155073824, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[4].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
+    - target: {fileID: 6039778394155073824, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
+      propertyPath: m_Delegates.Array.data[5].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 710663265}
     - target: {fileID: 6125608941269522541, guid: 0bc831e8ac2769048a6d982ab934218f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -17420,6 +17574,7 @@ MonoBehaviour:
   source: {fileID: 3316911744441219199}
   renderer: {fileID: 0}
   mask: {fileID: 0}
+  touchDlyTime: 0
 --- !u!60 &9099659891086349661
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -23,12 +23,14 @@ namespace GameScene
         private void OnDestroy()
         {
             Island.IslandRefreshQPanelEvent -= SetNewQuestion;
+            GameSceneManager.RefreshDataEvent -= SetNewQuestion;
         }
 
         private void Start()
         {
             _defPos = mainPanel.transform.localPosition;
             Island.IslandRefreshQPanelEvent += SetNewQuestion;
+            GameSceneManager.RefreshDataEvent += SetNewQuestion;
             foreach (var optionButton in optionButtons)
             {
                 optionButton.ButtonClickEvent += OnOptionButtonClickEvent;
@@ -82,6 +84,7 @@ namespace GameScene
             mainPanel.transform.localPosition = _defPos;
             QPanelRayCastEvent?.Invoke(false);
 
+            Debug.Log("Answer event");
             AnswerEvent?.Invoke(_currentData, _answerIsCorrect);
         }
 

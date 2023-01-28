@@ -38,6 +38,14 @@ namespace Video
                 button.SetVideoToPlayer(player);
                 button.VideoButtonClickEvent += OnVideoButtonClickEvent;
             }
+
+            player.prepareCompleted += p =>
+            {
+                foreach (var bImage in playButton)
+                {
+                    bImage.sprite = pauseSp;
+                }
+            };
         }
 
         private void OnVideoButtonClickEvent(VideoClip clip)
@@ -63,16 +71,22 @@ namespace Video
             // soundSlider.interactable = true;
         }
 
-        // private void Update()
-        // {
-        //     // if (!_scrubTouched)
-        //     //     foreach (var timeLine in timeLines)
-        //     //     {
-        //     //         timeLine.value = (vPlayer.frame / (float) vPlayer.frameCount);
-        //     //     }
-        //     // else
-        //     //     vPlayer.time = _touchedSlider.value;
-        // }
+         private void Update()
+         {
+             if(player.isPlaying && playButton[0].sprite!=pauseSp)
+                 foreach (var bImage in playButton)
+                 {
+                     bImage.sprite = pauseSp;
+                 }
+                 
+             // if (!_scrubTouched)
+             //     foreach (var timeLine in timeLines)
+             //     {
+             //         timeLine.value = (vPlayer.frame / (float) vPlayer.frameCount);
+             //     }
+             // else
+             //     vPlayer.time = _touchedSlider.value;
+         }
 
 
         public void OnStopButton()
@@ -199,6 +213,10 @@ namespace Video
         public void OnSoundSlider(Slider slider)
         {
             source.volume = slider.value;
+            foreach (var s in soundSlider)
+            {
+                s.value = source.volume;
+            }
         }
     }
 }

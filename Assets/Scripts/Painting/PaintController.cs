@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Painting
@@ -15,6 +16,17 @@ namespace Painting
         [SerializeField] private Color defColor;
         [SerializeField] private int defBrush;
         public float touchDly;
+
+
+
+        private void SaveSections()
+        {
+            Dictionary<int,Color>sectionColors= new Dictionary<int, Color>();
+            foreach (var paintSection in FindObjectsOfType<PaintSection>())
+            {
+                // sectionColors.Add(paintSection.Id,paintSection.currentColor);
+            }
+        }
 
         private void OnDestroy()
         {
