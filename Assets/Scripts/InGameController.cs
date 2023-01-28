@@ -12,8 +12,7 @@ public class InGameController : MonoBehaviour
     public static InGameController Instance;
     [SerializeField] private bool loadFromIslands;
     [SerializeField] private string defaultSceneName;
-    [SerializeField] private GameObject winPanel, exitPanel;
-    [SerializeField] private Button submitButton, cancelButton,backButton;
+    [SerializeField] private GameObject winPanel;
 
     private void Start()
     {
@@ -35,9 +34,10 @@ public class InGameController : MonoBehaviour
         {
             PlayerPrefs.SetString("IslandGameRef" + Island.IslandGameRef, "1");
             Island.IslandGameRef = string.Empty;
+            OnSubmitButtonClick();
         }
-
-        winPanel.SetActive(true);
+        else
+            winPanel.GetComponent<WinPanel>().ShowWinPanel();
     }
 
     public void Exit()

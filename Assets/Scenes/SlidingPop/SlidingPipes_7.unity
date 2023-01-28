@@ -266,6 +266,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52a9012fa13c4549bc12579b3be5dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &1379029800 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2315394876323977509, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
+  m_PrefabInstance: {fileID: 1087026663755746103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1379244055 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9001195741352180601, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
@@ -930,6 +935,10 @@ PrefabInstance:
       propertyPath: matrixType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1087026663075534984, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
+      propertyPath: lastMsgSprite
+      value: 
+      objectReference: {fileID: 1379029800}
     - target: {fileID: 1087026663075534985, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
       propertyPath: m_Name
       value: SlidingController
@@ -1085,6 +1094,10 @@ PrefabInstance:
     - target: {fileID: 1450016752739128257, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458418234962472733, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 1479839298149022817, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
       propertyPath: m_IsActive
@@ -2464,7 +2477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7653924096801303637, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7698070985307733860, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
       propertyPath: top

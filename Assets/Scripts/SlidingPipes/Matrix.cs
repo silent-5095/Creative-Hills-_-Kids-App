@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -78,7 +79,7 @@ namespace SlidingPipes
             for (var index = 0; index < sections.Length; index++)
             {
                 var section = sections[index];
-                if (_correctPath[index] == SectionType.None || _correctPath[index]== SectionType.Movable) continue;
+                if (_correctPath[index] == SectionType.None || _correctPath[index] == SectionType.Movable) continue;
                 _isWin = _correctPath[index] == section.SectionProp.type;
                 if (!_isWin) break;
             }
@@ -94,7 +95,8 @@ namespace SlidingPipes
 
         private void Win()
         {
-            WinEvent?.Invoke(true);
+             WinEvent?.Invoke(true);
         }
+
     }
 }
