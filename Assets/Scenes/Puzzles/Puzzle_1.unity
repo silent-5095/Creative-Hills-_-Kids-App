@@ -343,9 +343,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1772766749}
     m_Modifications:
+    - target: {fileID: -4232626152973862358, guid: e115286de024a954d9ef68515a08d7b1, type: 3}
+      propertyPath: currentIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1850822187489686747, guid: e115286de024a954d9ef68515a08d7b1, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244575418070921371, guid: e115286de024a954d9ef68515a08d7b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1256801036}
+    - target: {fileID: 4244575418070921371, guid: e115286de024a954d9ef68515a08d7b1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339515749717564684, guid: e115286de024a954d9ef68515a08d7b1, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6766019053436861713, guid: e115286de024a954d9ef68515a08d7b1, type: 3}
       propertyPath: m_Pivot.x
@@ -445,11 +461,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e115286de024a954d9ef68515a08d7b1, type: 3}
---- !u!224 &440824175 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6766019053436861713, guid: e115286de024a954d9ef68515a08d7b1, type: 3}
-  m_PrefabInstance: {fileID: 440824174}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &464958317 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2558693054429415199, guid: 33bdd1dd43f11e148be8573bc78697df, type: 3}
@@ -2026,7 +2037,7 @@ RectTransform:
   - {fileID: 138106522}
   - {fileID: 1364270727}
   - {fileID: 2041416242}
-  - {fileID: 440824175}
+  - {fileID: 2098704843}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2544,6 +2555,16 @@ PrefabInstance:
       objectReference: {fileID: 1772766748}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33bdd1dd43f11e148be8573bc78697df, type: 3}
+--- !u!1 &2098704842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4339515749717564683, guid: e115286de024a954d9ef68515a08d7b1, type: 3}
+  m_PrefabInstance: {fileID: 440824174}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2098704843 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4339515749717564684, guid: e115286de024a954d9ef68515a08d7b1, type: 3}
+  m_PrefabInstance: {fileID: 440824174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &948520888647215768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2707,6 +2728,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSlot 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2573892490656604843, guid: 6fe0794d7a6b34d41af5179cb9bd9090, type: 3}
+      propertyPath: endPanel
+      value: 
+      objectReference: {fileID: 2098704842}
     - target: {fileID: 2703034019571470466, guid: 6fe0794d7a6b34d41af5179cb9bd9090, type: 3}
       propertyPath: item
       value: 

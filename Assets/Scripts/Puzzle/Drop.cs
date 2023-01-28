@@ -55,7 +55,6 @@ namespace Puzzle
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            Debug.Log("On Pointer enter in drop");
         }
     }
 }

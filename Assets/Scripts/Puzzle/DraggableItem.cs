@@ -45,7 +45,6 @@ namespace Puzzle
         {
             _defPos = rect.localPosition;
             image.maskable = false;
-            Debug.Log(_defPos);
         }
     }
 }

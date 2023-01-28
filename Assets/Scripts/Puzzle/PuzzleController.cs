@@ -9,7 +9,7 @@ namespace Puzzle
         public static PuzzleController Instance;
         [SerializeField] private List<Drop> itemSlots;
         [SerializeField] private AudioSource source;
-        [SerializeField] private GameObject winPanel;
+        [SerializeField] private GameObject endPanel, winPanel;
         private int _filledCount;
 
         private void Start()
@@ -25,7 +25,8 @@ namespace Puzzle
         {
             _filledCount++;
             if (_filledCount >= itemSlots.Count)
-                winPanel.SetActive(true);
+                endPanel.GetComponent<PuzzleEndPanel>().ShowMainPanel();
+            // winPanel.SetActive(true);
             else
                 source.Play();
         }
