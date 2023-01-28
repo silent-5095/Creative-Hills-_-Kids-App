@@ -9,6 +9,7 @@ namespace Shop
     public class ShopSlot : MonoBehaviour
     {
         [SerializeField] private List<ShopItem> items;
+        [SerializeField] private AudioSource audioSource;
         private bool _pointerEntered;
         private ShopItem _currentItem;
 
@@ -23,6 +24,7 @@ namespace Shop
 
         private void ItemOnEndDragEvent(ShopItem item)
         {
+            audioSource.Play();
             _currentItem = item;
             item.Reset();
             // if (!item.IsActive)
