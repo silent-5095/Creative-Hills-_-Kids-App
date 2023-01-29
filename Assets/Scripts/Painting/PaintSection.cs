@@ -51,11 +51,19 @@ namespace Painting
             brushPaintingTextures = GetComponentInChildren<BrushPaintingTexture>();
             solidPaintingTextures.SetTextureOrder(mask.frontSortingOrder);
             brushPaintingTextures.SetTextureOrder(mask.frontSortingOrder);
+            Invoke(nameof(test), 0.05f);
+        }
+
+        void test()
+        {
             _pSectionProp = LoadData();
-            renderer.color = _pSectionProp.GetColor();
+            // renderer.color = _pSectionProp.GetColor();
             Debug.Log(_pSectionProp.GetColor());
+            // mask.enabled = false;
+
+            Debug.Log(_pSectionProp.BrushId + " " + _pSectionProp.SolidColor, gameObject);
             brushPaintingTextures.GetTexture(_pSectionProp.BrushId).Active(true);
-            brushPaintingTextures.GetTexture(_pSectionProp.BrushId).SetColor(Color.black);
+            brushPaintingTextures.GetTexture(_pSectionProp.BrushId).SetColor(_pSectionProp.GetColor());
             if (_pSectionProp.TextureId > -1)
                 solidPaintingTextures.GetTexture(_pSectionProp.TextureId).Active(true);
             mask.enabled = true;
@@ -175,7 +183,6 @@ namespace Painting
         private PaintSectionProp LoadData()
         {
             var dataString = PlayerPrefs.GetString(gameObject.name, string.Empty);
-            Debug.Log($"load{dataString}", gameObject);
             return string.IsNullOrEmpty(dataString)
                 ? new PaintSectionProp()
                 : JsonConvert.DeserializeObject<PaintSectionProp>(dataString);
