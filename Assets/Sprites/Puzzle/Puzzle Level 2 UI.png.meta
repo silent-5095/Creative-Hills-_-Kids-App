@@ -3,7 +3,7 @@ guid: 38784dc4befad474fb0ae29b4443b8e6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -63,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -125,7 +124,7 @@ TextureImporter:
         width: 851
         height: 1390
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +145,7 @@ TextureImporter:
         width: 714
         height: 1505
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +166,7 @@ TextureImporter:
         width: 946
         height: 945
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,7 +187,7 @@ TextureImporter:
         width: 421
         height: 140
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,15 +200,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Puzzle Level 2 UI_4
+      name: 1_Copy
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 83
-        width: 1384
-        height: 1268
+        x: 391
+        y: 1526
+        width: 301
+        height: 382
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,15 +221,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Puzzle Level 2 UI_5
+      name: 1
       rect:
         serializedVersion: 2
-        x: 391
-        y: 1544
-        width: 4188
-        height: 437
+        x: 1100
+        y: 1003
+        width: 267
+        height: 348
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,22 +242,337 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Puzzle Level 2 UI_6
+      name: 2_Copy
       rect:
         serializedVersion: 2
-        x: 21
-        y: 1746
-        width: 245
-        height: 276
+        x: 811
+        y: 1605
+        width: 458
+        height: 303
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2101d6aba4ff81d41bddd76a7729ffdd
-      internalID: -1884905558
+      spriteID: b892a01c6e45d03488e8447e5fb4ba46
+      internalID: 2077866905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 1084
+        width: 425
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e190a74b7d5db84fb3a7b68bb3faab3
+      internalID: -577604202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Copy
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1526
+        width: 301
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3481359bc2e784b90422281cde7882
+      internalID: -1382054251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 1003
+        width: 267
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811db1015e38fcf43b4a2ce04c3770db
+      internalID: 1592498502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Copy
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 1600
+        width: 370
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70a47b70381d4745b0154ed3a67d4b9
+      internalID: 936661257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 580
+        width: 346
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc2e7a0dbfaf9e42bd44a6310b0cfad
+      internalID: 906478795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5_Copy
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 1521
+        width: 300
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5db948c5dd169941af0d02cfa53a52e
+      internalID: 876127884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 499
+        width: 265
+        height: 427
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96beb8b8e2385b544bd26092e3797d47
+      internalID: -2073811279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6_Copy
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 1600
+        width: 380
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b731a8851f058142a8a9c6a30ae1d91
+      internalID: 102713495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6
+      rect:
+        serializedVersion: 2
+        x: 2138
+        y: 580
+        width: 346
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca68583a66e713458e0da0714dc73ef
+      internalID: -1521693594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_Copy
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 1600
+        width: 301
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbc0730d6d8de54aa9b9a94c8e94d9d
+      internalID: 1674101047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 83
+        width: 267
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dac086690c953a4297ae6f91ef1e8ff
+      internalID: 655933955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8_Copy
+      rect:
+        serializedVersion: 2
+        x: 3731
+        y: 1600
+        width: 460
+        height: 301
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57dff3c5c64a2349b8ca4040027fac5
+      internalID: -1549576406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 83
+        width: 425
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85087170479cb544c84d6cecb1506c06
+      internalID: -1478253877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9_Copy
+      rect:
+        serializedVersion: 2
+        x: 4278
+        y: 1600
+        width: 301
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc843a4490391994683e621a843197d0
+      internalID: -849820186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 83
+        width: 267
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc4df3017497034e88ba9e270276b3d
+      internalID: -1469630297
       vertices: []
       indices: 
       edges: []
@@ -275,12 +589,27 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Puzzle Level 2 UI_6: -1884905558
-      Puzzle Level 2 UI_5: -2032615253
+      3: 1592498502
+      8: -1478253877
+      7_Copy: 1674101047
+      2: -577604202
+      6: -1521693594
+      9: -1469630297
+      4: 906478795
+      3_Copy: -1382054251
+      6_Copy: 102713495
+      5: -2073811279
+      2_Copy: 2077866905
       Puzzle Level 2 UI_3: -2039762383
+      4_Copy: 936661257
+      5_Copy: 876127884
       Puzzle Level 2 UI_1: -1627592713
-      Puzzle Level 2 UI_4: 483834428
+      1: -2032615253
+      9_Copy: -849820186
+      7: 655933955
+      8_Copy: -1549576406
       Puzzle Level 2 UI_2: 132122941
-      Puzzle Level 2 UI_7: 2077866905
+      1_Copy: 483834428
       Puzzle Level 2 UI_0: -994561538
   spritePackingTag: 
   pSDRemoveMatte: 0

@@ -24,8 +24,14 @@ namespace Video
         [SerializeField] private Image[] soundButton, playButton;
         [SerializeField] private Sprite pauseSp, playSp, muteSp, volumeSp;
 
+        private void OnDestroy()
+        {
+            Screen.sleepTimeout = SleepTimeout.SystemSetting;
+        }
+
         private void Start()
         {
+            Screen.sleepTimeout = SleepTimeout.NeverSleep;
             foreach (var slider in soundSlider)
             {
                 slider.value = source.volume;
@@ -45,12 +51,14 @@ namespace Video
                 {
                     bImage.sprite = pauseSp;
                 }
+                p.Play();
             };
+            player.loopPointReached += videoPlayer => videoPlayer.frame = 0;
         }
 
         private void OnVideoButtonClickEvent(VideoClip clip)
         {
-            player.Play();
+            player.Prepare();
             foreach (var pButton in playButton)
             {
                 pButton.sprite = player.isPaused ? playSp : pauseSp;
