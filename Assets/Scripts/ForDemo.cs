@@ -8,6 +8,7 @@ public class ForDemo : MonoBehaviour
     [SerializeField] private ScreenOrientation orientation;
     [SerializeField] private bool isFirstScene;
     [SerializeField] private Transition transition;
+    [SerializeField] private bool isSplash;
     private bool _canTouch;
 
     private void Awake()
@@ -24,6 +25,8 @@ public class ForDemo : MonoBehaviour
             orientation == ScreenOrientation.Portrait || orientation == ScreenOrientation.AutoRotation;
         Screen.autorotateToLandscapeLeft =
             orientation != ScreenOrientation.Portrait && orientation == ScreenOrientation.AutoRotation;
+        if(isSplash)
+            return;
         transition.Enter();
     }
 
@@ -48,8 +51,7 @@ public class ForDemo : MonoBehaviour
         if(!_canTouch)
             return;
         _canTouch = false;
-         SceneManager.LoadScene(sceneName);
-        //transition.Exit(() => SceneManager.LoadScene(sceneName));
+        transition.Exit(() => SceneManager.LoadScene(sceneName));
     }
     
     public void LoadSceneImmediately(string sceneName)
@@ -57,8 +59,7 @@ public class ForDemo : MonoBehaviour
         if(!_canTouch)
             return;
         _canTouch = false;
-         SceneManager.LoadScene(sceneName);
-        //transition.Exit(() => SceneManager.LoadScene(sceneName));
+        transition.Exit(() => SceneManager.LoadScene(sceneName));
     }
     
 
