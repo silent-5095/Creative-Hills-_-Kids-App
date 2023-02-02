@@ -38,7 +38,7 @@ namespace Painting
             MainPaletteButton.PushButtonEvent+= OnMainPaletteButtonEvent;
             PatternButton.SelectPatternEvent+= OnPatternButtonClickEvent;
             PatternButton.SelectBrushEvent+= OnSelectBrushButtonClickEvent;
-            ResetAll();
+            // ResetAll();
         }
 
         private void OnPatternButtonClickEvent(int index)

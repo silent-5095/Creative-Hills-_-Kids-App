@@ -19,21 +19,25 @@ public class InGameController : MonoBehaviour
         if (Instance is not null)
             Destroy(Instance);
         Instance = this;
-        loadFromIslands = !string.IsNullOrEmpty(Island.IslandGameRef);
+        // loadFromIslands = !string.IsNullOrEmpty(Island.IslandGameRef);
     }
 
     public void OnSubmitButtonClick()
     {
-        ForDemo.Instance.LoadScene(loadFromIslands ? "Island" : defaultSceneName);
+        ForDemo.Instance.LoadScene(defaultSceneName);
         // SceneManager.LoadScene(loadFromIslands ? "Island" : defaultSceneName);
+    }
+
+    public void OnBackButtonClick()
+    {
+        Island.IslandGameRef = string.Empty;
+        OnSubmitButtonClick();
     }
 
     public void Win()
     {
         if (loadFromIslands)
         {
-            PlayerPrefs.SetString("IslandGameRef" + Island.IslandGameRef, "1");
-            Island.IslandGameRef = string.Empty;
             OnSubmitButtonClick();
         }
         else

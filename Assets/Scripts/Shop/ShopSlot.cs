@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Shop
@@ -9,7 +10,7 @@ namespace Shop
     public class ShopSlot : MonoBehaviour
     {
         [SerializeField] private List<ShopItem> items;
-        [SerializeField] private AudioSource audioSource;
+        public static event Action<bool> DropEvent;
         private bool _pointerEntered;
         private ShopItem _currentItem;
 
@@ -24,23 +25,17 @@ namespace Shop
 
         private void ItemOnEndDragEvent(ShopItem item)
         {
-            audioSource.Play();
             _currentItem = item;
             item.Reset();
-            // if (!item.IsActive)
-            // {
-            //      item.ResetPosition();
-            // }
-            // else
-            // {
-            //     _currentItem = item;
-            // }
         }
 
         public void Drop()
         {
             if (_currentItem != null && _currentItem.IsActive)
+            {
                 _currentItem.AttachToSlot();
+            }
+            DropEvent?.Invoke(_currentItem != null && _currentItem.IsActive);
         }
     }
 }

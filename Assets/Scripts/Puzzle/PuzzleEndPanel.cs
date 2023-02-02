@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ namespace Puzzle
 {
     public class PuzzleEndPanel : MonoBehaviour
     {
+        public static event Action EndPanelEvent;
         [SerializeField] private Image mainPanel;
         [SerializeField] private Image[] currentEndPanel;
         [SerializeField] private int currentIndex;
@@ -23,7 +25,7 @@ namespace Puzzle
            tween2.onPlay += () =>
            {
                var tween3 = currentEndPanel[currentIndex].transform.DORotate(Vector3.zero, 0.3f);
-               
+               EndPanelEvent?.Invoke();
            };
            
            mySequence.Append(tween);

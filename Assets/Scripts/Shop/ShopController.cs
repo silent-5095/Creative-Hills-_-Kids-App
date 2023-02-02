@@ -11,8 +11,14 @@ namespace Shop
         [SerializeField] private List<ShopItem> items;
         [SerializeField] private string sceneName;
         private int _activeItemCount = 0;
-        [SerializeField] private GameObject winPanel;
+        [SerializeField] private WinPanel winPanel;
         [SerializeField] private AudioSource source;
+        [SerializeField] private AudioClip wrongAClip, correctAClip;
+
+        private void OnDestroy()
+        {
+            ShopSlot.DropEvent -= OnEndDragEvent;
+        }
 
         private void Start()
         {
@@ -23,6 +29,8 @@ namespace Shop
                 if (item.IsActive)
                     _activeItemCount++;
             }
+
+            ShopSlot.DropEvent += OnEndDragEvent;
         }
 
         private void OnAttachEvent()
@@ -31,12 +39,18 @@ namespace Shop
             if (_activeItemCount <= 0)
                 Win();
             else
-                source.Play();
+                source.PlayOneShot(correctAClip);
+        }
+
+        private void OnEndDragEvent(bool con)
+        {
+            if (!con)
+                source.PlayOneShot(wrongAClip);
         }
 
         private void Win()
         {
-            winPanel.SetActive(true);
+            winPanel.ShowWinPanel();
         }
     }
 }

@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
 public class ForDemo : MonoBehaviour
 {
     public static ForDemo Instance;
+    public event Action ChangeSceneEvent;
     [SerializeField] private ScreenOrientation orientation;
     [SerializeField] private bool isFirstScene;
     [SerializeField] private Transition transition;
@@ -51,7 +53,8 @@ public class ForDemo : MonoBehaviour
         if(!_canTouch)
             return;
         _canTouch = false;
-        transition.Exit(() => SceneManager.LoadScene(sceneName));
+        ChangeSceneEvent?.Invoke();
+        transition.Exit(() => Addressables.LoadSceneAsync(sceneName));
     }
     
     public void LoadSceneImmediately(string sceneName)
@@ -59,7 +62,8 @@ public class ForDemo : MonoBehaviour
         if(!_canTouch)
             return;
         _canTouch = false;
-        transition.Exit(() => SceneManager.LoadScene(sceneName));
+        ChangeSceneEvent?.Invoke();
+        transition.Exit(() => Addressables.LoadSceneAsync(sceneName));
     }
     
 

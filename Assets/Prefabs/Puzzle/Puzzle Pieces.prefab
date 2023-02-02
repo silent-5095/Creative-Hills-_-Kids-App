@@ -167,9 +167,10 @@ MonoBehaviour:
   - {fileID: 2793902265586423866}
   - {fileID: 3024636795890697228}
   - {fileID: 8755265749420496332}
-  source: {fileID: 8938782866029105518}
+  clickSource: {fileID: 8938782866029105518}
+  musicSource: {fileID: 3635249585630425231}
+  winClip: {fileID: 8300000, guid: 7287afa7626c69744a53a8ef16ee005b, type: 3}
   endPanel: {fileID: 0}
-  winPanel: {fileID: 585072318831002118}
 --- !u!82 &8938782866029105518
 AudioSource:
   m_ObjectHideFlags: 0
@@ -516,11 +517,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c12f63577308349ac469cb60c33321, type: 3}
---- !u!1 &585072318831002118 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2992810029700291493, guid: f0c12f63577308349ac469cb60c33321, type: 3}
-  m_PrefabInstance: {fileID: 2420122885371009443}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1648202164314780504 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3983882281459002107, guid: f0c12f63577308349ac469cb60c33321, type: 3}

@@ -470,6 +470,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1209478685, guid: 28dbaeb2122dbdc4f877519997960054, type: 3}
+    - target: {fileID: 5724946075693596199, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724946075693596199, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724946075693596199, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5724946075758267105, guid: d4ba048e7ff8e024dbce950a795f8f89, type: 3}
       propertyPath: m_Padding.m_Top
       value: 50

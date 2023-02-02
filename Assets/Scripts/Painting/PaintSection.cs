@@ -6,6 +6,7 @@ using Interfaces;
 using Newtonsoft.Json;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using ColorUtility = UnityEngine.ColorUtility;
 
@@ -51,17 +52,12 @@ namespace Painting
             brushPaintingTextures = GetComponentInChildren<BrushPaintingTexture>();
             solidPaintingTextures.SetTextureOrder(mask.frontSortingOrder);
             brushPaintingTextures.SetTextureOrder(mask.frontSortingOrder);
-            Invoke(nameof(test), 0.05f);
+            Invoke(nameof(SetData), 0.1f);
         }
 
-        void test()
+        private void SetData()
         {
             _pSectionProp = LoadData();
-            // renderer.color = _pSectionProp.GetColor();
-            Debug.Log(_pSectionProp.GetColor());
-            // mask.enabled = false;
-
-            Debug.Log(_pSectionProp.BrushId + " " + _pSectionProp.SolidColor, gameObject);
             brushPaintingTextures.GetTexture(_pSectionProp.BrushId).Active(true);
             brushPaintingTextures.GetTexture(_pSectionProp.BrushId).SetColor(_pSectionProp.GetColor());
             if (_pSectionProp.TextureId > -1)
@@ -73,6 +69,8 @@ namespace Painting
         {
             solidPaintingTextures.ResetTextures();
             brushPaintingTextures.ResetTextures();
+            Debug.Log("OnResetAll");
+            PlayerPrefs.DeleteKey(gameObject.name+SceneManager.GetActiveScene().name);
             renderer.color = Color.white;
         }
 
@@ -175,14 +173,19 @@ namespace Painting
         private void SaveProp()
         {
             var dataString = _pSectionProp.ToString();
-            Debug.Log(_pSectionProp.SolidColor);
-            Debug.Log($"save {dataString}", gameObject);
-            PlayerPrefs.SetString(gameObject.name, dataString);
+            // Debug.Log(_pSectionProp.SolidColor);
+            // Debug.Log(gameObject.name, gameObject);
+            PlayerPrefs.SetString(gameObject.name+SceneManager.GetActiveScene().name, dataString);
+            Debug.Log($"{gameObject.name}  {_pSectionProp is null}  {dataString}", gameObject);
+            Debug.Log(PlayerPrefs.GetString(gameObject.name));
         }
 
         private PaintSectionProp LoadData()
         {
-            var dataString = PlayerPrefs.GetString(gameObject.name, string.Empty);
+            var dataString = PlayerPrefs.GetString(gameObject.name+SceneManager.GetActiveScene().name, string.Empty);
+
+            var prop = JsonConvert.DeserializeObject<PaintSectionProp>(dataString);
+            Debug.Log($"{gameObject.name}  {dataString} | {prop?.SolidColor}", gameObject);
             return string.IsNullOrEmpty(dataString)
                 ? new PaintSectionProp()
                 : JsonConvert.DeserializeObject<PaintSectionProp>(dataString);

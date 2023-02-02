@@ -6,19 +6,30 @@ namespace Puzzle
 {
     public class PuzzleController : MonoBehaviour
     {
-        public static PuzzleController Instance;
         [SerializeField] private List<Drop> itemSlots;
-        [SerializeField] private AudioSource source;
-        [SerializeField] private GameObject endPanel, winPanel;
+        [SerializeField] private AudioSource clickSource,musicSource;
+        [SerializeField] private AudioClip winClip;
+        [SerializeField] private GameObject endPanel;
         private int _filledCount;
+
+        private void OnDestroy()
+        {           
+            PuzzleEndPanel.EndPanelEvent -= OnEndPanelEvent;
+        }
 
         private void Start()
         {
-            Instance = this;
+            PuzzleEndPanel.EndPanelEvent += OnEndPanelEvent;
             foreach (var slot in itemSlots)
             {
                 slot.FillSlotEvent += OnFillSlotEvent;
             }
+        }
+
+        private void OnEndPanelEvent()
+        {
+            musicSource.Stop();
+            musicSource.PlayOneShot(winClip);
         }
 
         private void OnFillSlotEvent()
@@ -28,7 +39,7 @@ namespace Puzzle
                 endPanel.GetComponent<PuzzleEndPanel>().ShowMainPanel();
             // winPanel.SetActive(true);
             else
-                source.Play();
+                clickSource.Play();
         }
     }
 }

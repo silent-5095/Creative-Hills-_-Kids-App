@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using Interfaces;
@@ -61,6 +62,23 @@ namespace Painting
 
         public void OnMoveTouchHandler()
         {
+            // PaintCameraController.Instance.enabled = true;
+            // foreach (var paletteButton in mainPaletteButtons)
+            // {
+            //     paletteButton.OnResetAll();
+            // }
+            StopCoroutine(ClosePanels());
+            StartCoroutine(ClosePanels());
+        }
+
+        private IEnumerator ClosePanels()
+        {
+            PaintCameraController.Instance.enabled = true;
+            yield return new WaitForSeconds(0.2f);
+            foreach (var paletteButton in mainPaletteButtons)
+            {
+                paletteButton.OnResetAll();
+            }
         }
 
         public void OnEndTouchHandler()
@@ -147,7 +165,9 @@ namespace Painting
             onPushedImage.enabled = false;
             if (palette.anchoredPosition == _paletteDefPos)
                 return;
-            palette.anchoredPosition = _paletteDefPos;
+            // palette.anchoredPosition = _paletteDefPos;
+            var movInTween = palette.DOAnchorPosX(_paletteDefPos.x, 0.1f);
+            movInTween.onComplete += () => { movInTween.Kill(); };
         }
 
         public PaintType PaintType => paintType;

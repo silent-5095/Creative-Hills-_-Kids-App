@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 03a2e1e0f9c42194687b547054cd3d48
+  m_DefaultGroup: de06a813c95eda445bcd797951dbcc10
   m_CachedHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -34,15 +34,15 @@ MonoBehaviour:
   m_MonoScriptBundleNaming: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: 1c75a67857a1e304c8ff27a7eda9059e
   m_RemoteCatalogLoadPath:
-    m_Id: 
+    m_Id: a0595ea1400459546ae7a49538b4d4df
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: 49651d1b5d1c6624286f84f2f00c0b83, type: 2}
-  - {fileID: 11400000, guid: b59db32b6776bbe4fbd5062da629f8f5, type: 2}
+  - {fileID: 11400000, guid: 58f0fa25d38dc054cb49bb554285af42, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -63,7 +63,7 @@ MonoBehaviour:
       - m_Id: 1c75a67857a1e304c8ff27a7eda9059e
         m_Value: ServerData/[BuildTarget]
       - m_Id: a0595ea1400459546ae7a49538b4d4df
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://storage.googleapis.com/
     m_ProfileEntryNames:
     - m_Id: d8cb801d91c0aac469c51d8329846236
       m_Name: BuildTarget

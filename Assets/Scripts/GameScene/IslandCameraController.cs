@@ -1,5 +1,4 @@
-using System;
-using Painting;
+using DG.Tweening;
 using UnityEngine;
 
 namespace GameScene
@@ -42,15 +41,23 @@ namespace GameScene
                 _touchStart = camera.ScreenToWorldPoint(Input.mousePosition);
             }
 
-            if (Input.GetMouseButton(0))
+            if (!Input.GetMouseButton(0)) return;
+            var direction = _touchStart - camera.ScreenToWorldPoint(Input.mousePosition);
+            var transform1 = camera.transform;
+            var newPos = transform1.position;
+            newPos.x += +direction.x;
+            newPos.x = newPos.x > max ? max : newPos.x;
+            newPos.x = newPos.x < min ? min : newPos.x;
+            transform1.position = newPos;
+        }
+
+        public void MoveToTarget(Transform targetTransform)
+        {
+            var tween=camera.transform.DOMoveX(targetTransform.transform.position.x, 0.2f);
+            tween.onComplete += () =>
             {
-                var direction = _touchStart - camera.ScreenToWorldPoint(Input.mousePosition);
-                var newPos = camera.transform.position;
-                newPos.x += +direction.x;
-                newPos.x = newPos.x > max ? max : newPos.x;
-                newPos.x = newPos.x < min ? min : newPos.x;
-                camera.transform.position = newPos;
-            }
+                tween.Kill();
+            };
         }
     }
 }

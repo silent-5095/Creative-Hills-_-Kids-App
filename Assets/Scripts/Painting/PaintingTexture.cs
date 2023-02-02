@@ -6,7 +6,7 @@ namespace Painting
 {
     public class PaintingTexture : MonoBehaviour
     {
-        [SerializeField] internal  TextureProp[] brushTextures;
+        [SerializeField] internal TextureProp[] brushTextures;
 
         public virtual bool IsActive()
         {
@@ -30,6 +30,7 @@ namespace Painting
         {
             foreach (var brushTexture in brushTextures)
             {
+                brushTexture.SetColor(Color.white);
                 brushTexture.Active(false);
             }
         }

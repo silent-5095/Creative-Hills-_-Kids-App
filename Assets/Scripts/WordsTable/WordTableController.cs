@@ -11,7 +11,7 @@ namespace WordsTable
     {
         public static event Action<string> CompleteWordEvent;
         [SerializeField] private AudioSource source;
-        [SerializeField] private GameObject winPanel;
+        [SerializeField] private WinPanel winPanel;
          private int _wordCount;
         [SerializeField] private LineController wordLinePrefab;
         private LineController _currentLineRenderer;
@@ -39,7 +39,7 @@ namespace WordsTable
                 _wordCount -= 1;
                 if (_wordCount <= 0)
                 {
-                    winPanel.SetActive(true);
+                    winPanel.ShowWinPanel();
                 }
                 else
                     source.Play();

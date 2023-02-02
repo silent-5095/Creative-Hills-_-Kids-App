@@ -1517,7 +1517,6 @@ GameObject:
   - component: {fileID: 1135919608}
   - component: {fileID: 1135919607}
   - component: {fileID: 1135919606}
-  - component: {fileID: 1135919605}
   m_Layer: 0
   m_Name: MainUI
   m_TagString: Untagged
@@ -1547,21 +1546,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1135919605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135919603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34a0f4322d486954ea47fd80791caf56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orientation: 5
-  isFirstScene: 0
-  transition: {fileID: 0}
 --- !u!114 &1135919606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1681,10 +1665,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5736641534758865703, guid: 6d87936924f024d449de527a5a6f45c1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736641534758865703, guid: 6d87936924f024d449de527a5a6f45c1, type: 3}
-      propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5779974365528689482, guid: 6d87936924f024d449de527a5a6f45c1, type: 3}
@@ -1907,6 +1887,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6f7558265f6410f4da42c3e4471edecd, type: 3}
   landScapeCHolder: {fileID: 831392529}
   portraitCHolder: {fileID: 524995566}
+  camera: {fileID: 0}
 --- !u!4 &1825523158
 Transform:
   m_ObjectHideFlags: 0

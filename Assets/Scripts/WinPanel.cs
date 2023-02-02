@@ -5,20 +5,22 @@ using UnityEngine;
 
 public class WinPanel : MonoBehaviour
 {
-    [SerializeField] private GameObject mainPanel;
-    [SerializeField] private GameObject[] panels;
-    private int _currentIndex;
+    [SerializeField] internal GameObject mainPanel;
+    [SerializeField] internal GameObject[] panels;
+    [SerializeField] internal string winPanel="WinPanel";
+    internal int CurrentIndex;
 
-    private void Start()
+    internal virtual void Start()
     {
-        _currentIndex = PlayerPrefs.GetInt("WinPanel", 0);
+        CurrentIndex = PlayerPrefs.GetInt(winPanel, 0);
     }
 
-    public void ShowWinPanel()
+    public virtual void ShowWinPanel()
     {
         mainPanel.SetActive(true);
-        panels[_currentIndex].SetActive(true);
-        _currentIndex = _currentIndex < panels.Length-1 ? _currentIndex + 1 : 0;
-        PlayerPrefs.SetInt("WinPanel", _currentIndex);
+        panels[CurrentIndex].SetActive(true);
+        CurrentIndex = CurrentIndex < panels.Length-1 ? CurrentIndex + 1 : 0;
+        Debug.Log(CurrentIndex);
+        PlayerPrefs.SetInt(winPanel, CurrentIndex);
     }
 }

@@ -19,6 +19,7 @@ namespace Painting
         private void Awake()
         {
             Instance = this;
+            ForDemo.Instance.ChangeSceneEvent += () => camera.orthographicSize = zoomOutMax;
         }
 
         private void Update()
@@ -48,7 +49,7 @@ namespace Painting
             }
             else
                 Zoom(Input.GetAxis("Mouse ScrollWheel"));
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && Input.touchCount <2)
             {
                 var direction = _touchStart - camera.ScreenToWorldPoint(Input.mousePosition);
                 var newPos = camera.transform.position + direction;
@@ -65,5 +66,6 @@ namespace Painting
             camera.orthographicSize = Mathf.Clamp(camera.orthographicSize - currentIncrement, zoomOutMin, zoomOutMax);
             increment = zoomOutMax - camera.orthographicSize;
         }
+        
     }
 }

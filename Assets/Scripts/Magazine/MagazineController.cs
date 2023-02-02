@@ -10,6 +10,7 @@ namespace Magazine
         [SerializeField] private Image landScapePrefab, portraitPrefab;
         [SerializeField] private Sprite[] pages;
         [SerializeField] private Transform landScapeCHolder, portraitCHolder;
+        [SerializeField] private new Camera camera;
 
         private void Update()
         {

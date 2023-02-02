@@ -670,6 +670,10 @@ PrefabInstance:
       propertyPath: inBasketObj
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4613195842614749266, guid: 4f98952877acced45bda888f08152c2a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4693238985676362391, guid: 4f98952877acced45bda888f08152c2a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -878,6 +882,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -40
       objectReference: {fileID: 0}
+    - target: {fileID: 7541935847111661390, guid: 4f98952877acced45bda888f08152c2a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 791ff571b1c675b4a9cbb12403a7398d, type: 3}
     - target: {fileID: 7693806830991015680, guid: 4f98952877acced45bda888f08152c2a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 831
