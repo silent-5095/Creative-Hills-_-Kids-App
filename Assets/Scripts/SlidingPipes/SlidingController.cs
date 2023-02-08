@@ -49,7 +49,7 @@ namespace SlidingPipes
         {
             source.PlayOneShot(lMsgClip);
             var tween = lastMsgSprite.DOFade(0, 0.5f);
-            tween.onComplete += () => { Invoke(nameof(Win),2f); };
+            tween.onComplete += () => { Invoke(nameof(Win),lMsgClip.length+0.2f); };
         }
 
         private void Win()

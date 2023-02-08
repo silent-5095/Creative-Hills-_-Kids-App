@@ -7,9 +7,10 @@ namespace GameScene
     public class Island : MonoBehaviour
     {
         public static event Action<QuestionData> IslandRefreshQPanelEvent;
-        public static event Action<Transform> CompleteIslandEvent;
+        public static event Action<Transform,IslandType> CompleteIslandEvent;
+        // public static event Action<Transform> CompleteIslandGameEvent;
         public static string IslandGameRef;
-        [SerializeField] private string islandName;
+        [SerializeField] private IslandType isLandType;
         [SerializeField] private bool isFirst, isOpen, isPassed, isGamePassed;
         [SerializeField] private IslandQuestionButton[] buttons;
         private IslandQuestionButton _clickedButton;
@@ -34,15 +35,15 @@ namespace GameScene
 
             gameButton.onClick.AddListener(OnGameButton);
 
-            isGamePassed = PlayerPrefs.GetInt(islandName + "Game") > 0;
-            if (IslandGameRef == islandName && !isGamePassed)
-            {
-                CompleteIslandEvent?.Invoke(nextIsland.transform);
-                PlayerPrefs.SetInt(islandName + "Game", 1);
-                isGamePassed = true;
-                IslandGameRef = string.Empty;
-                nextIsland?.OpenIsland();
-            }
+            isGamePassed = PlayerPrefs.GetInt(isLandType + "Game") > 0;
+            if (IslandGameRef != isLandType.ToString() || isGamePassed) return;
+            CompleteIslandEvent?.Invoke(nextIsland.transform, IslandType.Game);
+            PlayerPrefs.SetInt(isLandType + "Game", 1);
+            isGamePassed = true;
+            IslandGameRef = string.Empty;
+            if(nextIsland == null)
+                return;
+            nextIsland.OpenIsland();
         }
 
         private void OnCancelQuestionEvent()
@@ -59,36 +60,15 @@ namespace GameScene
         private void OnGameButton()
         {
             if (!isPassed) return;
-            IslandGameRef = islandName;
+            IslandGameRef = isLandType.ToString();
             ForDemo.Instance.LoadScene(gameSceneName);
         }
-        // public void Prepare()
-        // {
-        //     isOpen = isOpen || PlayerPrefs.GetInt(islandName, 0) > 0;
-        //     foreach (var button in buttons)
-        //     {
-        //         if (isOpen)
-        //         {
-        //             button.HandleCondition();
-        //         }
-        //         else
-        //             button.Lock();
-        //
-        //         if (button.questionData.IsCompleted)
-        //             _passedQCount++;
-        //     }
-        //     isPassed = _passedQCount >= buttons.Length;
-        //     gameLock.SetActive(!isPassed);
-        //     if (!isPassed || nextIsland == null || nextIsland.isOpen) return;
-        //     if (PlayerPrefs.HasKey(nameof(IslandGameRef) + islandName))
-        //         nextIsland.OpenIsland();
-        // }
 
         public void OnQuestionAnswer()
         {
-            isOpen = isFirst || PlayerPrefs.GetInt(islandName + "Open") > 0;
-            isPassed = PlayerPrefs.GetInt(islandName + "Passed") > 0;
-            gameLock.SetActive(!(PlayerPrefs.GetInt(islandName + "GameLock") > 0));
+            isOpen = isFirst || PlayerPrefs.GetInt(isLandType + "Open") > 0;
+            isPassed = PlayerPrefs.GetInt(isLandType + "Passed") > 0;
+            gameLock.SetActive(!(PlayerPrefs.GetInt(isLandType + "GameLock") > 0));
             if (isPassed)
             {
                 foreach (var button in buttons)
@@ -112,13 +92,11 @@ namespace GameScene
             }
 
             isPassed = passedQ >= buttons.Length;
-            PlayerPrefs.SetInt(islandName + "Passed", isPassed ? 1 : 0);
-            PlayerPrefs.SetInt(islandName + "GameLock", isPassed ? 1 : 0);
-            if (isPassed)
-            {
-                CompleteIslandEvent?.Invoke(gameButton.transform);
-                gameLock.SetActive(false);
-            }
+            PlayerPrefs.SetInt(isLandType + "Passed", isPassed ? 1 : 0);
+            PlayerPrefs.SetInt(isLandType + "GameLock", isPassed ? 1 : 0);
+            if (!isPassed) return;
+            CompleteIslandEvent?.Invoke(gameButton.transform,isLandType);
+            gameLock.SetActive(false);
         }
 
         private void OpenIsland()
@@ -128,7 +106,15 @@ namespace GameScene
             {
                 button.HandleCondition();
             }
-            PlayerPrefs.SetInt(islandName + "Open",1);
+            PlayerPrefs.SetInt(isLandType + "Open",1);
         }
+    }
+
+    public enum IslandType
+    {
+        Mattrah,
+        Sohar,
+        Nizwa,
+        Game
     }
 }

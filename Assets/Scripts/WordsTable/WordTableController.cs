@@ -20,6 +20,7 @@ namespace WordsTable
         [SerializeField] private List<string> levelWord;
         private List<LineController> _currentLineControllers;
         [SerializeField] private List<Color> lineColors;
+        
         private Color _currentColor;
 
         private void OnDestroy()

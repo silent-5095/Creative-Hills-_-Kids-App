@@ -1,20 +1,28 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Transition : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     public event Action ExitAction;
+    [SerializeField] private UnityEvent OnStartSceneEvent;
     public void Enter()
     {
         animator.Play("Transition_Enter");
-    } public void Exit(Action action)
+    }
+
+    private void EnterEventInvoker()
+    {
+        OnStartSceneEvent?.Invoke();
+    }
+    public void Exit(Action action)
     {
         ExitAction = action;
         animator.Play("Transition_Exit");
     }
 
-    public void ExitAnimation()
+    private void ExitEventInvoker()
     {
         ExitAction?.Invoke();
     }

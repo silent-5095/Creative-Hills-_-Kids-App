@@ -12,6 +12,7 @@ namespace Painting
         private static int _patternIndex;
         private static int _brushIndex;
         private static PaintType _paintType;
+        [SerializeField] private AudioSource source;
         
         [SerializeField] private Color defColor;
         [SerializeField] private int defBrush;
@@ -44,20 +45,24 @@ namespace Painting
         private void OnPatternButtonClickEvent(int index)
         {
             _patternIndex = index;
+            source.Play();
         }
         private void OnSelectBrushButtonClickEvent(int index)
         {
             _brushIndex = index;
+            source.Play();
         }
 
         private void OnMainPaletteButtonEvent(MainPaletteButton target)
         {
             _paintType = target.PaintType;
+            source.Play();
         }
 
         private void OnBucketClickEvent(Color currentColor)
         {
             _currentColor = currentColor;
+            source.Play();
         }
 
         public static Color GetColor()

@@ -16,6 +16,9 @@ namespace GameScene
         [SerializeField] private TextMeshProUGUI summary;
         [SerializeField] private ArabicFixerTMPRO fixerSummary;
         [SerializeField] private OptionButton[] optionButtons;
+        [SerializeField] private AudioSource source;
+        [SerializeField] private AudioClip[] aClips;
+        private int _aClipIndex = 0;
         private QuestionData _currentData;
         private bool _answerIsCorrect;
         private Vector2 _defPos;
@@ -74,6 +77,11 @@ namespace GameScene
             }
 
             mainPanel.transform.localPosition = Vector2.zero;
+            
+            source.PlayOneShot(aClips[_aClipIndex]);
+            _aClipIndex++;
+            _aClipIndex = aClips.Length <= _aClipIndex ? 0 : _aClipIndex;
+            
             QPanelRayCastEvent?.Invoke(true);
             // mainPanel.SetActive(true);
         }

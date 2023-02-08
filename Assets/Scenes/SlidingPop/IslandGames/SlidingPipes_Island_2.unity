@@ -494,6 +494,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1087026663075534984, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
+      propertyPath: lMsgClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e342b56fa5aebc14789c6cc1dc409458, type: 3}
+    - target: {fileID: 1087026663075534984, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
       propertyPath: matrix4in4
       value: 
       objectReference: {fileID: 0}
@@ -997,6 +1001,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4679870014755898510, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 72da5398b98eea0479ebab7794a2ae69, type: 3}
     - target: {fileID: 4862323087513071239, guid: e3ec14d8636f2234cb58dbd9ca1d1759, type: 3}
       propertyPath: m_LocalScale.y
       value: 5

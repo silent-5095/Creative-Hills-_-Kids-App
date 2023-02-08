@@ -2438,6 +2438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2181251374291342650, guid: 6d87936924f024d449de527a5a6f45c1, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5779974365528689482, guid: 6d87936924f024d449de527a5a6f45c1, type: 3}
       propertyPath: m_RootOrder
       value: 3

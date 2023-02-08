@@ -119,6 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 190545524534625189}
+  OnStartSceneEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1771849211639549243
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +231,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 29836aea52f9aaa44b9a0151afa6dffa, type: 2}
   m_audioClip: {fileID: 8300000, guid: 963adba5ef6e5fe40a21d496a2f61593, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1
   Loop: 1

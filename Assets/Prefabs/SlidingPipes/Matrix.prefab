@@ -456,7 +456,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7866651009687050948}
-  - component: {fileID: 2431726949766398433}
   - component: {fileID: 6169967529696287693}
   m_Layer: 5
   m_Name: StartMsg
@@ -482,21 +481,6 @@ Transform:
   m_Father: {fileID: 4881647847990847467}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2431726949766398433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3602185124236092500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80bc6d17f041eff40a4e8b9cb8ec7b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  startPos: 1
-  update: 0
 --- !u!212 &6169967529696287693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -720,7 +704,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5530437177665794045}
-  - component: {fileID: 1311153294166654536}
   - component: {fileID: 2635800317481709764}
   m_Layer: 5
   m_Name: EndMsg
@@ -746,21 +729,6 @@ Transform:
   m_Father: {fileID: 4881647847990847467}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1311153294166654536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7135479685847074951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80bc6d17f041eff40a4e8b9cb8ec7b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  startPos: 0
-  update: 0
 --- !u!212 &2635800317481709764
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -990,11 +958,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 302070369752741422, guid: 82ea493224bb47748bbf631cba6a8823, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.54
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 302070369752741422, guid: 82ea493224bb47748bbf631cba6a8823, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.51
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 2305173365840194742, guid: 82ea493224bb47748bbf631cba6a8823, type: 3}
       propertyPath: m_Name
