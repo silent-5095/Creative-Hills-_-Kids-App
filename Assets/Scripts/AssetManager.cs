@@ -4,12 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.Networking;
-using UnityEngine.ParticleSystemJobs;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.Video;
 
 namespace Kelerjiman
 {

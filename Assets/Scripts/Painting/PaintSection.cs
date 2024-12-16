@@ -1,13 +1,9 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Interfaces;
 using Newtonsoft.Json;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using ColorUtility = UnityEngine.ColorUtility;
 
 namespace Painting
