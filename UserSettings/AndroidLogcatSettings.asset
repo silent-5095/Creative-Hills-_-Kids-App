@@ -1,13 +1,38 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "HZAL1670DAJ71605337",
     "m_SelectedProcess": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "HZAL1670DAJ71605337",
+        "name": "com.CreativeHills.TheLittleConsumer",
+        "processId": 9753,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownProcessesForSerialization": [],
+    "m_KnownProcessesForSerialization": [
+        {
+            "deviceId": "HZAL1670DAJ71605337",
+            "name": "com.android.settings",
+            "processId": 5747,
+            "exited": true
+        },
+        {
+            "deviceId": "HZAL1670DAJ71605337",
+            "name": "com.CreativeHills.TheLittleConsumer",
+            "processId": 6645,
+            "exited": true
+        },
+        {
+            "deviceId": "HZAL1670DAJ71605337",
+            "name": "com.android.settings",
+            "processId": 8087,
+            "exited": false
+        },
+        {
+            "deviceId": "HZAL1670DAJ71605337",
+            "name": "com.CreativeHills.TheLittleConsumer",
+            "processId": 9753,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {

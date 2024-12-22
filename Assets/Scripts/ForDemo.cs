@@ -21,11 +21,11 @@ public class ForDemo : MonoBehaviour
 
     private void Start()
     {
-        Screen.orientation = orientation;
-        Screen.autorotateToPortrait =
-            orientation == ScreenOrientation.Portrait || orientation == ScreenOrientation.AutoRotation;
-        Screen.autorotateToLandscapeLeft =
-            orientation != ScreenOrientation.Portrait && orientation == ScreenOrientation.AutoRotation;
+        // Screen.orientation = orientation;
+        // Screen.autorotateToPortrait =
+        //     orientation == ScreenOrientation.Portrait || orientation == ScreenOrientation.AutoRotation;
+        // Screen.autorotateToLandscapeLeft =
+        //     orientation != ScreenOrientation.Portrait && orientation == ScreenOrientation.AutoRotation;
         if(isSplash)
             return;
         transition.Enter();

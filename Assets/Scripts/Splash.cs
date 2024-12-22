@@ -3,14 +3,19 @@ using UnityEngine.Video;
 
 public class Splash : MonoBehaviour
 {
-    [SerializeField] private VideoPlayer player;
+    //[SerializeField] private VideoPlayer player;
 
-    private void Awake()
-    {
-        player.loopPointReached+= PlayerEndloopPointReached;
-    }
+    //private void Awake()
+   // {
+      //  player.loopPointReached+= PlayerEndloopPointReached;
+    //}
 
-    private void PlayerEndloopPointReached(VideoPlayer source)
+   // private void PlayerEndloopPointReached(VideoPlayer source)
+    //{
+        //ForDemo.Instance.LoadScene("FirstScene");
+   // }
+
+    public void LoadScene()
     {
         ForDemo.Instance.LoadScene("FirstScene");
     }
